@@ -7,6 +7,11 @@ A Unity solo development game
 2) imported files
 
 ___
+## 23/02/2021
+### Test commit
+1) testing commit, pull and push
+
+___
 ## (Day/Month/Year)
 ### (generaly worked on)
 1) (work on thing 1)
