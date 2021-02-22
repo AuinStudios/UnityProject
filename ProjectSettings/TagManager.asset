@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - objectTag
+  - delete
+  - ownerisdie
+  - fly
+  - bounce
+  - pressed
+  - CanPickUp
+  - gun
+  - test3000
+  - canpickup
+  - TimeManager
+  - plate
+  - bullet
+  - lava
+  - forcefield
+  - enemy
+  - nextscene
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Ground
+  - Player
+  - Wallrun
+  - death
+  - navigation
+  - poop
+  - forcefield
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

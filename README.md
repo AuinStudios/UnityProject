@@ -1,5 +1,5 @@
 # UnityProject
-a unity solo development game
+A Unity solo development game
 
 ## 22/02/2021
 ### Github link + setup
