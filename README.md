@@ -9,7 +9,8 @@ A Unity solo development game
 ___
 ## 23/02/2021
 ### Test commit
-1) testing commit, pull and push
+1) testing commit, push
+2) test pull
 
 ___
 ## (Day/Month/Year)
