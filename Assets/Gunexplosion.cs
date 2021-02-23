@@ -8,14 +8,14 @@ public class Gunexplosion : MonoBehaviour
     public float Power = 100.0f;
     public float UpPower = 50.0f;
     public float radius = 60.0f;
-
+    public float blowtimer = 0.1f;
 
 
     public void Start()
     {
         if (equip == enabled)
         {
-            Invoke("blow", 0);
+            Invoke("blow",blowtimer );
         }
     }
 

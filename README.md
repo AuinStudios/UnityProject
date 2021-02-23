@@ -11,7 +11,8 @@ ___
 ### Restored testing zone
 1) testing commit, push
 2) test pull
-3
+3)  made  a explosion weapon 
+4) made a explosion pratical for it 
 ___
 ## (Day/Month/Year)
 ### (generaly worked on)
