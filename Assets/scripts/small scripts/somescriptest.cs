@@ -10,7 +10,7 @@ public class somescriptest : MonoBehaviour
     public float UpPower = 50.0f;
     public float radius = 60.0f;
     public float damage = 10f;
-
+    public GameObject thing;
     public float range = 100f;
     public float firerate = 3f;
     public float impactforce = 30f;
@@ -66,9 +66,9 @@ public class somescriptest : MonoBehaviour
     void Shoot()
     {
 
-        Vector3 explosionpos = equip.transform.position;
-        Collider[] colliders = Physics.OverlapSphere(explosionpos, radius);
-        foreach (Collider HIT in colliders)
+     //  Vector3 explosionpos = equip.transform.position;
+     //  Collider[] colliders = Physics.OverlapSphere(explosionpos, radius);
+     //  foreach (Collider HIT in colliders)
             currentammo--;
         // makes gun go  S H O O T
         muzzleFlash.Play();
@@ -100,13 +100,7 @@ public class somescriptest : MonoBehaviour
             }
 
 
-            if (hit.collider != null)
-            {
-                blow();
-
-            }
-
-
+          
             // code for praticle to show every time u click
             GameObject impactGO = Instantiate(impacteffect, hit.point, Quaternion.LookRotation(hit.normal));
             // destorys  praticles that despawned so it doesnt lag the game
@@ -114,30 +108,30 @@ public class somescriptest : MonoBehaviour
         }
     }
     
-    void blow()
-    {
-
-
-
-        Vector3 explosionpos = equip.transform.position;
-        Collider[] colliders = Physics.OverlapSphere(explosionpos, radius);
-        foreach (Collider HIT in colliders)
-        {
-            Rigidbody rb = HIT.GetComponent<Rigidbody>();
-            
-            if (!HIT.CompareTag("Player"))
-            {
-                if (rb != null && !HIT.CompareTag("gun") && !HIT.CompareTag("delete"))
-                {
-                    rb.AddExplosionForce(Power, explosionpos, radius, UpPower, ForceMode.Impulse);
-
-
-                }
-            }
-           
-            
-        }
-    }
+   // void blow()
+   // {
+   //
+   //
+   //
+   //     Vector3 explosionpos = equip.transform.position;
+   //     Collider[] colliders = Physics.OverlapSphere(explosionpos, radius);
+   //     foreach (Collider HIT in colliders)
+   //     {
+   //         Rigidbody rb = HIT.GetComponent<Rigidbody>();
+   //         
+   //         if (!HIT.CompareTag("Player"))
+   //         {
+   //             if (rb != null && !HIT.CompareTag("gun") && !HIT.CompareTag("delete"))
+   //             {
+   //                 rb.AddExplosionForce(Power, explosionpos, radius, UpPower, ForceMode.Impulse);
+   //
+   //
+   //             }
+   //         }
+   //        
+   //         
+   //     }
+   // }
 
 
 
