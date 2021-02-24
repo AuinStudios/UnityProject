@@ -20,7 +20,28 @@ public class Gunexplosion : MonoBehaviour
 
 
 
-    
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("forcefield"))
+        {
+            blow();
+        }
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+
+
+
+
+
+        if (collision.gameObject)
+        {
+            blow();
+        }
+    }
+
 
 
 
@@ -46,7 +67,7 @@ public class Gunexplosion : MonoBehaviour
                 
 
 
-
+           
 
                 if (HIT.CompareTag("Player"))
                 {
@@ -58,7 +79,7 @@ public class Gunexplosion : MonoBehaviour
             Instantiate(impacteffect, transform.position, transform.rotation);
             if (gameObject.name == "test(Clone)")
             {
-   Destroy(gameObject);
+              Destroy(gameObject);
             }
          
 

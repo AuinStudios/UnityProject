@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.Rendering;
+
 
 
 
@@ -20,7 +20,7 @@ public class pickupgun : MonoBehaviour
     public bool equipped;
     public static bool slotFull;
     //public GameObject yes;
-    
+    public TextMeshProUGUI ammoui;
     
      void Awake()
     {
@@ -70,7 +70,7 @@ public class pickupgun : MonoBehaviour
     {
         equipped = true;
         slotFull = true;
-
+        ammoui.color = new Color(233, 210, 21, 255);
         //Make weapon a child of the camera and move it to default position
         transform.SetParent(gunContainer);
         transform.localPosition = Vector3.zero;
@@ -97,7 +97,7 @@ public class pickupgun : MonoBehaviour
     {
         equipped = false;
         slotFull = false;
-
+        ammoui.color = new Color(0, 0, 0, 0);
         //Set parent to null
         transform.SetParent(null);
 

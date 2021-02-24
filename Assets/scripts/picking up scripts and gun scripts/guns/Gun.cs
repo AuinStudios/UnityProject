@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Gun : MonoBehaviour
 {// variables
@@ -10,7 +11,7 @@ public class Gun : MonoBehaviour
     public Camera fpscam;
 
     public ParticleSystem muzzleFlash;
-
+    public TextMeshProUGUI guntext;
     public GameObject impacteffect;
 
     private bool isreloadi = false;
@@ -34,8 +35,8 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        guntext.text = Mathf.Clamp((float)scriptableobject.currentammo, 0, float.MaxValue).ToString();
 
-      
 
         if (isreloadi)
             return;

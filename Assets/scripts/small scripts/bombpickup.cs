@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class bombpickup : MonoBehaviour
 {
@@ -8,10 +9,10 @@ public class bombpickup : MonoBehaviour
     public Rigidbody rb;
     public BoxCollider coll;
     public Transform player, gunContainer, fpsCam;
-
+    public TextMeshProUGUI ammoui;
     public float pickUpRange;
     public float dropForwardForce, dropUpwardForce;
-
+    
     public bool equipped;
     public static bool slotFull;
 
@@ -22,12 +23,14 @@ public class bombpickup : MonoBehaviour
         //Setup
         if (!equipped)
         {
+            
             gunscript.enabled = false;
             rb.isKinematic = false;
             coll.isTrigger = false;
         }
         if (equipped)
         {
+            
             gunscript.enabled = true;
             rb.isKinematic = true;
             coll.isTrigger = true;
@@ -51,7 +54,7 @@ public class bombpickup : MonoBehaviour
     {
         equipped = true;
         slotFull = true;
-
+ammoui.color = new Color(233, 210, 21, 255);
         //Make weapon a child of the camera and move it to default position
         transform.SetParent(gunContainer);
         transform.localPosition = Vector3.zero;
@@ -71,7 +74,7 @@ public class bombpickup : MonoBehaviour
     {
         equipped = false;
         slotFull = false;
-
+ammoui.color = new Color(0, 0, 0, 0);
         //Set parent to null
         transform.SetParent(null);
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponScriptableObject : MonoBehaviour
+public class gunammohandler : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
