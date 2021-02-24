@@ -39,6 +39,7 @@ public class GunsScriptableObject : ScriptableObject
     public float playersexplosionforce = 400f;
     public float playersupforce = 0f;
     public float grenades = 5f;
+   
 }
 // ------------------------------------------------------
 
@@ -81,7 +82,7 @@ class gundataui : Editor
             
             myScript.Reloadtime = EditorGUILayout.Slider("Gun reload time: ", myScript.Reloadtime, 1.0f , 5.0f);
             myScript.firerate = EditorGUILayout.Slider("Gun fire rate: ", myScript.firerate, 0.1f, 100.0f);
-            
+            myScript.maxammo = EditorGUILayout.IntSlider("Max ammo: ", myScript.maxammo, 1, 500);
             myScript.hoverText = EditorGUILayout.TextField("On hover text: ", myScript.hoverText);
             myScript.hoverVisibleDistance = EditorGUILayout.Slider("Over text visible distance: ", myScript.hoverVisibleDistance, 1.0f, 5.0f);
             myScript.weaponPrefab = EditorGUILayout.ObjectField("Weapon prefab: ", myScript.weaponPrefab, typeof(GameObject), false);

@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 50
-  scriptableobject: {fileID: 11400000, guid: 35cc31f3e6a6173448bb118a18207ac8, type: 2}
+  scriptableobject: {fileID: 11400000, guid: 06910d1f6dd8b8c4482a413c3e6f6f23, type: 2}
   fpscam: {fileID: 0}
   muzzleFlash: {fileID: 4477152070413440810}
   guntext: {fileID: 0}
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponPickupGUI: {fileID: 0}
-  gun: {fileID: 11400000, guid: 35cc31f3e6a6173448bb118a18207ac8, type: 2}
+  gun: {fileID: 11400000, guid: 06910d1f6dd8b8c4482a413c3e6f6f23, type: 2}
 --- !u!1 &4477152070413440813
 GameObject:
   m_ObjectHideFlags: 0

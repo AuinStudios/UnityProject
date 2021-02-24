@@ -7781,7 +7781,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh60198
+  m_Name: pb_Mesh17920
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21880,7 +21880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponPickupGUI: {fileID: 699765724}
-  gun: {fileID: 11400000, guid: 35cc31f3e6a6173448bb118a18207ac8, type: 2}
+  gun: {fileID: 11400000, guid: f418f805647cb32409786e383d34fc77, type: 2}
 --- !u!65 &6997572288928582341
 BoxCollider:
   m_ObjectHideFlags: 0

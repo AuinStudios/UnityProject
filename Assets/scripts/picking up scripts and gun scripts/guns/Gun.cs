@@ -70,13 +70,21 @@ public class Gun : MonoBehaviour
             {
                 target.takedamage(damage);
             }
-
-            // makes impact force to push the block
-            if (hit.rigidbody != null)
-            {
+           
+          
+             if (hit.rigidbody != null)
+             {
                 hit.rigidbody.AddForce(-hit.normal * scriptableobject.impactforce);
 
-            }
+
+
+            
+
+
+             }
+            
+            // makes impact force to push the block
+           
             // checks if the target took damage or not
             notuseing Target = hit.transform.GetComponent<notuseing>();
             if (Target != null)
