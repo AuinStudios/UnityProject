@@ -17,7 +17,7 @@ ___
 ## (24/2/2021)
 ### (generaly worked on fixing stuff and redoing the grenadelauncher)
 1) (added a new grenade launcher system)
-2) (finished the grenade launcher and made some ui for it for the ammo to show)
+2) (finished the grenade launcher and made some ui for it for the ammo to Show)
 
 
 ___
