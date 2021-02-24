@@ -4,24 +4,23 @@ using UnityEngine;
 
 public class Gunexplosion : MonoBehaviour
 {
+ 
     public GameObject equip;
-    public float Power = 100.0f;
-    public float UpPower = 50.0f;
-    public float radius = 60.0f;
-    public float blowtimer = 0.1f;
-
-
+    public float blowtimer = 2f;
+    public GunsScriptableObject scriptableobject;
+    public RaycastHit hit;
+    public GameObject impacteffect;
     public void Start()
     {
-        if (equip == enabled)
+      if (equip == enabled)
         {
-            Invoke("blow",blowtimer );
+            Invoke("blow", blowtimer);
         }
     }
 
 
-   
 
+    
 
 
 
@@ -32,26 +31,40 @@ public class Gunexplosion : MonoBehaviour
 
 
         Vector3 explosionpos = equip.transform.position;
-        Collider[] colliders = Physics.OverlapSphere(explosionpos, radius);
+        Collider[] colliders = Physics.OverlapSphere(explosionpos, scriptableobject.explosionRange);
         foreach (Collider HIT in colliders)
         {
             Rigidbody rb = HIT.GetComponent<Rigidbody>();
+            
             if (!HIT.CompareTag("Player"))
             {
                 if (rb != null && (!HIT.CompareTag("gun")))
                 {
-                    rb.AddExplosionForce(Power, explosionpos, radius, UpPower, ForceMode.Impulse);
+                    rb.AddExplosionForce(scriptableobject.powerofexplosion, explosionpos, scriptableobject.explosionRange, scriptableobject.uppowerexplosion, ForceMode.Impulse);
+                }
+            }
+                
+
+
+
+
+                if (HIT.CompareTag("Player"))
+                {
+                rb.AddExplosionForce(scriptableobject.playersexplosionforce, explosionpos, scriptableobject.explosionRange, scriptableobject.playersupforce, ForceMode.Impulse);
                 }
 
 
 
-
-
-
-
-
-
+            Instantiate(impacteffect, transform.position, transform.rotation);
+            if (gameObject.name == "test(Clone)")
+            {
+   Destroy(gameObject);
             }
+         
+
+
+
+            
         }
 
     }

@@ -16,7 +16,7 @@ public enum guntype
 [CreateAssetMenu(fileName = "GunScriptableobject", menuName = "gun/propertys", order = 1)]
 public class GunsScriptableObject : ScriptableObject
 {
-    
+       
     public string Name = "weapon";
     public guntype Type = guntype.melee;
     //----------------------------- variables for gun
@@ -33,6 +33,10 @@ public class GunsScriptableObject : ScriptableObject
     public string hoverText = "Press E to pick up";
     public float hoverVisibleDistance = 4.0f;
     public float explosionRange = 5.0f;
+    public float uppowerexplosion = 1.0f;
+    public float powerofexplosion = 300f;
+    public float playersexplosionforce = 1000f;
+    public float playersupforce = 1f;
 }
 // ------------------------------------------------------
 
@@ -58,6 +62,10 @@ class gundataui : Editor
             {
                 // variables that ONLY the rpg can have
                 myScript.explosionRange = EditorGUILayout.Slider("Explosion range: ", myScript.explosionRange, 1.0f, 10.0f);
+                myScript.uppowerexplosion = EditorGUILayout.Slider("explosion up power mutlplyer", myScript.uppowerexplosion, 0f, 100f);
+                myScript.powerofexplosion = EditorGUILayout.Slider("general power of explosion", myScript.powerofexplosion, 0f, 10000f);
+                myScript.playersexplosionforce = EditorGUILayout.Slider("players explosion force", myScript.playersexplosionforce, 1.0f, 100000f);
+                myScript.playersupforce = EditorGUILayout.Slider("players expolosion up power", myScript.playersupforce, 0f, 100f);
             }
             else
             {

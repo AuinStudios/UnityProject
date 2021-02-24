@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class bombpickup : MonoBehaviour
 {
-    public somescriptest gunscript;
+    public grenadelaunchertest gunscript;
     public Rigidbody rb;
     public BoxCollider coll;
     public Transform player, gunContainer, fpsCam;

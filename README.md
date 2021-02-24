@@ -14,10 +14,10 @@ ___
 3)  made  a explosion weapon 
 4) made a explosion pratical for it 
 ___
-## (Day/Month/Year)
-### (generaly worked on)
-1) (work on thing 1)
-2) (work on thing 2)
-3) (...)
+## (24/2/2021)
+### (generaly worked on fixing stuff and redoing the grenadelauncher)
+1) (added a new grenade launcher system)
+2) (more to do today)
+
 
 ___
