@@ -39,7 +39,8 @@ public class GunsScriptableObject : ScriptableObject
     public float playersexplosionforce = 400f;
     public float playersupforce = 0f;
     public float grenades = 5f;
-   
+    public float meeeleaddforce = 10000f;
+    public float upforcemeele = 6000f;
 }
 // ------------------------------------------------------
 
@@ -59,7 +60,14 @@ class gundataui : Editor
         
        // the   variables ui shown in inspector
         myScript.Type = (guntype)EditorGUILayout.EnumPopup(myScript.Type);
+        if (myScript.Type == guntype.melee)
+            {
+                myScript.meeeleaddforce = EditorGUILayout.Slider("meeeleforce", myScript.meeeleaddforce, 0f, 200000f);
+            myScript.upforcemeele = EditorGUILayout.Slider("meeeleupforce", myScript.upforcemeele, 0f, 200000f);
+        }
         if (myScript.Type != guntype.melee)
+        
+            
         {
             if (myScript.Type == guntype.grenadelauncher)
             {
@@ -87,6 +95,9 @@ class gundataui : Editor
             myScript.hoverVisibleDistance = EditorGUILayout.Slider("Over text visible distance: ", myScript.hoverVisibleDistance, 1.0f, 5.0f);
             myScript.weaponPrefab = EditorGUILayout.ObjectField("Weapon prefab: ", myScript.weaponPrefab, typeof(GameObject), false);
             
+
+
+            
         }
-    }    
+    }   
 }

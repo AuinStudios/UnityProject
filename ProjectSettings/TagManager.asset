@@ -22,6 +22,8 @@ TagManager:
   - nextscene
   - canpickup
   - explosionfield
+  - Ground
+  - bananakatana
   layers:
   - Default
   - TransparentFX

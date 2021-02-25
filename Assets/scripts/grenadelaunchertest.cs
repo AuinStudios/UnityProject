@@ -2,25 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement;
 
 public class grenadelaunchertest : MonoBehaviour
-{
+{// variables
+    // transforms and vectors shit
     public Transform spawnpoint;
     public GameObject grenade;
     public bombpickup bombboi;
+    // ------------------------------------------
     public float range = 15f;
     public GunsScriptableObject scriptableobject;
     public bool isreloadi = false;
     private float nextimetofire = 1f;
-   
+   // --------------------------------------------
     
     
     public TextMeshProUGUI guntext;
 
     
     
-
+    // -------------------------------------------- 
     IEnumerator Reload()
     {
         isreloadi = true;
@@ -29,23 +30,23 @@ public class grenadelaunchertest : MonoBehaviour
         isreloadi = false;
     }
 
+    // ----------------------------------------------
 
 
 
-
-    // Start is called before the first frame update
+   
     void Start()
     {
         scriptableobject.currentammo = scriptableobject.maxammo;
         
 
     }
-
+    // ---------------------------------------------------------------------------------------------------
     // Update is called once per frame
     void Update()
     {
 
-
+        // clamps the  ammo to never go down 0
         guntext.text = Mathf.Clamp((float)scriptableobject.currentammo, 0, float.MaxValue).ToString();
 
        
@@ -80,4 +81,5 @@ public class grenadelaunchertest : MonoBehaviour
         GameObject grenadespawn = Instantiate(grenade, spawnpoint.position, spawnpoint.rotation);
         grenadespawn.GetComponent<Rigidbody>().AddForce(spawnpoint.forward * range, ForceMode.Impulse);
     }
+    // ---------------------------------------------------------------------------------------------------
 }
