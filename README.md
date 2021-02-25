@@ -23,6 +23,6 @@ ___
 ___
 
 ## (25/2/2021)
-### (made meele system all by my self only the animation i needed help with)
+### (made meele system all by my self)
 1) (it add forces if u hit an gameobject)
-2) (more to do today)
+2) (added praticals on it but it isnt that good and i couldnt finish some stuff so torromow)

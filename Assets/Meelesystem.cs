@@ -9,9 +9,11 @@ public class Meelesystem : MonoBehaviour
    public  Rigidbody rig;
     public ParticleSystem effects;
     public GunsScriptableObject scriptableobject;
-
-
     
+
+
+  
+
     public void Start()
     {// gets the  animator
         animateboi = GetComponent<Animator>();
@@ -19,6 +21,7 @@ public class Meelesystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
         
 
         // transform thing for bannaa katana
@@ -27,9 +30,14 @@ public class Meelesystem : MonoBehaviour
         // to start the animation
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
-            animateboi.SetTrigger("start");
-            effects.Play();
+            
+           animateboi.SetTrigger("start"  );
+           
+
+            
         }
+        
+
         
     }
 }
