@@ -21,3 +21,8 @@ ___
 
 
 ___
+
+## (25/2/2021)
+### (made meele system all by my self only the animation i needed help with)
+1) (it add forces if u hit an gameobject)
+2) (more to do today)
