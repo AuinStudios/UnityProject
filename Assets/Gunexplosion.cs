@@ -10,11 +10,13 @@ public class Gunexplosion : MonoBehaviour
     public GunsScriptableObject scriptableobject;
     public RaycastHit hit;
     public GameObject impacteffect;
+    
     public void Start()
     {
       if (equip == enabled)
         {
-            Invoke("blow", blowtimer);
+            Invoke("blow", blowtimer ) ;
+            
         }
     }
 
@@ -26,6 +28,7 @@ public class Gunexplosion : MonoBehaviour
         if (other.gameObject.CompareTag("forcefield"))
         {
             blow();
+            
         }
     }
 
@@ -39,6 +42,7 @@ public class Gunexplosion : MonoBehaviour
         if (collision.gameObject)
         {
             blow();
+            
         }
     }
 
@@ -48,7 +52,7 @@ public class Gunexplosion : MonoBehaviour
 
     void blow()
     {
-
+        
 
 
         Vector3 explosionpos = equip.transform.position;
@@ -62,6 +66,7 @@ public class Gunexplosion : MonoBehaviour
                 if (rb != null && (!HIT.CompareTag("gun")))
                 {
                     rb.AddExplosionForce(scriptableobject.powerofexplosion, explosionpos, scriptableobject.explosionRange, scriptableobject.uppowerexplosion, ForceMode.Impulse);
+                   
                 }
             }
                 
@@ -72,6 +77,7 @@ public class Gunexplosion : MonoBehaviour
                 if (HIT.CompareTag("Player"))
                 {
                 rb.AddExplosionForce(scriptableobject.playersexplosionforce, explosionpos, scriptableobject.explosionRange, scriptableobject.playersupforce, ForceMode.Impulse);
+                    
                 }
 
 
@@ -80,6 +86,7 @@ public class Gunexplosion : MonoBehaviour
             if (gameObject.name == "test(Clone)")
             {
               Destroy(gameObject);
+                
             }
          
 

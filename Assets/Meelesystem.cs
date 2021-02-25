@@ -32,12 +32,12 @@ public class Meelesystem : MonoBehaviour
         {
             
            animateboi.SetTrigger("start"  );
-           
+             animateboi.SetBool("isidle", true);
 
             
         }
         
-
+        
         
     }
 }
