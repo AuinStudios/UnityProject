@@ -67,7 +67,10 @@ public class destorybullet : MonoBehaviour
         {
             Destroy(gameObject, timer);
         }
-
+        if (gameObject.name == ("pleasework(Clone)"))
+        {
+            Destroy(gameObject, timer);
+        }
 
         if (gameObject.name == ("bullet(Clone)"))
         {

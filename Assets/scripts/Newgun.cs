@@ -11,7 +11,7 @@ public class Newgun : MonoBehaviour
     public GameObject bullet;
     public pickupgun gunboi;
     // ------------------------------------------
-    
+    public ParticleSystem muzzleflash;
     public float range = 15f;
     public GunsScriptableObject scriptableobject;
     public bool isreloadi = false;
@@ -67,7 +67,7 @@ public class Newgun : MonoBehaviour
 
 
 
-        if (gunboi == enabled && Input.GetKeyDown(KeyCode.Mouse0) && Time.time >= nextimetofire)
+        if (gunboi == enabled && Input.GetKey(KeyCode.Mouse0) && Time.time >= nextimetofire)
         {
             nextimetofire = Time.time + 1f / scriptableobject.firerate;
 
@@ -80,6 +80,7 @@ public class Newgun : MonoBehaviour
     }
     private void launchboi()
     {
+        muzzleflash.Play();
         GameObject grenadespawn = Instantiate(bullet, spawnpoint.position, spawnpoint.rotation);
         grenadespawn.GetComponent<Rigidbody>().AddForce(spawnpoint.forward * range, ForceMode.Impulse);
         
