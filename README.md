@@ -26,3 +26,10 @@ ___
 ### (made meele system all by my self)
 1) (it add forces if u hit an gameobject)
 2) (added praticals on it but it isnt that good and i couldnt finish some stuff so torromow)
+
+
+
+___
+## (26/2/2021)
+### (improved the meele system added effects to it and some other stuff)
+1) (will do more today)

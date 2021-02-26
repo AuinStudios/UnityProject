@@ -6,10 +6,11 @@ public class Testkatanascript : MonoBehaviour
 {
     public GunsScriptableObject scriptableobject;
    public   Rigidbody rig;
-    
+
     public Transform bananakatana;
     private void OnCollisionEnter(Collision collision)
     {
+       
         if (collision.collider.CompareTag("bananakatana"))
         {// adds force from the transform of the banana looking direction
             rig.AddForce(bananakatana.forward * scriptableobject.meeeleaddforce);

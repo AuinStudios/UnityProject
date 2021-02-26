@@ -41,6 +41,7 @@ public class GunsScriptableObject : ScriptableObject
     public float grenades = 5f;
     public float meeeleaddforce = 10000f;
     public float upforcemeele = 6000f;
+    public  float bulletforce = 10000f;
 }
 // ------------------------------------------------------
 
@@ -94,10 +95,9 @@ class gundataui : Editor
             myScript.hoverText = EditorGUILayout.TextField("On hover text: ", myScript.hoverText);
             myScript.hoverVisibleDistance = EditorGUILayout.Slider("Over text visible distance: ", myScript.hoverVisibleDistance, 1.0f, 5.0f);
             myScript.weaponPrefab = EditorGUILayout.ObjectField("Weapon prefab: ", myScript.weaponPrefab, typeof(GameObject), false);
-            
+            myScript.bulletforce = EditorGUILayout.Slider("bulletforce", myScript.bulletforce, 0f, 20000f);
 
 
-            
         }
     }   
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-
+    
     private TimeManager timemanager;
     /// </summary>
 
@@ -170,12 +170,8 @@ private void Update()
     SonicSpeed();
     WallRunInput();
 
-        
-            
-        
-    
-
-}
+       
+} 
 
 /// <summary>
 /// Find user input. Should put this in its own class but im lazy
@@ -297,12 +293,14 @@ private void Movement()
 
     //Some multipliers
     float multiplier = 1f, multiplierV = 1f;
-
+        
     // Movement in air
     if (!grounded)
     {
+            
         multiplier = 0.5f;
         multiplierV = 0.5f;
+            
     }
 
     // Movement while sliding
@@ -318,7 +316,7 @@ private void Jump()
     if (grounded)
     {
         readyToJump = false;
-
+           
         //Add jump forces
         rb.AddForce(Vector2.up * jumpForce * 1.5f);
         rb.AddForce(normalVector * jumpForce * 0.5f);
@@ -384,6 +382,9 @@ private void ResetJump()
 
 private void Dash()
 {
+        
+        
+       
     //saves current velocity
     dashStartVector = orientation.forward;
 
@@ -413,6 +414,7 @@ private void ActivateGravity()
 }
 private void SonicSpeed()
 {
+        
     //If running builds up speed
     if (grounded && y >= 0.99f)
     {

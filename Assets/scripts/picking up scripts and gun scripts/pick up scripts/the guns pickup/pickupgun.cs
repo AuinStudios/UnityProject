@@ -9,7 +9,7 @@ using TMPro;
 
 public class pickupgun : MonoBehaviour
 {
-    public Gun gunscript;
+    public Newgun gunscript;
     public Rigidbody rb;
     public BoxCollider coll;
     public Transform player, gunContainer, fpsCam;
