@@ -24,7 +24,7 @@ public class GunsScriptableObject : ScriptableObject
     public int NormalDamage = 5;
     public int CriticalDamage = 10;
     public float firerate = 1.0f;
-    public int Range = 200;
+    public float Range = 60f;
     public float Reloadtime = 4.0f;
     public int maxammo = 50;
     public int currentammo = 1;
@@ -42,6 +42,7 @@ public class GunsScriptableObject : ScriptableObject
     public float meeeleaddforce = 10000f;
     public float upforcemeele = 6000f;
     public  float bulletforce = 10000f;
+    
 }
 // ------------------------------------------------------
 
@@ -72,30 +73,32 @@ class gundataui : Editor
         {
             if (myScript.Type == guntype.grenadelauncher)
             {
-                // variables that ONLY the rpg can have
+                // variables that ONLY the grenadelauncher can have
+                
                 myScript.explosionRange = EditorGUILayout.Slider("Explosion range: ", myScript.explosionRange, 1.0f, 10.0f);
                 myScript.uppowerexplosion = EditorGUILayout.Slider("explosion up power mutlplyer", myScript.uppowerexplosion, 0f, 100f);
                 myScript.powerofexplosion = EditorGUILayout.Slider("general power of explosion", myScript.powerofexplosion, 0f, 10000f);
                 myScript.playersexplosionforce = EditorGUILayout.Slider("players explosion force", myScript.playersexplosionforce, 1.0f, 100000f);
                 myScript.playersupforce = EditorGUILayout.Slider("players expolosion up power", myScript.playersupforce, 0f, 100f);
-                myScript.maxammo = EditorGUILayout.IntSlider("Max ammo: ", myScript.maxammo, 1, 500);
+                
+                
             }
             else
             {
                 // variables that the grenade launcher CAN NOT have
-                myScript.Range = EditorGUILayout.IntSlider("Gun range: ", myScript.Range, 10, 500);
-                myScript.impactforce = EditorGUILayout.IntSlider("Impact force: ", myScript.impactforce, 1, 10000);
+
+                myScript.bulletforce = EditorGUILayout.Slider("bulletforce", myScript.bulletforce, 0f, 20000f);
             }
 
             // variables that all weapons EXCEPT Melee can have
-            
+            myScript.Range = EditorGUILayout.Slider("range", myScript.Range, 1.0f, 1000.0f);
             myScript.Reloadtime = EditorGUILayout.Slider("Gun reload time: ", myScript.Reloadtime, 1.0f , 5.0f);
             myScript.firerate = EditorGUILayout.Slider("Gun fire rate: ", myScript.firerate, 0.1f, 100.0f);
             myScript.maxammo = EditorGUILayout.IntSlider("Max ammo: ", myScript.maxammo, 1, 500000);
             myScript.hoverText = EditorGUILayout.TextField("On hover text: ", myScript.hoverText);
             myScript.hoverVisibleDistance = EditorGUILayout.Slider("Over text visible distance: ", myScript.hoverVisibleDistance, 1.0f, 5.0f);
             myScript.weaponPrefab = EditorGUILayout.ObjectField("Weapon prefab: ", myScript.weaponPrefab, typeof(GameObject), false);
-            myScript.bulletforce = EditorGUILayout.Slider("bulletforce", myScript.bulletforce, 0f, 20000f);
+            
 
 
         }

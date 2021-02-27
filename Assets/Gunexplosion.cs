@@ -83,7 +83,7 @@ public class Gunexplosion : MonoBehaviour
 
 
             Instantiate(impacteffect, transform.position, transform.rotation);
-            if (gameObject.name == "test(Clone)")
+            if (gameObject.name == "grenadelauncherammo(Clone)")
             {
               Destroy(gameObject);
                 

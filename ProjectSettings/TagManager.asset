@@ -9,7 +9,6 @@ TagManager:
   - delete
   - fly
   - bounce
-  - pressed
   - CanPickUp
   - gun
   - test3000
@@ -20,10 +19,10 @@ TagManager:
   - forcefield
   - enemy
   - nextscene
-  - canpickup
   - explosionfield
   - Ground
   - bananakatana
+  - wall
   layers:
   - Default
   - TransparentFX

@@ -3,24 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class grenadelaunchertest : MonoBehaviour
-{// variables
+public class Grenadelauncher : MonoBehaviour
+{
+    // variables
     // transforms and vectors shit
     public Transform spawnpoint;
-    public GameObject grenade;
-    public bombpickup bombboi;
+    public GameObject bullet;
+    public bombpickup bomboi;
+    
     // ------------------------------------------
-    public float range = 15f;
+    public ParticleSystem muzzleflash;
     public GunsScriptableObject scriptableobject;
     public bool isreloadi = false;
     private float nextimetofire = 1f;
-   // --------------------------------------------
-    
-    
+    // --------------------------------------------
+
+
     public TextMeshProUGUI guntext;
 
-    
-    
+
+
     // -------------------------------------------- 
     IEnumerator Reload()
     {
@@ -34,11 +36,11 @@ public class grenadelaunchertest : MonoBehaviour
 
 
 
-   
+
     void Start()
     {
         scriptableobject.currentammo = scriptableobject.maxammo;
-        
+
 
     }
     // ---------------------------------------------------------------------------------------------------
@@ -49,26 +51,26 @@ public class grenadelaunchertest : MonoBehaviour
         // clamps the  ammo to never go down 0
         guntext.text = Mathf.Clamp((float)scriptableobject.currentammo, 0, float.MaxValue).ToString();
 
-       
 
-       
+
+
 
 
 
         if (isreloadi)
             return;
-        if (scriptableobject.currentammo == 0 )
+        if (scriptableobject.currentammo == 0)
         {
             StartCoroutine(Reload());
             return;
         }
 
-       
 
-        if (bombboi == enabled && Input.GetKeyDown(KeyCode.Mouse0) && Time.time >= nextimetofire) 
+
+        if (bomboi == enabled && Input.GetKey(KeyCode.Mouse0) && Time.time >= nextimetofire)
         {
             nextimetofire = Time.time + 1f / scriptableobject.firerate;
-            
+
             launchboi();
 
             scriptableobject.currentammo -= 1;
@@ -76,10 +78,12 @@ public class grenadelaunchertest : MonoBehaviour
 
         }
     }
-    private void launchboi() 
+    private void launchboi()
     {
-        GameObject grenadespawn = Instantiate(grenade, spawnpoint.position, spawnpoint.rotation);
-        grenadespawn.GetComponent<Rigidbody>().AddForce(spawnpoint.forward * range, ForceMode.Impulse);
+        muzzleflash.Play();
+        GameObject grenadespawn = Instantiate(bullet, spawnpoint.position, spawnpoint.rotation);
+        grenadespawn.GetComponent<Rigidbody>().AddForce(spawnpoint.forward * scriptableobject.Range, ForceMode.Impulse);
+
     }
     // ---------------------------------------------------------------------------------------------------
 }

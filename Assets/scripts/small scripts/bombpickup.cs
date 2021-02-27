@@ -5,7 +5,7 @@ using TMPro;
 
 public class bombpickup : MonoBehaviour
 {
-    public grenadelaunchertest gunscript;
+    public Grenadelauncher gunscript;
     public Rigidbody rb;
     public BoxCollider coll;
     public Transform player, gunContainer, fpsCam;

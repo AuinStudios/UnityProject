@@ -5,15 +5,20 @@ using UnityEngine;
 public class destorybullet : MonoBehaviour
 {
     public int timer = 10;
+    public ParticleSystem impacteffect;
+    public Material worpls;
+    
 
-
-
-
+    public void Start()
+    {
+        Invoke("destorystuff", timer);
+    }
     private void OnTriggerEnter(Collider collider)
     {
       if (collider.gameObject.tag == "forcefield")
         {
-            Destroy(gameObject);
+            destorystuff();
+            worpls.color = Color.cyan;
         }
     }
 
@@ -25,62 +30,86 @@ public class destorybullet : MonoBehaviour
 
         if (collision.gameObject.tag == "Untagged")
         {
-            Destroy(gameObject);
+            destorystuff();
+            worpls.color = Color.white;
+            
         }
 
         
-
+        if (collision.gameObject.tag == "wall")
+        {
+            destorystuff();
+            worpls.color = Color.yellow;
+        }
 
 
 
         if (collision.gameObject.tag == "Player")
         {
-            Destroy(gameObject);
+           destorystuff();
+            worpls.color = Color.red;
         }
 
-
+        
 
         if (collision.gameObject.tag == "gun")
         {
-            Destroy(gameObject);
+            destorystuff();
+            worpls.color = Color.grey;
         }
-
+       
 
         if (collision.gameObject.tag == "delete")
         {
-            Destroy(gameObject);
+            destorystuff();
+            worpls.color = Color.white;
         }
 
 
 
         if (collision.gameObject.tag == "CanPickUp")
         {
-            Destroy(gameObject);
+            destorystuff();
+            worpls.color = Color.black;
         }
     }
 
     
    public void Update()
     {
+
+
+
+
+
+
        
+
         if (gameObject.name == ("timebullet(Clone)"))
         {
-            Destroy(gameObject, timer);
+            destorystuff();
         }
         if (gameObject.name == ("pleasework(Clone)"))
         {
-            Destroy(gameObject, timer);
+            destorystuff();
         }
 
         if (gameObject.name == ("bullet(Clone)"))
         {
-            Destroy(gameObject, timer);
+            destorystuff();
+
         }
     }
 
 
    
-   
+   public void destorystuff()
+    {
+        Destroy(gameObject);
+        Instantiate(impacteffect, transform.position, transform.rotation);
+       
+
+    }
 
 
 

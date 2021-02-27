@@ -33,3 +33,15 @@ ___
 ## (26/2/2021)
 ### (improved the meele system added effects to it and some other stuff)
 1) (made a new gun system  will improve in future)
+
+
+
+
+___
+## (27/2/2021)
+### (didnt do much today did some bug fixes improve the gun system abit)
+1) (also trying to add a wind effect if the player is going to fast but im not sure how to do it)
+
+
+
+

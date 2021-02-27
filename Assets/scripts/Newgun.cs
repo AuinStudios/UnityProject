@@ -10,9 +10,9 @@ public class Newgun : MonoBehaviour
     public Transform spawnpoint;
     public GameObject bullet;
     public pickupgun gunboi;
+    private bombpickup bombboi;
     // ------------------------------------------
     public ParticleSystem muzzleflash;
-    public float range = 15f;
     public GunsScriptableObject scriptableobject;
     public bool isreloadi = false;
     private float nextimetofire = 1f;
@@ -40,7 +40,7 @@ public class Newgun : MonoBehaviour
     void Start()
     {
         scriptableobject.currentammo = scriptableobject.maxammo;
-
+        
 
     }
     // ---------------------------------------------------------------------------------------------------
@@ -82,7 +82,7 @@ public class Newgun : MonoBehaviour
     {
         muzzleflash.Play();
         GameObject grenadespawn = Instantiate(bullet, spawnpoint.position, spawnpoint.rotation);
-        grenadespawn.GetComponent<Rigidbody>().AddForce(spawnpoint.forward * range, ForceMode.Impulse);
+        grenadespawn.GetComponent<Rigidbody>().AddForce(spawnpoint.forward * scriptableobject.Range, ForceMode.Impulse);
         
     }
     // ---------------------------------------------------------------------------------------------------

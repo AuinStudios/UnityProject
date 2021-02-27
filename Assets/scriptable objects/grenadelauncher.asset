@@ -16,19 +16,22 @@ MonoBehaviour:
   Type: 0
   NormalDamage: 5
   CriticalDamage: 10
-  firerate: 1
-  Range: 200
+  firerate: 50
+  Range: 100
   Reloadtime: 4
-  maxammo: 5
-  currentammo: 1
+  maxammo: 500000
+  currentammo: 500000
   impactforce: 6000
   nextimetofire: 1
-  weaponPrefab: {fileID: 3666884231216940497, guid: db6ea9f6d0dc718489d207b84e08612a, type: 3}
+  weaponPrefab: {fileID: 0}
   hoverText: Press E to pick up
   hoverVisibleDistance: 4
   explosionRange: 5
-  uppowerexplosion: 0
-  powerofexplosion: 1
-  playersexplosionforce: 1
+  uppowerexplosion: 1
+  powerofexplosion: 200
+  playersexplosionforce: 400
   playersupforce: 0
   grenades: 5
+  meeeleaddforce: 10000
+  upforcemeele: 6000
+  bulletforce: 10000
