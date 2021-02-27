@@ -32,4 +32,4 @@ ___
 ___
 ## (26/2/2021)
 ### (improved the meele system added effects to it and some other stuff)
-1) (made a new gun system ( its kinda shit)  but will improve in future)
+1) (made a new gun system  will improve in future)
