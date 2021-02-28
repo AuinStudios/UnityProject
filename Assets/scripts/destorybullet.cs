@@ -50,7 +50,11 @@ public class destorybullet : MonoBehaviour
             worpls.color = Color.red;
         }
 
-        
+        if (collision.gameObject.tag == "bananakatana")
+        {
+            destorystuff();
+            worpls.color = Color.grey;
+        }
 
         if (collision.gameObject.tag == "gun")
         {
