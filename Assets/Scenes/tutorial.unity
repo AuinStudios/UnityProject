@@ -10851,6 +10851,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1472877366 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4477152070413440808, guid: db6ea9f6d0dc718489d207b84e08612a, type: 3}
+  m_PrefabInstance: {fileID: 4477152069320081374}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1474183519
 GameObject:
   m_ObjectHideFlags: 0
@@ -11619,6 +11624,7 @@ GameObject:
   - component: {fileID: 1744618043}
   - component: {fileID: 1744618042}
   - component: {fileID: 1744618041}
+  - component: {fileID: 1744618046}
   m_Layer: 0
   m_Name: box2
   m_TagString: CanPickUp
@@ -11718,6 +11724,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1744618046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744618040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e41cec1184cf3564c848b8a09ff4089a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptableobject: {fileID: 11400000, guid: 06910d1f6dd8b8c4482a413c3e6f6f23, type: 2}
+  rig: {fileID: 1744618041}
+  bulletgun: {fileID: 1472877366}
 --- !u!1 &1755962432
 GameObject:
   m_ObjectHideFlags: 0
@@ -13261,14 +13282,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4477152071117210102, guid: db6ea9f6d0dc718489d207b84e08612a, type: 3}
-      propertyPath: fpscam
-      value: 
-      objectReference: {fileID: 1724492981}
-    - target: {fileID: 4477152071117210102, guid: db6ea9f6d0dc718489d207b84e08612a, type: 3}
-      propertyPath: guntext
-      value: 
-      objectReference: {fileID: 62347164}
     - target: {fileID: 4477152071117210105, guid: db6ea9f6d0dc718489d207b84e08612a, type: 3}
       propertyPath: player
       value: 
@@ -13283,6 +13296,10 @@ PrefabInstance:
       objectReference: {fileID: 1644690000}
     - target: {fileID: 4477152071117210105, guid: db6ea9f6d0dc718489d207b84e08612a, type: 3}
       propertyPath: ammoui
+      value: 
+      objectReference: {fileID: 62347164}
+    - target: {fileID: 7346373448070436489, guid: db6ea9f6d0dc718489d207b84e08612a, type: 3}
+      propertyPath: guntext
       value: 
       objectReference: {fileID: 62347164}
     m_RemovedComponents: []
