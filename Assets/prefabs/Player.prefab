@@ -137,6 +137,8 @@ MonoBehaviour:
   maxWallSpeed: 8000
   maxWallRunCameraTilt: 16
   wallRunCameraTilt: 15
+  transition: {fileID: 0}
+  transitiontime: 1
   playerCam: {fileID: 0}
   orientation: {fileID: 1695635067521273356}
   moveSpeed: 80000
@@ -201,6 +203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 200
   HealthText: {fileID: 0}
+  textcolorui: {fileID: 0}
 --- !u!136 &1695635068576658984
 CapsuleCollider:
   m_ObjectHideFlags: 0

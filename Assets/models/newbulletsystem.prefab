@@ -162,6 +162,7 @@ MonoBehaviour:
   timer: 5
   impacteffect: {fileID: 2432971450539032540, guid: 8dd3cd17e5609ff48be55ccfab465de1, type: 3}
   worpls: {fileID: 2100000, guid: 2326f7cc2a864af4f99910da3d7f9c8a, type: 2}
+  test: {fileID: 2100000, guid: cbd1bbe087dfd70419293eeba8c1edb8, type: 2}
 --- !u!1 &7562898312782281863
 GameObject:
   m_ObjectHideFlags: 0

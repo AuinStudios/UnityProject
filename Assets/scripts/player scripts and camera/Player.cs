@@ -2,6 +2,7 @@
 using System;
 using UnityEngine;
 
+
 public class Player : MonoBehaviour
 {
 
@@ -56,13 +57,20 @@ private void CheckForWall() //make sure to call in void Update
 }
 
 
-/// <summary>
-/// Wall run done, here comes the rest of the movement script
-/// </summary>
+    /// <summary>
+    /// Wall run done, here comes the rest of the movement script
+    /// </summary>
+
+    // change scene 
+
+    public Animator transition;
+
+    public float transitiontime = 1.0f;
 
 
-//Assingables
-public Transform playerCam;
+
+    //Assingables
+    public Transform playerCam;
 public Transform orientation;
 
 //Other
@@ -162,8 +170,15 @@ void Start()
     Movement();
 }
 
-private void Update()
+
+  
+
+
+    private void Update()
 {
+       
+
+
     MyInput();
     Look();
     CheckForWall();

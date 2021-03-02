@@ -50,3 +50,11 @@ ___
 ___
 ## (1/3/2021)
 ### (today was fixing a huge bug on the tutorial which didnt allow the player to play and i tried to make it that the pratical takes the objects color but i dont know rendeirng yet so i sticked with the old way and change color when it collides with a tag)
+
+
+
+
+
+___
+## (2/3/2021)
+### (finished the tutorial layout but need to fix some stuff in it stll)
