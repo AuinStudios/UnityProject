@@ -58,3 +58,31 @@ ___
 ___
 ## (2/3/2021)
 ### (finished the tutorial layout but need to fix some stuff in it stll)
+
+
+
+
+
+
+
+## (3/3/2021)
+### (did nothing)
+
+
+
+
+
+
+
+
+
+
+## (4/3/2021)
+### (made my own moveing charater with jumping )
+
+1) i will probably use him for a side project like a simple ball game
+
+
+
+
+

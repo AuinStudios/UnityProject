@@ -23,6 +23,8 @@ TagManager:
   - Ground
   - bananakatana
   - wall
+  - canpickup
+  - groundballgame
   layers:
   - Default
   - TransparentFX
@@ -39,7 +41,7 @@ TagManager:
   - navigation
   - poop
   - forcefield
-  - 
+  - ballgroundcheck
   - 
   - 
   - 
