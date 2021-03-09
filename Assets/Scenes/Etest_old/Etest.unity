@@ -651,7 +651,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh18012
+  m_Name: pb_Mesh19620
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27237,6 +27237,8 @@ MonoBehaviour:
   maxWallSpeed: 8000
   maxWallRunCameraTilt: 12
   wallRunCameraTilt: 12
+  transition: {fileID: 0}
+  transitiontime: 1
   playerCam: {fileID: 1143054467}
   orientation: {fileID: 1695635067410593136}
   moveSpeed: 80000
