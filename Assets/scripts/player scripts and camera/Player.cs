@@ -63,9 +63,6 @@ private void CheckForWall() //make sure to call in void Update
 
     // change scene 
 
-    public Animator transition;
-
-    public float transitiontime = 1.0f;
 
 
 

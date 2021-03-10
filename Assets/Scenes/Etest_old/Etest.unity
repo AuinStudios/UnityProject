@@ -2528,7 +2528,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.08
+  m_Time: 0.09
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -2604,7 +2604,7 @@ TrailRenderer:
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
-    numCapVertices: 1
+    numCapVertices: 5
     alignment: 0
     textureMode: 0
     shadowBias: 0.5
@@ -2684,7 +2684,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.06
+  m_Time: 0.09
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -2693,7 +2693,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.2569447
+        value: 0.20033458
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -2769,7 +2769,7 @@ TrailRenderer:
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
-    numCapVertices: 1
+    numCapVertices: 5
     alignment: 0
     textureMode: 0
     shadowBias: 0
@@ -2879,7 +2879,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.08
+  m_Time: 0.09
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -2955,7 +2955,7 @@ TrailRenderer:
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
-    numCapVertices: 1
+    numCapVertices: 5
     alignment: 0
     textureMode: 0
     shadowBias: 0.5
@@ -8440,7 +8440,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.06
+  m_Time: 0.09
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -8449,7 +8449,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.34027183
+        value: 0.2899636
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -8525,7 +8525,7 @@ TrailRenderer:
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
-    numCapVertices: 1
+    numCapVertices: 5
     alignment: 0
     textureMode: 0
     shadowBias: 0
@@ -9517,7 +9517,7 @@ ParticleSystem:
     rateOverDistance:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -13592,7 +13592,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.06
+  m_Time: 0.09
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -13601,7 +13601,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.18056682
+        value: 0.14283183
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -13668,7 +13668,7 @@ TrailRenderer:
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
-    numCapVertices: 1
+    numCapVertices: 5
     alignment: 0
     textureMode: 0
     shadowBias: 0
@@ -13915,7 +13915,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.08
+  m_Time: 0.09
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -13924,7 +13924,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.06250957
+        value: 0.056222945
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -13982,7 +13982,7 @@ TrailRenderer:
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
-    numCapVertices: 1
+    numCapVertices: 5
     alignment: 0
     textureMode: 0
     shadowBias: 0.5
@@ -27237,8 +27237,6 @@ MonoBehaviour:
   maxWallSpeed: 8000
   maxWallRunCameraTilt: 12
   wallRunCameraTilt: 12
-  transition: {fileID: 0}
-  transitiontime: 1
   playerCam: {fileID: 1143054467}
   orientation: {fileID: 1695635067410593136}
   moveSpeed: 80000
