@@ -8192,7 +8192,7 @@ MonoBehaviour:
   task: roof
   TriggerObject: {fileID: 361744963}
   ExtraTriggerObjects:
-  - {fileID: 562785993}
+  - {fileID: 1527579264}
   MovingObject: {fileID: 981506403}
   ExtraMovingObjects: []
   TargetPosition: {x: -126.84, y: 106, z: 49.17}
@@ -8218,7 +8218,7 @@ MonoBehaviour:
   task: floor
   TriggerObject: {fileID: 361744963}
   ExtraTriggerObjects:
-  - {fileID: 562785993}
+  - {fileID: 1527579264}
   MovingObject: {fileID: 24497205}
   ExtraMovingObjects: []
   TargetPosition: {x: -126.84, y: 100, z: 49.17}
@@ -8299,7 +8299,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 361744963}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -129.786, y: 6.652, z: 49.094}
+  m_LocalPosition: {x: -129.607, y: 6.652, z: 49.094}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11221,6 +11221,11 @@ Transform:
   m_Father: {fileID: 1724492976}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1527579264 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3666884231216940497, guid: db6ea9f6d0dc718489d207b84e08612a, type: 3}
+  m_PrefabInstance: {fileID: 4477152069320081374}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1545259229
 GameObject:
   m_ObjectHideFlags: 0
