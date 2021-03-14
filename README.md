@@ -86,3 +86,14 @@ ___
 
 
 
+
+
+## (14/3/2021)
+### (i havent worked on my main project for a while but i fixed the lighting and crap on the game)
+
+1)will try to make the enemys have health now
+
+
+
+
+

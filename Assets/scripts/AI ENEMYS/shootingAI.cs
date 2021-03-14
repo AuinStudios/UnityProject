@@ -9,10 +9,10 @@ public class shootingAI : MonoBehaviour
     public EnemyData data;
     public GameObject player;
     public float timer = 0;
-    
+    public GameObject objectodamage;
     public TextMeshPro uiText;
     public Color enemyUIColor;
-
+   
     public bool isVisibleGizmo = true;
     [Range(5.0f, 15.0f)]
     public float MinUIRange = 10.0f;
@@ -32,7 +32,29 @@ public class shootingAI : MonoBehaviour
         uiText.text = data.Name + "\n" + data.Health;
     }
 
-    // Update is called once per frame
+   //private void OnCollisionEnter(Collision collision)
+   //{
+   //    if (collision.gameObject.)
+   //    {
+   //        BulletOwner bulletOwner = collision.gameObject.GetComponent<BulletOwner>();
+   //
+   //        if (bulletOwner.isBoss)
+   //        {
+   //            data.Health -= bulletOwner.normalDamage + bulletOwner.criticalDamage;
+   //        }
+   //        else
+   //        {
+   //            data.Health -= bulletOwner.normalDamage;
+   //        }
+   //
+   //      
+   //    } 
+   //}
+
+
+
+
+
     void Update()
     {
         float dist = Vector3.Distance(player.transform.position, transform.position);
