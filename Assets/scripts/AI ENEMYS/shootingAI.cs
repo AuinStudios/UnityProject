@@ -12,7 +12,7 @@ public class shootingAI : MonoBehaviour
     public GameObject objectodamage;
     public TextMeshPro uiText;
     public Color enemyUIColor;
-   
+    public ENEMYHEALTH test;
     public bool isVisibleGizmo = true;
     [Range(5.0f, 15.0f)]
     public float MinUIRange = 10.0f;
@@ -27,29 +27,27 @@ public class shootingAI : MonoBehaviour
     private bool hasFire = false;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        uiText.text = data.Name + "\n" + data.Health;
-    }
+   
 
-   //private void OnCollisionEnter(Collision collision)
-   //{
-   //    if (collision.gameObject.)
-   //    {
-   //        BulletOwner bulletOwner = collision.gameObject.GetComponent<BulletOwner>();
-   //
-   //        if (bulletOwner.isBoss)
-   //        {
-   //            data.Health -= bulletOwner.normalDamage + bulletOwner.criticalDamage;
-   //        }
-   //        else
-   //        {
-   //            data.Health -= bulletOwner.normalDamage;
-   //        }
-   //
-   //      
-   //    } 
-   //}
+
+   public void OnCollisionEnter(Collision collision)
+   {
+       if (collision.gameObject.tag == "bullet")
+       {
+           BulletOwner bulletOwner = collision.gameObject.GetComponent<BulletOwner>();
+   
+           if (bulletOwner.isBoss)
+           {
+               test.health -= bulletOwner.normalDamage + bulletOwner.criticalDamage;
+           }
+           else
+           {
+               test.health =- bulletOwner.normalDamage;
+           }
+   
+         
+       } 
+   }
 
 
 
@@ -57,6 +55,8 @@ public class shootingAI : MonoBehaviour
 
     void Update()
     {
+
+        uiText.text = data.Name + "\n" + test.health;
         float dist = Vector3.Distance(player.transform.position, transform.position);
         if (dist >= MinUIRange && dist <= MaxUIRange)
         {
@@ -66,7 +66,7 @@ public class shootingAI : MonoBehaviour
         {
             uiText.faceColor = new Color(0,0,0,0);
         }
-
+       
 
         facetarget();
         if (data.Type != EnemyType.NoRange)
