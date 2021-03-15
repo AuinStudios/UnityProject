@@ -25,6 +25,7 @@ TagManager:
   - wall
   - canpickup
   - groundballgame
+  - mover
   layers:
   - Default
   - TransparentFX

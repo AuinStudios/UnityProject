@@ -647,8 +647,10 @@ private bool cancellingGrounded;
 /// </summary>
 private void OnCollisionStay(Collision other)
 {
-    //Make sure we are only checking for walkable layers
-    int layer = other.gameObject.layer;
+   
+       
+        //Make sure we are only checking for walkable layers
+        int layer = other.gameObject.layer;
     if (whatIsGround != (whatIsGround | (1 << layer))) return;
 
     //Iterate through every collision in a physics update

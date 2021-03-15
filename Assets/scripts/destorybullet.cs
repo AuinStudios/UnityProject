@@ -42,7 +42,11 @@ public class destorybullet : MonoBehaviour
             worpls.color = Color.yellow;
         }
 
-
+        if (collision.gameObject.tag == "enemy")
+        {
+            destorystuff();
+            worpls.color = Color.black;
+        }
 
         if (collision.gameObject.tag == "Player")
         {

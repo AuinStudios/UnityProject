@@ -10,9 +10,6 @@ public class ENEMYHEALTH : MonoBehaviour
     public float health = 100f;
 
     
-    public void Update()
-    {
-     
-    }
+    
  
 }

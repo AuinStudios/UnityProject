@@ -6,10 +6,10 @@ using TMPro;
 
 public class shootingAI : MonoBehaviour
 {
+    public Transform forwardback;
     public EnemyData data;
     public GameObject player;
     public float timer = 0;
-    public GameObject objectodamage;
     public TextMeshPro uiText;
     public Color enemyUIColor;
     public ENEMYHEALTH test;
@@ -55,7 +55,13 @@ public class shootingAI : MonoBehaviour
 
     void Update()
     {
+        if (test.health == 0)
+        {
+           
+        }
 
+
+        test.health = Mathf.Clamp((float) test.health, 0, float.MaxValue);
         uiText.text = data.Name + "\n" + test.health;
         float dist = Vector3.Distance(player.transform.position, transform.position);
         if (dist >= MinUIRange && dist <= MaxUIRange)

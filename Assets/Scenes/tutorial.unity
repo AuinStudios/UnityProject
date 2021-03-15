@@ -9783,7 +9783,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 637764156}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: -1}
-  m_LocalPosition: {x: 0.669, y: -0.6500001, z: 2.781}
+  m_LocalPosition: {x: 0.83, y: -0.6500001, z: 1.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1724492976}
@@ -11800,7 +11800,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17980
+  m_Name: pb_Mesh17984
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -36304,10 +36304,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8ca8a3e47a899545968b45b6ff2f892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  forwardback: {fileID: 0}
   data: {fileID: 11400000, guid: 10070ee8dd6defb42b8713192669e86d, type: 2}
   player: {fileID: 29697489}
   timer: 0
-  objectodamage: {fileID: 0}
   uiText: {fileID: 2975378079273756096}
   enemyUIColor: {r: 0.098039225, g: 0.9960785, b: 0, a: 1}
   test: {fileID: 2975378078073832800}
@@ -36420,7 +36420,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  clamp: {fileID: 2975378078073832794}
 --- !u!23 &2975378078170389870
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -36994,10 +36993,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8ca8a3e47a899545968b45b6ff2f892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  forwardback: {fileID: 0}
   data: {fileID: 11400000, guid: 10070ee8dd6defb42b8713192669e86d, type: 2}
   player: {fileID: 29697489}
   timer: 0
-  objectodamage: {fileID: 0}
   uiText: {fileID: 2975378079598138181}
   enemyUIColor: {r: 0.098039225, g: 0.9960785, b: 0, a: 1}
   test: {fileID: 2975378078565774304}
@@ -37019,7 +37018,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  clamp: {fileID: 2975378078565774303}
 --- !u!1 &2975378078845863284
 GameObject:
   m_ObjectHideFlags: 0
@@ -37519,10 +37517,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8ca8a3e47a899545968b45b6ff2f892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  forwardback: {fileID: 0}
   data: {fileID: 11400000, guid: 10070ee8dd6defb42b8713192669e86d, type: 2}
   player: {fileID: 29697489}
   timer: 0
-  objectodamage: {fileID: 0}
   uiText: {fileID: 2975378078370632883}
   enemyUIColor: {r: 0.098039225, g: 0.9960785, b: 0, a: 1}
   test: {fileID: 2975378079520650288}
@@ -37669,7 +37667,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  clamp: {fileID: 2975378079520650281}
 --- !u!1 &2975378079598138179
 GameObject:
   m_ObjectHideFlags: 0
@@ -38118,11 +38115,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4154767929878683499, guid: db6ea9f6d0dc718489d207b84e08612a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.91
+      value: 6.9316
       objectReference: {fileID: 0}
     - target: {fileID: 4154767929878683499, guid: db6ea9f6d0dc718489d207b84e08612a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.23
+      value: -12.171
       objectReference: {fileID: 0}
     - target: {fileID: 4154767929878683499, guid: db6ea9f6d0dc718489d207b84e08612a, type: 3}
       propertyPath: m_LocalRotation.x
