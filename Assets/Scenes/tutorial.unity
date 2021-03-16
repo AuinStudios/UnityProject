@@ -11257,6 +11257,8 @@ GameObject:
   - component: {fileID: 1474183522}
   - component: {fileID: 1474183521}
   - component: {fileID: 1474183520}
+  - component: {fileID: 1474183525}
+  - component: {fileID: 1474183524}
   m_Layer: 0
   m_Name: door4 (1)
   m_TagString: Untagged
@@ -11340,6 +11342,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &1474183524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474183519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f11b5fb9196d934d818676c005e3fe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  task: new task
+  TriggerObject: {fileID: 75166323}
+  ExtraTriggerObjects: []
+  MovingObject: {fileID: 1474183519}
+  ExtraMovingObjects: []
+  TargetPosition: {x: -126.76, y: 15.3, z: 46.21}
+  MovingSpeed: 1
+  canDropDown: 0
+  canEmmitParticles: 0
+  Particles: {fileID: 1130342644}
+  DropMultiplier: 1
+  DebugGizmoLine: {r: 1, g: 0.88914996, b: 0, a: 1}
+  DebugWireBoxColor: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &1474183525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474183519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 185058ebdc7e5fc4681be78c26d00d4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 2975378078073832800}
+  test: {fileID: 1474183524}
 --- !u!1 &1522997571
 GameObject:
   m_ObjectHideFlags: 0
@@ -36304,7 +36345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8ca8a3e47a899545968b45b6ff2f892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardback: {fileID: 0}
+  forwardback: {fileID: 2975378078073832795}
   data: {fileID: 11400000, guid: 10070ee8dd6defb42b8713192669e86d, type: 2}
   player: {fileID: 29697489}
   timer: 0
@@ -36316,6 +36357,7 @@ MonoBehaviour:
   MinUIRangeColor: {r: 1, g: 0, b: 0, a: 1}
   MaxUIRange: 26.5
   MaxUIRangeColor: {r: 0, g: 1, b: 0, a: 1}
+  rig: {fileID: 2975378078073832799}
 --- !u!4 &2975378078073832795
 Transform:
   m_ObjectHideFlags: 0
@@ -36993,7 +37035,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8ca8a3e47a899545968b45b6ff2f892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardback: {fileID: 0}
+  forwardback: {fileID: 2975378078565774302}
   data: {fileID: 11400000, guid: 10070ee8dd6defb42b8713192669e86d, type: 2}
   player: {fileID: 29697489}
   timer: 0
@@ -37005,6 +37047,7 @@ MonoBehaviour:
   MinUIRangeColor: {r: 1, g: 0, b: 0, a: 1}
   MaxUIRange: 26.5
   MaxUIRangeColor: {r: 0, g: 1, b: 0, a: 1}
+  rig: {fileID: 2975378078565774298}
 --- !u!114 &2975378078565774304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37517,7 +37560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8ca8a3e47a899545968b45b6ff2f892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardback: {fileID: 0}
+  forwardback: {fileID: 2975378079520650280}
   data: {fileID: 11400000, guid: 10070ee8dd6defb42b8713192669e86d, type: 2}
   player: {fileID: 29697489}
   timer: 0
@@ -37529,6 +37572,7 @@ MonoBehaviour:
   MinUIRangeColor: {r: 1, g: 0, b: 0, a: 1}
   MaxUIRange: 26.5
   MaxUIRangeColor: {r: 0, g: 1, b: 0, a: 1}
+  rig: {fileID: 2975378079520650284}
 --- !u!23 &2975378079520650282
 MeshRenderer:
   m_ObjectHideFlags: 0

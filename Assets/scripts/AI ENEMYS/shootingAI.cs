@@ -20,12 +20,13 @@ public class shootingAI : MonoBehaviour
     [Range(20.0f, 50.0f)]
     public float MaxUIRange = 40.0f;
     public Color MaxUIRangeColor = Color.green;
-
+    private float timerdestory = 2f;
     private GameObject bullet;
     private Vector3 offset = new Vector3(0, 1, 0);
-
+    public Rigidbody rig;
+    public GameObject fadeout;
     private bool hasFire = false;
-
+    private float backwardsforce = -1000000f;
     // Start is called before the first frame update
    
 
@@ -50,14 +51,20 @@ public class shootingAI : MonoBehaviour
    }
 
 
-
+    public void Start()
+    {
+      
+    }
 
 
     void Update()
     {
-        if (test.health == 0)
+          if (test.health == 0)
         {
-           
+            rig.AddForce(transform.forward * backwardsforce * Time.deltaTime, ForceMode.Impulse);
+            
+            
+            Destroy(gameObject, timerdestory);
         }
 
 
