@@ -13,7 +13,7 @@ public class Opendoor : MonoBehaviour
     {
         if (health.health == 0)
         {
-           // test.;
+           
         }
     }
 }

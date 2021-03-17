@@ -12,6 +12,7 @@ public class effectobject : MonoBehaviour
     void Start()
     {
         Destroy(gameObject, time);
+        
     }
 
 

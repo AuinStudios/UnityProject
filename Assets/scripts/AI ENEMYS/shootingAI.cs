@@ -24,8 +24,9 @@ public class shootingAI : MonoBehaviour
     private GameObject bullet;
     private Vector3 offset = new Vector3(0, 1, 0);
     public Rigidbody rig;
-    public GameObject fadeout;
+    public GameObject spawneffect;
     private bool hasFire = false;
+    public ParticleSystem effect;
     private float backwardsforce = -1000000f;
     // Start is called before the first frame update
    
@@ -54,17 +55,23 @@ public class shootingAI : MonoBehaviour
     public void Start()
     {
       
+           
     }
+
+  
+
+  
 
 
     void Update()
     {
-          if (test.health == 0)
+        if (test.health == 0)
         {
             rig.AddForce(transform.forward * backwardsforce * Time.deltaTime, ForceMode.Impulse);
+            Destroy(gameObject);
+            Instantiate(effect, transform.position, spawneffect.transform.rotation);
             
             
-            Destroy(gameObject, timerdestory);
         }
 
 

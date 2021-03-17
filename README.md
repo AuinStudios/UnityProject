@@ -103,3 +103,6 @@ ___
 
 ## (16/3/2021)
 ### (added enemys get  boucned back when dieing )
+
+## (17/3/2021)
+### (finished enemys for now  trying to make the door open when enemys die)
