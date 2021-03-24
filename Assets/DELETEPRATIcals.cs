@@ -14,5 +14,10 @@ public class DELETEPRATIcals : MonoBehaviour
             Destroy(gameObject,destorytimer);
 
         }
+        if (gameObject.name == "ai death(Clone)")
+        {
+            Destroy(gameObject, destorytimer);
+
+        }
     }
 }

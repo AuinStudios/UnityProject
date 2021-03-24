@@ -68,8 +68,9 @@ public class shootingAI : MonoBehaviour
         if (test.health == 0)
         {
             rig.AddForce(transform.forward * backwardsforce * Time.deltaTime, ForceMode.Impulse);
+           
             Destroy(gameObject);
-            Instantiate(effect, transform.position, spawneffect.transform.rotation);
+            Instantiate(effect, transform.position, spawneffect.transform.rotation );
             
             
         }

@@ -26,6 +26,7 @@ TagManager:
   - canpickup
   - groundballgame
   - mover
+  - enemypos
   layers:
   - Default
   - TransparentFX

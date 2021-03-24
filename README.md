@@ -106,3 +106,9 @@ ___
 
 ## (17/3/2021)
 ### (finished enemys for now  trying to make the door open when enemys die)
+
+
+
+
+## (24/3/2021)
+### (i took abit of a  break i was very unmotvitated but i finally  made the door open when the enemys die alone i was so happy when i did it)
