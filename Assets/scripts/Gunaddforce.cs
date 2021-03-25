@@ -13,8 +13,8 @@ public class Gunaddforce : MonoBehaviour
         {
 
             // adds force from the transform of the banana looking direction
-            rig.AddForce(bulletgun.forward * scriptableobject.bulletforce);
-            rig.AddForce(bulletgun.forward * scriptableobject.bulletforce);
+            rig.AddForce(bulletgun.forward * scriptableobject.bulletforce * Time.deltaTime);
+            rig.AddForce(bulletgun.forward * scriptableobject.bulletforce * Time.deltaTime);
 
 
         }

@@ -112,3 +112,8 @@ ___
 
 ## (24/3/2021)
 ### (i took abit of a  break i was very unmotvitated but i finally  made the door open when the enemys die alone i was so happy when i did it)
+
+
+
+## (25/3/2021)
+### (i didnt do much today i only  changed the values of the gun because it did not have time delta so i puted it because i learnt from my ball game it really glitches if i dont add time delta so i was searching most of my codes to add time delta in it)

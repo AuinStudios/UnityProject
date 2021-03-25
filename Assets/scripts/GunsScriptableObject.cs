@@ -64,7 +64,7 @@ class gundataui : Editor
         myScript.Type = (guntype)EditorGUILayout.EnumPopup(myScript.Type);
         if (myScript.Type == guntype.melee)
             {
-                myScript.meeeleaddforce = EditorGUILayout.Slider("meeeleforce", myScript.meeeleaddforce, 0f, 200000f);
+                myScript.meeeleaddforce = EditorGUILayout.Slider("meeeleforce", myScript.meeeleaddforce, 0f, 2000000f);
             myScript.upforcemeele = EditorGUILayout.Slider("meeeleupforce", myScript.upforcemeele, 0f, 200000f);
         }
         if (myScript.Type != guntype.melee)

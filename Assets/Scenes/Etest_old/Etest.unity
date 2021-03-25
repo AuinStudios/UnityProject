@@ -28028,6 +28028,9 @@ MonoBehaviour:
   MinUIRangeColor: {r: 1, g: 0, b: 0, a: 1}
   MaxUIRange: 50
   MaxUIRangeColor: {r: 0, g: 1, b: 0, a: 1}
+  rig: {fileID: 2975378079813751263}
+  spawneffect: {fileID: 2975378079813751261}
+  effect: {fileID: 1881791155571813637, guid: c5fd08013d645ee458ef3755f2ea8964, type: 3}
 --- !u!4 &2975378079813751259
 Transform:
   m_ObjectHideFlags: 0
@@ -28264,7 +28267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75ffd6a2278331498ee2a857ee38a52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 5
 --- !u!114 &2975378080030943088
 MonoBehaviour:
   m_ObjectHideFlags: 0
