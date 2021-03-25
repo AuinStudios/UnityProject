@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6657112099605186533}
   - component: {fileID: 2905061670128512828}
   - component: {fileID: 4355978608496618456}
+  - component: {fileID: -8776105740263208079}
   m_Layer: 0
   m_Name: grenadelauncherammo
   m_TagString: gun
@@ -129,3 +130,19 @@ Rigidbody:
   m_Interpolate: 2
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-8776105740263208079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6657112099605186555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9daa72d147e6cbe48b47e2f363bf4a5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: no owner
+  normalDamage: 1
+  isBoss: 1
+  criticalDamage: 1

@@ -87,7 +87,7 @@ class gundataui : Editor
             {
                 // variables that the grenade launcher CAN NOT have
 
-                myScript.bulletforce = EditorGUILayout.Slider("bulletforce", myScript.bulletforce, 0f, 20000f);
+                myScript.bulletforce = EditorGUILayout.Slider("bulletforce", myScript.bulletforce, 0f, 400000f);
             }
 
             // variables that all weapons EXCEPT Melee can have

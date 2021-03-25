@@ -6,7 +6,7 @@ using TMPro;
 
 public class shootingAI : MonoBehaviour
 {
-    public Transform forwardback;
+
     public EnemyData data;
     public GameObject player;
     public float timer = 0;
@@ -27,7 +27,7 @@ public class shootingAI : MonoBehaviour
     public GameObject spawneffect;
     private bool hasFire = false;
     public ParticleSystem effect;
-    private float backwardsforce = -1000000f;
+    
     // Start is called before the first frame update
    
 
@@ -67,8 +67,7 @@ public class shootingAI : MonoBehaviour
     {
         if (test.health == 0)
         {
-            rig.AddForce(transform.forward * backwardsforce * Time.deltaTime, ForceMode.Impulse);
-           
+          
             Destroy(gameObject);
             Instantiate(effect, transform.position, spawneffect.transform.rotation );
             
