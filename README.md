@@ -117,3 +117,9 @@ ___
 
 ## (25/3/2021)
 ### (i didnt do much today i only  changed the values of the gun because it did not have time delta so i puted it because i learnt from my ball game it really glitches if i dont add time delta so i was searching most of my codes to add time delta in it)
+
+
+
+
+## (28/3/2021)
+### (i cannot find a way to fix this huge bug the script is from scriptableobject and its from the editor i cannot figure out how to fix this i spented like 3-4 hours trying to fix it my brain just really hurts cant do anything else)

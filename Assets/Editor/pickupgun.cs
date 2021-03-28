@@ -22,13 +22,7 @@ public class pickupgun : MonoBehaviour
     //public GameObject yes;
     public TextMeshProUGUI ammoui;
     
-     void Awake()
-    {
-            //popup.text = scriptableobject2.Name + "\n";
-            //popup.transform.position = yes.transform.position;
-        
-        
-    }
+ 
 
     
     private void Start()
@@ -55,7 +49,7 @@ public class pickupgun : MonoBehaviour
     {
         //Check if player is in range and "E" is pressed
         Vector3 distanceToPlayer = player.position - transform.position;
-        if (!equipped && distanceToPlayer.magnitude <= pickUpRange && Input.GetKeyDown(KeyCode.E) && !slotFull) PickUp();
+        if (!equipped && distanceToPlayer.magnitude <= pickUpRange && Input.GetKeyDown(KeyCode.E)) PickUp();
 
         //Drop if equipped and "Q" is pressed
         if (equipped && Input.GetKeyDown(KeyCode.Q)) Drop();

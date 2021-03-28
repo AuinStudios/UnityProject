@@ -111,8 +111,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equip: {fileID: 6657112099605186555}
-  blowtimer: 3
-  scriptableobject: {fileID: 11400000, guid: 06910d1f6dd8b8c4482a413c3e6f6f23, type: 2}
+  blowtimer: 2
+  scriptableobject: {fileID: 11400000, guid: f418f805647cb32409786e383d34fc77, type: 2}
   impacteffect: {fileID: 6890023512862090658, guid: 19a1a11daae0de54fbc570c2564b4121, type: 3}
 --- !u!54 &4355978608496618456
 Rigidbody:
