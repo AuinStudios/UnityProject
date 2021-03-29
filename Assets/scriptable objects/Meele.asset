@@ -9,26 +9,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fac05947878399448b007c2e72fa563, type: 3}
-  m_Name: GunScriptableobject
+  m_Script: {fileID: 11500000, guid: 648c455ae647f834fae57ed6dd6b5703, type: 3}
+  m_Name: Meele
   m_EditorClassIdentifier: 
   Name: weapon
-  Type: 0
+  Type: 2
   NormalDamage: 5
   CriticalDamage: 10
   firerate: 1
-  Range: 200
+  Range: 60
   Reloadtime: 4
-  maxammo: 5
-  currentammo: 3
+  maxammo: 50
+  currentammo: 1
   impactforce: 6000
   nextimetofire: 1
-  weaponPrefab: {fileID: 3666884231216940497, guid: db6ea9f6d0dc718489d207b84e08612a, type: 3}
+  weaponPrefab: {fileID: 0}
   hoverText: Press E to pick up
   hoverVisibleDistance: 4
   explosionRange: 5
   uppowerexplosion: 1
-  powerofexplosion: 300
+  powerofexplosion: 200
   playersexplosionforce: 400
-  playersupforce: 1
+  playersupforce: 0
   grenades: 5
+  meeeleaddforce: 10000
+  upforcemeele: 6000
+  bulletforce: 10000

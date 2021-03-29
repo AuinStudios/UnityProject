@@ -7,7 +7,6 @@ public class Meelesystem : MonoBehaviour
     public Animator animateboi;
     public Transform ye;
    public  Rigidbody rig;
-    public ParticleSystem effects;
     public GunsScriptableObject scriptableobject;
     
 

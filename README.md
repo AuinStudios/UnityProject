@@ -123,3 +123,20 @@ ___
 
 ## (28/3/2021)
 ### (i cannot find a way to fix this huge bug the script is from scriptableobject and its from the editor i cannot figure out how to fix this i spented like 3-4 hours trying to fix it my brain just really hurts cant do anything else)
+
+
+
+
+## (30/3/2021)
+### (I FINALLY FIXED THE SCRIPTABLEOBJECT ALONE W00000000000000000 AND  EVERYTHING WORKS apart from the  grenades not explodeing in impact)
+
+
+
+
+
+
+
+
+
+
+
