@@ -32,6 +32,6 @@ MonoBehaviour:
   playersexplosionforce: 400
   playersupforce: 0
   grenades: 5
-  meeeleaddforce: 10000
-  upforcemeele: 6000
-  bulletforce: 10000
+  meeeleaddforce: 1500000
+  upforcemeele: 150000
+  bulletforce: 4000000

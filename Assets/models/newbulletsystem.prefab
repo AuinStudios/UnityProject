@@ -116,8 +116,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.008, y: 0.0079999985, z: 0.0336475}
-  m_Center: {x: -1.1146105e-16, y: 0, z: 0.009910313}
+  m_Size: {x: 0.008, y: 0.0079999985, z: 0.034269895}
+  m_Center: {x: -6.8146024e-17, y: 0, z: 0.012051399}
 --- !u!114 &5780565180198476823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,7 +162,6 @@ MonoBehaviour:
   timer: 5
   impacteffect: {fileID: 2432971450539032540, guid: 8dd3cd17e5609ff48be55ccfab465de1, type: 3}
   worpls: {fileID: 2100000, guid: 2326f7cc2a864af4f99910da3d7f9c8a, type: 2}
-  test: {fileID: 2100000, guid: cbd1bbe087dfd70419293eeba8c1edb8, type: 2}
 --- !u!1 &7562898312782281863
 GameObject:
   m_ObjectHideFlags: 0

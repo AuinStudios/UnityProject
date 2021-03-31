@@ -37,9 +37,9 @@ public class GunsScriptableObject : ScriptableObject
     public float playersexplosionforce = 400f;
     public float playersupforce = 0f;
     public float grenades = 5f;
-    public float meeeleaddforce = 10000f;
-    public float upforcemeele = 6000f;
-    public float bulletforce = 10000f;
+    public float meeeleaddforce = 1500000f;
+    public float upforcemeele = 150000f;
+    public float bulletforce = 4000000f;
 
 }
 

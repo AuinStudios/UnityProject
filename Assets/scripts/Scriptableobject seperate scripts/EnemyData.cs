@@ -13,7 +13,7 @@ public enum EnemyType
 public class EnemyData : ScriptableObject
     {
         public string Name;
-        public int Health;
+        public float Health;
         public EnemyType Type;
 
         public bool isBoss = false;
@@ -22,7 +22,7 @@ public class EnemyData : ScriptableObject
 
         public int Range;
         public float ReloadTime = 5.0f;
-        public float ProjectileSpeed = 5000.0f;
+        public float ProjectileSpeed = 3000.0f;
         public Object ProjectilePrefab;
     }
 

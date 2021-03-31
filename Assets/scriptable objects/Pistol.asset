@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pistol
   m_EditorClassIdentifier: 
   Name: weapon
-  Type: 2
+  Type: 1
   NormalDamage: 5
   CriticalDamage: 10
   firerate: 1
@@ -32,6 +32,6 @@ MonoBehaviour:
   playersexplosionforce: 400
   playersupforce: 0
   grenades: 5
-  meeeleaddforce: 10000
-  upforcemeele: 6000
-  bulletforce: 10000
+  meeeleaddforce: 2000000
+  upforcemeele: 200000
+  bulletforce: 400000

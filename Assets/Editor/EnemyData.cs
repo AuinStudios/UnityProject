@@ -16,7 +16,7 @@ class EnemyDataCustomGUI : Editor
 
         // custom gui variables for out class
         myScript.Name = EditorGUILayout.TextField("Enemy Name: ", myScript.Name);
-        myScript.Health = EditorGUILayout.IntSlider("Enemy Health: ", myScript.Health, 5, 100);
+        myScript.Health = EditorGUILayout.Slider("Enemy Health: ", myScript.Health, 0, 100);
         myScript.NormalDamage = EditorGUILayout.IntSlider("Enemy Damage: ", myScript.NormalDamage, 1, 25);
 
 

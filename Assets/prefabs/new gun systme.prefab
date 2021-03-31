@@ -5007,7 +5007,7 @@ MonoBehaviour:
   player: {fileID: 0}
   gunContainer: {fileID: 0}
   fpsCam: {fileID: 0}
-  pickUpRange: 100
+  pickUpRange: 5
   dropForwardForce: 17
   dropUpwardForce: 15
   equipped: 0
@@ -5025,7 +5025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponPickupGUI: {fileID: 0}
-  gun: {fileID: 11400000, guid: 06910d1f6dd8b8c4482a413c3e6f6f23, type: 2}
+  gun: {fileID: 11400000, guid: eccea11ed9b6da1469a14c38c4583afc, type: 2}
 --- !u!114 &2906254512234221370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5042,6 +5042,6 @@ MonoBehaviour:
   bullet: {fileID: 5280939337676122326, guid: ac4a4c3c7cb60394c93372eec8433b0b, type: 3}
   gunboi: {fileID: 2635871066541165331}
   muzzleflash: {fileID: 2635871067513019840}
-  scriptableobject: {fileID: 11400000, guid: 06910d1f6dd8b8c4482a413c3e6f6f23, type: 2}
+  scriptableobject: {fileID: 11400000, guid: eccea11ed9b6da1469a14c38c4583afc, type: 2}
   isreloadi: 0
   guntext: {fileID: 0}
