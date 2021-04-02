@@ -6,10 +6,10 @@ using UnityEngine;
 public class PlayerHealthHandler : MonoBehaviour
 {
     [Range(10, 500)]
-    public int Health = 100;
+    public float Health = 100;
     public TextMeshProUGUI HealthText;
     public TextMeshProUGUI textcolorui;
-    int startingHealth;
+    float startingHealth;
     string enemyName;
 
 
@@ -18,7 +18,22 @@ public class PlayerHealthHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider coll)
     {
-         if (coll.gameObject.CompareTag("lava"))
+        if (coll.gameObject.tag == "explosiondamage")
+        {
+            BulletOwner bulletOwner = coll.gameObject.GetComponent<BulletOwner>();
+
+            if (bulletOwner.isBoss)
+            {
+                Health -= bulletOwner.normalDamage + bulletOwner.criticalDamage;
+            }
+            else
+            {
+                Health -= bulletOwner.normalDamage;
+            }
+
+
+        }
+        if (coll.gameObject.CompareTag("lava"))
         {
             BulletOwner bulletOwner = coll.gameObject.GetComponent<BulletOwner>();
 

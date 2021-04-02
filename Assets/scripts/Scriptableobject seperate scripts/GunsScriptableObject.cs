@@ -7,7 +7,8 @@ public enum guntype
 {// Variable that has multiple options
     grenadelauncher,
     pistol,
-    melee
+    melee,
+    auto
 }
 // This is the scriptable object Base variables
 [CreateAssetMenu(fileName = "GunScriptableobject", menuName = "gun/propertys", order = 1)]
@@ -17,7 +18,7 @@ public class GunsScriptableObject : ScriptableObject
 
 
     public string Name = "weapon";
-    public guntype Type = guntype.melee;
+    public guntype Type = guntype.auto;
     //----------------------------- variables for gun
     public int NormalDamage = 5;
     public int CriticalDamage = 10;

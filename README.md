@@ -139,6 +139,8 @@ ___
 
 
 
+## (2/4/2021)
+### (added damage to katana and grenadelauncher so they can damage enemys made a  very unefficent shotgun i didnt know how to make one and i didnt want to watcha n tutroial so i just made one that isnt efficent but works well and also added an auto rifle which is just changeing the fire rate )
 
 
 

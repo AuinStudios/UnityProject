@@ -32,6 +32,11 @@ class gundataui : Editor
                 myScript.meeeleaddforce = EditorGUILayout.Slider("meeeleforce", myScript.meeeleaddforce, 0f, 2000000f);
             myScript.upforcemeele = EditorGUILayout.Slider("meeeleupforce", myScript.upforcemeele, 0f, 200000f);
         }
+
+        if(myScript.Type == guntype.auto)
+        {
+            myScript.firerate = EditorGUILayout.Slider("Gun fire rate: ", myScript.firerate, 7f, 100.0f);
+        }
         if (myScript.Type != guntype.melee)
         
             

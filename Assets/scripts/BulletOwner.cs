@@ -3,7 +3,7 @@
 public class BulletOwner : MonoBehaviour
 {
     public string owner = "no owner";
-    public int normalDamage = 1;
+    public float normalDamage = 1;
     public bool isBoss = true;
-    public int criticalDamage = 1;
+    public float criticalDamage = 1;
 }

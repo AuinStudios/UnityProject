@@ -44,23 +44,56 @@ public class shootingAI : MonoBehaviour
            }
            else
            {
-               test.health =- bulletOwner.normalDamage;
+               test.health -= bulletOwner.normalDamage;
            }
    
          
-       } 
-   }
+       }
 
 
-    public void Start()
-    {
-      
-           
+
+
+
+        if (collision.gameObject.tag == "bananakatana")
+        {
+            BulletOwner bulletOwner = collision.gameObject.GetComponent<BulletOwner>();
+
+            if (bulletOwner.isBoss)
+            {
+                test.health -= bulletOwner.normalDamage + bulletOwner.criticalDamage;
+            }
+            else
+            {
+                test.health -= bulletOwner.normalDamage;
+            }
+
+
+        }
     }
 
-  
 
-  
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "explosiondamage")
+        {
+            BulletOwner bulletOwner = other.gameObject.GetComponent<BulletOwner>();
+
+            if (bulletOwner.isBoss)
+            {
+                test.health -= bulletOwner.normalDamage + bulletOwner.criticalDamage;
+            }
+            else
+            {
+                test.health -=bulletOwner.normalDamage;
+            }
+
+
+        }
+    }
+
+
+
+
 
 
     void Update()

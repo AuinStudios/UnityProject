@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2975378077956910392}
   - component: {fileID: 2975378077956910395}
   - component: {fileID: 2975378077956910397}
+  - component: {fileID: 2726076190743582551}
   m_Layer: 0
   m_Name: shooting ass hole
   m_TagString: enemy
@@ -151,16 +152,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8ca8a3e47a899545968b45b6ff2f892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 10070ee8dd6defb42b8713192669e86d, type: 2}
+  data: {fileID: 0}
   player: {fileID: 0}
   timer: 0
   uiText: {fileID: 2975378079122247079}
   enemyUIColor: {r: 0.098039225, g: 0.9960785, b: 0, a: 1}
+  test: {fileID: 0}
   isVisibleGizmo: 0
   MinUIRange: 8.75
   MinUIRangeColor: {r: 1, g: 0, b: 0, a: 1}
   MaxUIRange: 26.5
   MaxUIRangeColor: {r: 0, g: 1, b: 0, a: 1}
+  rig: {fileID: 0}
+  spawneffect: {fileID: 0}
+  effect: {fileID: 0}
+--- !u!114 &2726076190743582551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2975378077956910394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75ffd6a2278331498ee2a857ee38a52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &2975378078247230358
 GameObject:
   m_ObjectHideFlags: 0
