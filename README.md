@@ -150,3 +150,8 @@ ___
 
 ## (4/4/2021)
 ### (tried to make recoil but failed )
+
+
+
+## (7/4/2021)
+### (my cosin helped me improve the shotgun to be way better )

@@ -44,6 +44,12 @@ public class Gunexplosion : MonoBehaviour
             blow();
             
         }
+
+        if (collision.gameObject.CompareTag("CanPickUp"))
+        {
+            blow();
+
+        }
     }
 
 
