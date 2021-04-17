@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4580b74078cec74799a2b72d821210b, type: 3}
   m_Name: IDONTKNOW
   m_EditorClassIdentifier: 
-  Name: 
-  Health: 5
+  Name: Turret
+  Health: 100
   Type: 0
-  isBoss: 0
-  NormalDamage: 1
-  CriticalDamage: 0
-  Range: 10
+  isBoss: 1
+  NormalDamage: 25
+  CriticalDamage: 50
+  Range: 100
   ReloadTime: 5
-  ProjectileSpeed: 5000
-  ProjectilePrefab: {fileID: 0}
+  ProjectileSpeed: 3000
+  ProjectilePrefab: {fileID: 5280939337676122326, guid: ac4a4c3c7cb60394c93372eec8433b0b, type: 3}

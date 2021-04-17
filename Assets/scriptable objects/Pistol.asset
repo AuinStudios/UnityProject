@@ -12,26 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 648c455ae647f834fae57ed6dd6b5703, type: 3}
   m_Name: Pistol
   m_EditorClassIdentifier: 
-  Name: weapon
+  Name: 
   Type: 1
-  NormalDamage: 5
-  CriticalDamage: 10
+  NormalDamage: 1
+  CriticalDamage: 0
   firerate: 1
   Range: 60
-  Reloadtime: 4
-  maxammo: 50
-  currentammo: 1
-  impactforce: 6000
-  nextimetofire: 1
+  Reloadtime: 1.7
+  maxammo: 40
+  currentammo: 0
+  impactforce: 0
+  nextimetofire: 0
   weaponPrefab: {fileID: 0}
-  hoverText: Press E to pick up
-  hoverVisibleDistance: 4
-  explosionRange: 5
-  uppowerexplosion: 1
-  powerofexplosion: 200
-  playersexplosionforce: 400
+  hoverText: 
+  hoverVisibleDistance: 5
+  explosionRange: 1
+  uppowerexplosion: 0
+  powerofexplosion: 0
+  playersexplosionforce: 1
   playersupforce: 0
-  grenades: 5
-  meeeleaddforce: 2000000
-  upforcemeele: 200000
+  grenades: 0
+  meeeleaddforce: 0
+  upforcemeele: 0
   bulletforce: 400000

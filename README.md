@@ -155,3 +155,10 @@ ___
 
 ## (7/4/2021)
 ### (my cosin helped me improve the shotgun to be way better )
+
+
+
+
+
+## (17/4/2021)
+### (my cosin helped me make the scriptableobjects less messy and more effecitn and maybe will do th pickupsystem later today)

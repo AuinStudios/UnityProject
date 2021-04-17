@@ -1,7 +1,4 @@
-﻿
- using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public enum guntype
 {// Variable that has multiple options
@@ -10,37 +7,34 @@ public enum guntype
     melee,
     auto
 }
+
 // This is the scriptable object Base variables
-[CreateAssetMenu(fileName = "GunScriptableobject", menuName = "gun/propertys", order = 1)]
+[CreateAssetMenu(fileName = "GunScriptableobject", menuName = "Gun/Properties", order = 1)]
 public class GunsScriptableObject : ScriptableObject
 {
-
-
-
-    public string Name = "weapon";
-    public guntype Type = guntype.auto;
+    public string Name;
+    public guntype Type;
     //----------------------------- variables for gun
-    public int NormalDamage = 5;
-    public int CriticalDamage = 10;
-    public float firerate = 1.0f;
-    public float Range = 60f;
-    public float Reloadtime = 4.0f;
-    public int maxammo = 50;
-    public int currentammo = 1;
-    public int impactforce = 6000;
-    public float nextimetofire = 1.0f;
-    public Object weaponPrefab = null;
-    public string hoverText = "Press E to pick up";
-    public float hoverVisibleDistance = 4.0f;
-    public float explosionRange = 5.0f;
-    public float uppowerexplosion = 1.0f;
-    public float powerofexplosion = 200f;
-    public float playersexplosionforce = 400f;
-    public float playersupforce = 0f;
-    public float grenades = 5f;
-    public float meeeleaddforce = 1500000f;
-    public float upforcemeele = 150000f;
-    public float bulletforce = 4000000f;
-
+    public int NormalDamage;
+    public int CriticalDamage;
+    public float firerate;
+    public float Range;
+    public float Reloadtime;
+    public int maxammo;
+    public int currentammo;
+    public int impactforce;
+    public float nextimetofire;
+    public Object weaponPrefab;
+    public string hoverText;
+    public float hoverVisibleDistance;
+    public float explosionRange;
+    public float uppowerexplosion;
+    public float powerofexplosion;
+    public float playersexplosionforce;
+    public float playersupforce;
+    public float grenades;
+    public float meeeleaddforce;
+    public float upforcemeele;
+    public float bulletforce;
 }
 

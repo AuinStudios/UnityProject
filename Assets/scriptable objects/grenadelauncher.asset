@@ -12,26 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 648c455ae647f834fae57ed6dd6b5703, type: 3}
   m_Name: Grenadelauncher
   m_EditorClassIdentifier: 
-  Name: weapon
-  Type: 2
-  NormalDamage: 5
-  CriticalDamage: 10
-  firerate: 1
+  Name: 
+  Type: 0
+  NormalDamage: 1
+  CriticalDamage: 0
+  firerate: 0.5
   Range: 60
-  Reloadtime: 4
-  maxammo: 50
-  currentammo: 1
-  impactforce: 6000
-  nextimetofire: 1
+  Reloadtime: 1
+  maxammo: 10
+  currentammo: 0
+  impactforce: 0
+  nextimetofire: 0
   weaponPrefab: {fileID: 0}
-  hoverText: Press E to pick up
-  hoverVisibleDistance: 4
-  explosionRange: 5
+  hoverText: 
+  hoverVisibleDistance: 5
+  explosionRange: 6.44
   uppowerexplosion: 1
-  powerofexplosion: 200
-  playersexplosionforce: 400
-  playersupforce: 0
-  grenades: 5
-  meeeleaddforce: 10000
-  upforcemeele: 6000
-  bulletforce: 10000
+  powerofexplosion: 600
+  playersexplosionforce: 700
+  playersupforce: 1
+  grenades: 0
+  meeeleaddforce: 0
+  upforcemeele: 0
+  bulletforce: 0
