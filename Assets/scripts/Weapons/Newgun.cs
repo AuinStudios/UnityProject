@@ -10,7 +10,7 @@ public class Newgun : MonoBehaviour
     public Transform spawnpoint;
     public GameObject bullet;
     public pickupgun gunboi;
-    private bombpickup bombboi;
+
     // ------------------------------------------
     public ParticleSystem muzzleflash;
     public GunsScriptableObject scriptableobject;

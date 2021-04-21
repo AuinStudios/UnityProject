@@ -12,20 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 648c455ae647f834fae57ed6dd6b5703, type: 3}
   m_Name: autogun
   m_EditorClassIdentifier: 
-  Name: 
-  Type: 0
+  Name: Ak 47
+  Type: 3
   NormalDamage: 1
   CriticalDamage: 0
-  firerate: 0.1
-  Range: 1
+  firerate: 8
+  Range: 70
   Reloadtime: 1
-  maxammo: 1
+  maxammo: 100
   currentammo: 0
   impactforce: 0
   nextimetofire: 0
-  weaponPrefab: {fileID: 0}
-  hoverText: 
-  hoverVisibleDistance: 1
+  weaponPrefab: {fileID: 4000969147605217595, guid: 133f60c50a7a2eb4889d075333e54632, type: 3}
+  hoverText: Press e to pickup gun
+  hoverVisibleDistance: 5
   explosionRange: 1
   uppowerexplosion: 0
   powerofexplosion: 0
@@ -34,4 +34,4 @@ MonoBehaviour:
   grenades: 0
   meeeleaddforce: 0
   upforcemeele: 0
-  bulletforce: 0
+  bulletforce: 200000

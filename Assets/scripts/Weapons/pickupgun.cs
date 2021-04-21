@@ -9,7 +9,8 @@ using TMPro;
 
 public class pickupgun : MonoBehaviour
 {
-    public Newgun gunscript;
+    public static bool color;
+    public Shotgun gunscript;
     public Rigidbody rb;
     public BoxCollider coll;
     public Transform player, gunContainer, fpsCam;
@@ -33,6 +34,7 @@ public class pickupgun : MonoBehaviour
             gunscript.enabled = false;
             rb.isKinematic = false;
             coll.isTrigger = false;
+            slotFull = false;
         }
         if (equipped)
         {
@@ -43,28 +45,31 @@ public class pickupgun : MonoBehaviour
         }
     }
 
-             
-
+   
     private void Update()
     {
+        if (color == false)
+        {
+            ammoui.color = new Color(0, 0, 0, 0);
+        }
+        if (color == true)
+        {
+            ammoui.color = new Color(233, 210, 21, 255);
+        }
         //Check if player is in range and "E" is pressed
         Vector3 distanceToPlayer = player.position - transform.position;
-        if (!equipped && distanceToPlayer.magnitude <= pickUpRange && Input.GetKeyDown(KeyCode.E)) PickUp();
-
-        //Drop if equipped and "Q" is pressed
-        if (equipped && Input.GetKeyDown(KeyCode.Q)) Drop();
-
-        
-
-
+        if (!equipped && distanceToPlayer.magnitude <= pickUpRange && slotFull == false && Input.GetKeyDown(KeyCode.E) ) PickUp() ;
      
+        //Drop if equipped and "Q" is pressed
+        if (equipped && slotFull == true && Input.GetKeyDown(KeyCode.Q)) Drop();
+
     }
 
-    private void PickUp()
+    public void PickUp()
     {
         equipped = true;
         slotFull = true;
-        ammoui.color = new Color(233, 210, 21, 255);
+        color = true;
         //Make weapon a child of the camera and move it to default position
         transform.SetParent(gunContainer);
         transform.localPosition = Vector3.zero;
@@ -87,11 +92,11 @@ public class pickupgun : MonoBehaviour
 
     }
 
-    private void Drop()
+    public void Drop()
     {
         equipped = false;
         slotFull = false;
-        ammoui.color = new Color(0, 0, 0, 0);
+        color = false;
         //Set parent to null
         transform.SetParent(null);
 

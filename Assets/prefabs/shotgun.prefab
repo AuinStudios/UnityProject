@@ -4885,7 +4885,7 @@ GameObject:
   - component: {fileID: 6126746255424259185}
   - component: {fileID: 7043060023819608354}
   - component: {fileID: 6469414901457010728}
-  - component: {fileID: 6469414901457010729}
+  - component: {fileID: 4259794543048811636}
   m_Layer: 0
   m_Name: shotgun
   m_TagString: gun
@@ -5020,12 +5020,12 @@ MonoBehaviour:
   bulletCount: 4
   spreadAmount: 0.25
   bulletSpeedVariation: 1.5
-  gunboi: {fileID: 0}
+  gunboi: {fileID: 4259794543048811636}
   muzzleflash: {fileID: 6126746255192871596}
   scriptableobject: {fileID: 11400000, guid: 09752fd41d1cd6b4e822d9b4e0d6152d, type: 2}
   isreloadi: 0
   guntext: {fileID: 0}
---- !u!114 &6469414901457010729
+--- !u!114 &4259794543048811636
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5034,7 +5034,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6469414901457010775}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0724d455443ed49438d32600008840ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 9420c289207dfcd4c82d48f371ecd4ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gunscript: {fileID: 6469414901457010728}
@@ -5043,8 +5043,8 @@ MonoBehaviour:
   player: {fileID: 0}
   gunContainer: {fileID: 0}
   fpsCam: {fileID: 0}
-  pickUpRange: 4
+  pickUpRange: 5
   dropForwardForce: 17
-  dropUpwardForce: 15
+  dropUpwardForce: 17
   equipped: 0
   ammoui: {fileID: 0}

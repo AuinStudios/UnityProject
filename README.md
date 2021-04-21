@@ -162,3 +162,8 @@ ___
 
 ## (17/4/2021)
 ### (my cosin helped me make the scriptableobjects less messy and more effecitn and maybe will do th pickupsystem later today)
+
+
+
+## (21/4/2021)
+### (Fixed  mutlple guns being picked up and fixed the entire ui not showing  and also made the 6  diffrent gun scripts into only 2 scripts makeing it more efficent i got so happy when i did that)

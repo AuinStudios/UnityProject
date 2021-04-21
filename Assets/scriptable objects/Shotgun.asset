@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 648c455ae647f834fae57ed6dd6b5703, type: 3}
   m_Name: Shotgun
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Shotgun
   Type: 1
   NormalDamage: 1
   CriticalDamage: 0
-  firerate: 0.6
+  firerate: 0.5
   Range: 50
-  Reloadtime: 5
-  maxammo: 100
+  Reloadtime: 4
+  maxammo: 50
   currentammo: 0
   impactforce: 0
   nextimetofire: 0
-  weaponPrefab: {fileID: 0}
-  hoverText: 
+  weaponPrefab: {fileID: 6469414901457010775, guid: 1e5933a30a32bd64da6854701a681ae8, type: 3}
+  hoverText: Press e to pickup gun
   hoverVisibleDistance: 5
   explosionRange: 1
   uppowerexplosion: 0

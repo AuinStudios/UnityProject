@@ -11,6 +11,7 @@ public class Shotgun : MonoBehaviour
 
     // variables
     // transforms and vectors shit
+    
     public GameObject bullet;
     public Transform bulletSpawnPoint;
     [Range(1,30)]
@@ -78,8 +79,7 @@ public class Shotgun : MonoBehaviour
             StartCoroutine(Reload());
             return;
         }
-
-
+       
 
         if (gunboi == enabled && Input.GetKey(KeyCode.Mouse0) && Time.time >= nextimetofire && scriptableobject.currentammo >= bulletCount)
         {

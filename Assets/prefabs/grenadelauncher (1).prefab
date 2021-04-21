@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 862332962585589448}
   - component: {fileID: 862332962585589451}
   - component: {fileID: 4561290754395673496}
-  - component: {fileID: 519873918487786219}
-  - component: {fileID: 8877547170403566289}
+  - component: {fileID: 8309645144002514466}
+  - component: {fileID: 1241132886208374003}
   m_Layer: 0
   m_Name: grenadelauncher (1)
   m_TagString: gun
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponPickupGUI: {fileID: 0}
   gun: {fileID: 11400000, guid: f418f805647cb32409786e383d34fc77, type: 2}
---- !u!114 &519873918487786219
+--- !u!114 &8309645144002514466
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,39 +143,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 519873918487786221}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f91f4c15594d26143b025749308e37d6, type: 3}
+  m_Script: {fileID: 11500000, guid: b5ee946c98f7bff47bb8160b1a2e2fc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunscript: {fileID: 8877547170403566289}
+  bullet: {fileID: 6657112099605186555, guid: 659dbfb3d815aac4e87597455a57c485, type: 3}
+  bulletSpawnPoint: {fileID: 7704464543187441869}
+  bulletCount: 1
+  spreadAmount: 0.01
+  bulletSpeedVariation: 1.3
+  gunboi: {fileID: 1241132886208374003}
+  muzzleflash: {fileID: 862332961750212630}
+  scriptableobject: {fileID: 11400000, guid: f418f805647cb32409786e383d34fc77, type: 2}
+  isreloadi: 0
+  guntext: {fileID: 0}
+--- !u!114 &1241132886208374003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519873918487786221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9420c289207dfcd4c82d48f371ecd4ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunscript: {fileID: 8309645144002514466}
   rb: {fileID: 862332962585589448}
   coll: {fileID: 862332962585589451}
   player: {fileID: 0}
   gunContainer: {fileID: 0}
   fpsCam: {fileID: 0}
-  ammoui: {fileID: 0}
-  pickUpRange: 10
+  pickUpRange: 5
   dropForwardForce: 17
-  dropUpwardForce: 15
+  dropUpwardForce: 17
   equipped: 0
---- !u!114 &8877547170403566289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519873918487786221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db48080fe36b5594b8c6242abf573ca1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 7704464543187441869}
-  bullet: {fileID: 6657112099605186555, guid: 659dbfb3d815aac4e87597455a57c485, type: 3}
-  bomboi: {fileID: 519873918487786219}
-  muzzleflash: {fileID: 862332961750212630}
-  scriptableobject: {fileID: 11400000, guid: f418f805647cb32409786e383d34fc77, type: 2}
-  isreloadi: 0
-  guntext: {fileID: 0}
+  ammoui: {fileID: 0}
 --- !u!1 &862332961750212625
 GameObject:
   m_ObjectHideFlags: 0
