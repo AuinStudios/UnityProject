@@ -5,16 +5,12 @@ using UnityEngine.AI;
 
 public class r : MonoBehaviour
 {
-    public float time = 3f;
-
+    
     
     public void Update()
     {
 
-        if (gameObject.tag == "pressed")
-        {
-            Destroy(gameObject, time);
-        }
+     
 
 
         if (transform.position.y <= -90)

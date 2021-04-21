@@ -48,6 +48,12 @@ public class pickupgun : MonoBehaviour
    
     private void Update()
     {
+
+        if (slotFull == false && transform.position.y <= -90)
+        {
+            transform.position = new Vector3(0, 0, 0);
+        }
+
         if (color == false)
         {
             ammoui.color = new Color(0, 0, 0, 0);

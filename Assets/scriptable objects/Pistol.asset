@@ -17,14 +17,14 @@ MonoBehaviour:
   NormalDamage: 1
   CriticalDamage: 0
   firerate: 1
-  Range: 60
+  Range: 70
   Reloadtime: 2
-  maxammo: 10
+  maxammo: 30
   currentammo: 0
   impactforce: 0
   nextimetofire: 0
   weaponPrefab: {fileID: 2906254512234221371, guid: d4d320a609608df41979096fd341406a, type: 3}
-  hoverText: Press e to pickup gun
+  hoverText: Press e to pick up
   hoverVisibleDistance: 5
   explosionRange: 1
   uppowerexplosion: 0

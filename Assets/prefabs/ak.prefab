@@ -148,7 +148,7 @@ MonoBehaviour:
   bullet: {fileID: 599913207298766121, guid: 09bf3a042434f5b43adc18bbd21cbf6f, type: 3}
   bulletSpawnPoint: {fileID: 4271424468871635906}
   bulletCount: 1
-  spreadAmount: 0.01
+  spreadAmount: 0.15
   bulletSpeedVariation: 1.5
   gunboi: {fileID: 1454159574406545801}
   muzzleflash: {fileID: 4271424468871635904}

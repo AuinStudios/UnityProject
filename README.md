@@ -167,3 +167,8 @@ ___
 
 ## (21/4/2021)
 ### (Fixed  mutlple guns being picked up and fixed the entire ui not showing  and also made the 6  diffrent gun scripts into only 2 scripts makeing it more efficent i got so happy when i did that)
+
+
+1) made the trail bullet look better
+2) fixed   guns falling into the void forever and when going below 90 the gunw ould teleport out  of ur hand 
+3) fixed bullets just teleporting back to the spawn when going below -90
