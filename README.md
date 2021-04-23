@@ -172,3 +172,12 @@ ___
 1) made the trail bullet look better
 2) fixed   guns falling into the void forever and when going below 90 the gunw ould teleport out  of ur hand 
 3) fixed bullets just teleporting back to the spawn when going below -90
+
+
+
+## (21/4/2021)
+### (watched an tutorial on how to make an weapon sway which im not proud of but i learneded abit more about inputs and  quantrions)
+
+
+
+
