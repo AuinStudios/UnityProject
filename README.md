@@ -181,3 +181,7 @@ ___
 
 
 
+## (26/4/2021)
+### (makeing my own pick up katana script)
+
+
