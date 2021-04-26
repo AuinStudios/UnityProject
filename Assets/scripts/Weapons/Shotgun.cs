@@ -12,16 +12,9 @@ public class Shotgun : MonoBehaviour
     // variables
     // transforms and vectors shit
     
-    public GameObject bullet;
     public Transform bulletSpawnPoint;
-    [Range(1,30)]
-    public int bulletCount = 1;
-    [Range(0.01f, 0.25f)]
-    public float spreadAmount = 0.01f;
-    [Range(1.0f, 1.5f)]
-    public float bulletSpeedVariation = 1.0f;
-
-    public pickupgun gunboi;
+    private pickupgun gunboi;
+    
     // ------------------------------------------
     public ParticleSystem muzzleflash;
     public GunsScriptableObject scriptableobject;
@@ -29,15 +22,14 @@ public class Shotgun : MonoBehaviour
     private float nextimetofire = 1f;
     // --------------------------------------------
 
-
     public TextMeshProUGUI guntext;
 
     // -------------------------------------------- 
     IEnumerator Reload()
     {
         isreloadi = true;
-        scriptableobject.currentammo = scriptableobject.maxammo;
-        yield return new WaitForSeconds(scriptableobject.Reloadtime);
+        scriptableobject.currentAmmo = scriptableobject.maxAmmo;
+        yield return new WaitForSeconds(scriptableobject.reloadTime);
         isreloadi = false;
     }
 
@@ -48,20 +40,24 @@ public class Shotgun : MonoBehaviour
 
     void Awake()
     {
-        scriptableobject.currentammo = scriptableobject.maxammo;
+        scriptableobject.currentAmmo = scriptableobject.maxAmmo;
 
         if (bulletSpawnPoint == null)
         {
             bulletSpawnPoint = this.transform;
         }
+
+        gunboi = this.GetComponent<pickupgun>();
     }
+
+
     // ---------------------------------------------------------------------------------------------------
     // Update is called once per frame
     void Update()
     {
 
         // clamps the  ammo to never go down 0
-        guntext.text = Mathf.Clamp((float)scriptableobject.currentammo, 0, float.MaxValue).ToString();
+        guntext.text = Mathf.Clamp((float)scriptableobject.currentAmmo, 0, float.MaxValue).ToString();
 
 
 
@@ -74,20 +70,20 @@ public class Shotgun : MonoBehaviour
 
         if (isreloadi)
             return;
-        if (scriptableobject.currentammo == 0)
+        if (scriptableobject.currentAmmo == 0)
         {
             StartCoroutine(Reload());
             return;
         }
        
 
-        if (gunboi == enabled && Input.GetKey(KeyCode.Mouse0) && Time.time >= nextimetofire && scriptableobject.currentammo >= bulletCount)
+        if (gunboi == enabled && Input.GetKey(KeyCode.Mouse0) && Time.time >= nextimetofire && scriptableobject.currentAmmo >= scriptableobject.bulletCount)
         {
-            nextimetofire = Time.time + 1f / scriptableobject.firerate;
+            nextimetofire = Time.time + 1f / scriptableobject.fireRate;
 
             launchboi();
 
-            scriptableobject.currentammo -= bulletCount;
+            scriptableobject.currentAmmo -= scriptableobject.bulletCount;
 
 
         }
@@ -97,14 +93,28 @@ public class Shotgun : MonoBehaviour
     {
         muzzleflash.Play();
 
-        for (int i = 0; i < bulletCount; i++)
+        for (int i = 0; i < scriptableobject.bulletCount; i++)
         {
-            Vector3 spawnPosition = new Vector3(Random.Range(bulletSpawnPoint.position.x - spreadAmount, bulletSpawnPoint.position.x + spreadAmount),
-                                                Random.Range(bulletSpawnPoint.position.y - spreadAmount, bulletSpawnPoint.position.y + spreadAmount),
-                                                Random.Range(bulletSpawnPoint.position.z - spreadAmount, bulletSpawnPoint.position.z + spreadAmount));
+            Vector3 spawnPosition;
 
-            GameObject newBullet = Instantiate(bullet, spawnPosition, bulletSpawnPoint.gameObject.transform.rotation);
-            newBullet.GetComponent<Rigidbody>().AddForce(bulletSpawnPoint.forward * scriptableobject.Range * Random.Range(1.0f, bulletSpeedVariation), ForceMode.Impulse);
+            if (scriptableobject.canSpread == true)
+            {
+                spawnPosition = new Vector3(Random.Range(bulletSpawnPoint.position.x - scriptableobject.spreadAmount, bulletSpawnPoint.position.x + scriptableobject.spreadAmount),
+                                            Random.Range(bulletSpawnPoint.position.y - scriptableobject.spreadAmount, bulletSpawnPoint.position.y + scriptableobject.spreadAmount),
+                                            Random.Range(bulletSpawnPoint.position.z - scriptableobject.spreadAmount, bulletSpawnPoint.position.z + scriptableobject.spreadAmount));
+                
+                GameObject newBullet = (GameObject)Instantiate(scriptableobject.bullet, spawnPosition, bulletSpawnPoint.gameObject.transform.rotation);
+                newBullet.GetComponent<Rigidbody>().AddForce(bulletSpawnPoint.forward * scriptableobject.range * Random.Range(1.0f, scriptableobject.bulletSpreadVariation), ForceMode.Impulse);
+            }
+            else
+            {
+                spawnPosition = new Vector3(Random.Range(bulletSpawnPoint.position.x, bulletSpawnPoint.position.x),
+                                            Random.Range(bulletSpawnPoint.position.y, bulletSpawnPoint.position.y),
+                                            Random.Range(bulletSpawnPoint.position.z, bulletSpawnPoint.position.z));
+
+                GameObject newBullet = (GameObject)Instantiate(scriptableobject.bullet, spawnPosition, bulletSpawnPoint.gameObject.transform.rotation);
+                newBullet.GetComponent<Rigidbody>().AddForce(bulletSpawnPoint.forward * scriptableobject.range, ForceMode.Impulse);
+            }
         }
     }
 

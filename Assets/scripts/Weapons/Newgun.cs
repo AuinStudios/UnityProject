@@ -27,8 +27,8 @@ public class Newgun : MonoBehaviour
     IEnumerator Reload()
     {
         isreloadi = true;
-        scriptableobject.currentammo = scriptableobject.maxammo;
-        yield return new WaitForSeconds(scriptableobject.Reloadtime);
+        scriptableobject.currentAmmo = scriptableobject.maxAmmo;
+        yield return new WaitForSeconds(scriptableobject.reloadTime);
         isreloadi = false;
     }
 
@@ -39,7 +39,7 @@ public class Newgun : MonoBehaviour
 
     void Start()
     {
-        scriptableobject.currentammo = scriptableobject.maxammo;
+        scriptableobject.currentAmmo = scriptableobject.maxAmmo;
         
 
     }
@@ -49,7 +49,7 @@ public class Newgun : MonoBehaviour
     {
 
         // clamps the  ammo to never go down 0
-        guntext.text = Mathf.Clamp((float)scriptableobject.currentammo, 0, float.MaxValue).ToString();
+        guntext.text = Mathf.Clamp((float)scriptableobject.currentAmmo, 0, float.MaxValue).ToString();
 
 
 
@@ -59,7 +59,7 @@ public class Newgun : MonoBehaviour
 
         if (isreloadi)
             return;
-        if (scriptableobject.currentammo == 0)
+        if (scriptableobject.currentAmmo == 0)
         {
             StartCoroutine(Reload());
             return;
@@ -69,11 +69,11 @@ public class Newgun : MonoBehaviour
 
         if (gunboi == enabled && Input.GetKey(KeyCode.Mouse0) && Time.time >= nextimetofire)
         {
-            nextimetofire = Time.time + 1f / scriptableobject.firerate;
+            nextimetofire = Time.time + 1f / scriptableobject.fireRate;
 
             launchboi();
 
-            scriptableobject.currentammo -= 1;
+            scriptableobject.currentAmmo -= 1;
 
 
         }
@@ -82,7 +82,7 @@ public class Newgun : MonoBehaviour
     {
         muzzleflash.Play();
         GameObject grenadespawn = Instantiate(bullet, spawnpoint.position, spawnpoint.rotation);
-        grenadespawn.GetComponent<Rigidbody>().AddForce(spawnpoint.forward * scriptableobject.Range, ForceMode.Impulse);
+        grenadespawn.GetComponent<Rigidbody>().AddForce(spawnpoint.forward * scriptableobject.range, ForceMode.Impulse);
         
     }
     // ---------------------------------------------------------------------------------------------------

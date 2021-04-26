@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEditor;
 
 // ------------------------------------------------------
@@ -10,7 +12,7 @@ public class GunScriptableObjectEditor : Editor
     GunsScriptableObject gunsScriptable;
 
     private void OnEnable()
-    {
+    { 
         gunsScriptable = target as GunsScriptableObject;
     }
 
@@ -21,55 +23,83 @@ public class GunScriptableObjectEditor : Editor
 
         // custom gui variables for out class
         gunsScriptable.Name = EditorGUILayout.TextField("Gun Name: ", gunsScriptable.Name);
-        gunsScriptable.NormalDamage = EditorGUILayout.IntSlider("Damage: ", gunsScriptable.NormalDamage, 1, 50);
+        gunsScriptable.normalDamage = EditorGUILayout.IntSlider("Damage: ", gunsScriptable.normalDamage, 1, 50);
 
         GUILine();
 
         // the variables ui shown in inspector
-        gunsScriptable.Type = (guntype)EditorGUILayout.EnumPopup(gunsScriptable.Type);
-        if (gunsScriptable.Type == guntype.melee)
-        {
-            gunsScriptable.meeeleaddforce = EditorGUILayout.Slider("meeeleforce", gunsScriptable.meeeleaddforce, 0f, 2000000f);
-            gunsScriptable.upforcemeele = EditorGUILayout.Slider("meeeleupforce", gunsScriptable.upforcemeele, 0f, 200000f);
-        }
+        gunsScriptable.type = (guntype)EditorGUILayout.EnumPopup(gunsScriptable.type);
 
         GUILine();
 
-        if (gunsScriptable.Type == guntype.auto)
+        switch (gunsScriptable.type)
         {
-            gunsScriptable.firerate = EditorGUILayout.Slider("Gun fire rate: ", gunsScriptable.firerate, 7f, 100.0f);
+            case guntype.auto:
+                {
+                    gunsScriptable.bulletForce = EditorGUILayout.Slider("bulletforce", gunsScriptable.bulletForce, 0f, 400000f);
+
+                    break;
+                }
+            case guntype.grenadelauncher:
+                {
+                    gunsScriptable.explosionRange = EditorGUILayout.Slider("Explosion range: ", gunsScriptable.explosionRange, 1.0f, 10.0f);
+                    gunsScriptable.upPowerExplosion = EditorGUILayout.Slider("explosion up power mutlplyer", gunsScriptable.upPowerExplosion, 0f, 100f);
+                    gunsScriptable.powerOfExplosion = EditorGUILayout.Slider("general power of explosion", gunsScriptable.powerOfExplosion, 0f, 10000f);
+                    gunsScriptable.playerExplosionForce = EditorGUILayout.Slider("players explosion force", gunsScriptable.playerExplosionForce, 1.0f, 2000f);
+                    gunsScriptable.playerUpForce = EditorGUILayout.Slider("players expolosion up power", gunsScriptable.playerUpForce, 0f, 100f);
+
+                    break;
+                }
+            case guntype.melee:
+                {
+                    gunsScriptable.meleeAddForce = EditorGUILayout.Slider("meleeForce", gunsScriptable.meleeAddForce, 0f, 2000000f);
+                    gunsScriptable.upForceMelee = EditorGUILayout.Slider("meleeUpForce", gunsScriptable.upForceMelee, 0f, 200000f);
+
+                    break;
+                }
+            case guntype.pistol:
+                {
+                    gunsScriptable.bulletForce = EditorGUILayout.Slider("bulletforce", gunsScriptable.bulletForce, 0f, 400000f);
+
+                    break;
+                }
+            default:
+                {
+                    Debug.LogError("How did you end up in this case...");
+                    break;
+                }
         }
-        if (gunsScriptable.Type != guntype.melee)
+
+        if (gunsScriptable.type != guntype.melee)
         {
-            if (gunsScriptable.Type == guntype.grenadelauncher)
-            {
-                // variables that ONLY the grenadelauncher can have
-
-                gunsScriptable.explosionRange = EditorGUILayout.Slider("Explosion range: ", gunsScriptable.explosionRange, 1.0f, 10.0f);
-                gunsScriptable.uppowerexplosion = EditorGUILayout.Slider("explosion up power mutlplyer", gunsScriptable.uppowerexplosion, 0f, 100f);
-                gunsScriptable.powerofexplosion = EditorGUILayout.Slider("general power of explosion", gunsScriptable.powerofexplosion, 0f, 10000f);
-                gunsScriptable.playersexplosionforce = EditorGUILayout.Slider("players explosion force", gunsScriptable.playersexplosionforce, 1.0f, 100000f);
-                gunsScriptable.playersupforce = EditorGUILayout.Slider("players expolosion up power", gunsScriptable.playersupforce, 0f, 100f);
-            }
-            else
-            {
-                // variables that the grenade launcher CAN NOT have
-
-                gunsScriptable.bulletforce = EditorGUILayout.Slider("bulletforce", gunsScriptable.bulletforce, 0f, 400000f);
-            }
-
-            // variables that all weapons EXCEPT Melee can have
-            gunsScriptable.Range = EditorGUILayout.Slider("range", gunsScriptable.Range, 1.0f, 1000.0f);
-            gunsScriptable.Reloadtime = EditorGUILayout.Slider("Gun reload time: ", gunsScriptable.Reloadtime, 1.0f , 5.0f);
-            gunsScriptable.firerate = EditorGUILayout.Slider("Gun fire rate: ", gunsScriptable.firerate, 0.1f, 100.0f);
-            gunsScriptable.maxammo = EditorGUILayout.IntSlider("Max ammo: ", gunsScriptable.maxammo, 1, 500000);
+            gunsScriptable.range = EditorGUILayout.Slider("range", gunsScriptable.range, 1.0f, 1000.0f);
+            gunsScriptable.reloadTime = EditorGUILayout.Slider("Gun reload time: ", gunsScriptable.reloadTime, 1.0f, 5.0f);
+            gunsScriptable.fireRate = EditorGUILayout.Slider("Gun fire rate: ", gunsScriptable.fireRate, 0.1f, 100.0f);
+            gunsScriptable.maxAmmo = EditorGUILayout.IntSlider("Max ammo: ", gunsScriptable.maxAmmo, 1, 500000);
 
             gunsScriptable.hoverText = EditorGUILayout.TextField("On hover text: ", gunsScriptable.hoverText);
             gunsScriptable.hoverVisibleDistance = EditorGUILayout.Slider("Over text visible distance: ", gunsScriptable.hoverVisibleDistance, 1.0f, 5.0f);
             gunsScriptable.weaponPrefab = EditorGUILayout.ObjectField("Weapon prefab: ", gunsScriptable.weaponPrefab, typeof(GameObject), false);
+            
+            gunsScriptable.bullet = EditorGUILayout.ObjectField("Bullet prefab: ", gunsScriptable.bullet, typeof(GameObject), false);
 
+            if (gunsScriptable.type != guntype.pistol)
+            {
+                gunsScriptable.bulletCount = EditorGUILayout.IntSlider("Bullet count: ", gunsScriptable.bulletCount, 1, 30);
+
+                if (gunsScriptable.bulletCount > 1)
+                {
+                    gunsScriptable.canSpread = EditorGUILayout.Toggle("Can spread bullets: ", gunsScriptable.canSpread);
+
+                    if (gunsScriptable.canSpread == true)
+                    {
+                        gunsScriptable.spreadAmount = EditorGUILayout.Slider("Spread Amount: ", gunsScriptable.spreadAmount, 0.01f, 0.25f);
+                        gunsScriptable.bulletSpreadVariation = EditorGUILayout.Slider("Bullet Spread Variation: ", gunsScriptable.bulletSpreadVariation, 1.0f, 1.5f);
+                    }
+                }
+            }
         }
-        
+
         serializedObject.ApplyModifiedProperties();
     }
 

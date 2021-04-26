@@ -17,14 +17,14 @@ public class NewHitTrigger : MonoBehaviour
 
     [Header("Movement settings")]
     [SerializeField] 
-    Vector3 TargetPosition;
+    Vector3 targetPosition = new Vector3(0.0f, 0.0f, 0.0f);
     [Range(0.1f, 5.0f)] 
     public float MovingSpeed = 1.0f;
     public bool canDropDown = true;
 
     [Header("Particle settings")]
     public bool canEmmitParticles = false;
-    public ParticleSystem Particles;
+    public ParticleSystem particles;
     [Range(1.0f, 5.0f)]
     public float DropMultiplier = 1.0f;
 
@@ -39,7 +39,7 @@ public class NewHitTrigger : MonoBehaviour
     Vector3 size = Vector3.zero;
     bool isMovingDown = false;
 
-    float gravityModifier = 1.5f;
+    float newGravityModifier = 1.5f;
 
     private void Start()
     {
@@ -54,15 +54,15 @@ public class NewHitTrigger : MonoBehaviour
         size = MovingObject.gameObject.transform.localScale;
 
         float positiveSpeed = Mathf.Abs(MovingSpeed * DropMultiplier);
-        gravityModifier = (1 / positiveSpeed) + 1.0f;
-        gravityModifier = Mathf.Clamp(gravityModifier, 1.0f, 2.0f);
-        Particles.gravityModifier = gravityModifier;
+        newGravityModifier = (1 / positiveSpeed) + 1.0f;
+        newGravityModifier = Mathf.Clamp(newGravityModifier, 1.0f, 2.0f);
+        particles.gravityModifier = newGravityModifier;
     }
 
     private void OnDrawGizmos()
     {
         // ------ Drawing path line ------
-        Debug.DrawLine(MovingObject.gameObject.transform.position, TargetPosition, DebugGizmoLine);
+        Debug.DrawLine(MovingObject.gameObject.transform.position, targetPosition, DebugGizmoLine);
         // -------------------------------
 
         // ------ Changing all Gizmos color and size from here and down ------
@@ -79,7 +79,7 @@ public class NewHitTrigger : MonoBehaviour
 
         // ------ Drawing object end position ------
         // Set the Gizmo position = to the TargetPosition & set the rotation of the Gizmo = to the rotation of the MovingObject rotation 
-        Gizmos.matrix = Matrix4x4.TRS(TargetPosition, Quaternion.Euler(MovingObject.transform.rotation.eulerAngles), Vector3.one);
+        Gizmos.matrix = Matrix4x4.TRS(targetPosition, Quaternion.Euler(MovingObject.transform.rotation.eulerAngles), Vector3.one);
         // Get the scale of the MovingObject
         Vector3 ObjectSize = MovingObject.gameObject.transform.localScale;
         // Drawing the Qizmo in a wire box style with the correct size and matrix.
@@ -95,14 +95,14 @@ public class NewHitTrigger : MonoBehaviour
             if (collider == extraTriggers.GetComponent<Collider>())
             {
                 // Moving MovingObject to TargetPosition
-                MovingObject.transform.position = Vector3.MoveTowards(MovingObject.transform.position, TargetPosition, MovingSpeed * Time.deltaTime);
+                MovingObject.transform.position = Vector3.MoveTowards(MovingObject.transform.position, targetPosition, MovingSpeed * Time.deltaTime);
             }
         }
 
         if (collider == PlayerCollider)
         {
             // Moving MovingObject to TargetPosition
-            MovingObject.transform.position = Vector3.MoveTowards(MovingObject.transform.position, TargetPosition, MovingSpeed * Time.deltaTime);
+            MovingObject.transform.position = Vector3.MoveTowards(MovingObject.transform.position, targetPosition, MovingSpeed * Time.deltaTime);
         }
     }
     private void OnCollisionStay(Collision collision)
@@ -112,14 +112,14 @@ public class NewHitTrigger : MonoBehaviour
             if (collision.collider == extra.GetComponent<Collider>())
             {
                 // Moving MovingObject to TargetPosition
-                MovingObject.transform.position = Vector3.MoveTowards(MovingObject.transform.position, TargetPosition, MovingSpeed * Time.deltaTime);
+                MovingObject.transform.position = Vector3.MoveTowards(MovingObject.transform.position, targetPosition, MovingSpeed * Time.deltaTime);
             }
         }
     
         if (collision.collider == PlayerCollider)
         {
             // Moving MovingObject to TargetPosition
-            MovingObject.transform.position = Vector3.MoveTowards(MovingObject.transform.position, TargetPosition, MovingSpeed * Time.deltaTime);
+            MovingObject.transform.position = Vector3.MoveTowards(MovingObject.transform.position, targetPosition, MovingSpeed * Time.deltaTime);
         }
     }
 
@@ -199,7 +199,7 @@ public class NewHitTrigger : MonoBehaviour
 
                 if (canEmmitParticles)
                 {
-                    Particles.Play();
+                    particles.Play();
                 }
             }
         }

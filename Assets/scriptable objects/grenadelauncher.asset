@@ -12,26 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 648c455ae647f834fae57ed6dd6b5703, type: 3}
   m_Name: Grenadelauncher
   m_EditorClassIdentifier: 
-  Name: GrenadeLauncher
-  Type: 0
-  NormalDamage: 1
-  CriticalDamage: 0
-  firerate: 0.3
-  Range: 60
-  Reloadtime: 5
-  maxammo: 10
-  currentammo: 0
-  impactforce: 0
-  nextimetofire: 0
-  weaponPrefab: {fileID: 519873918487786221, guid: 5b9a7f2b5e9cc6a41968dc11f22511a8, type: 3}
-  hoverText: Press e to pickup gun
-  hoverVisibleDistance: 5
+  Name: 
+  type: 0
+  bulletForce: 0
+  fireRate: 0.5
   explosionRange: 5
-  uppowerexplosion: 1
-  powerofexplosion: 400
-  playersexplosionforce: 500
-  playersupforce: 1
+  upPowerExplosion: 1
+  powerOfExplosion: 300
+  playerExplosionForce: 400
+  playerUpForce: 1
+  meleeAddForce: 0
+  upForceMelee: 0
+  normalDamage: 1
+  criticalDamage: 0
+  range: 70
+  reloadTime: 5
+  maxAmmo: 5
+  currentAmmo: 5
+  impactForce: 0
+  nextTimeToFire: 0
+  weaponPrefab: {fileID: 519873918487786221, guid: 5b9a7f2b5e9cc6a41968dc11f22511a8, type: 3}
+  bullet: {fileID: 6657112099605186555, guid: 659dbfb3d815aac4e87597455a57c485, type: 3}
+  bulletCount: 1
+  hoverText: e
+  hoverVisibleDistance: 5
   grenades: 0
-  meeeleaddforce: 0
-  upforcemeele: 0
-  bulletforce: 0
+  canSpread: 0
+  spreadAmount: 0
+  bulletSpreadVariation: 0

@@ -13,28 +13,44 @@ public enum guntype
 public class GunsScriptableObject : ScriptableObject
 {
     public string Name;
-    public guntype Type;
+    public guntype type;
     //----------------------------- variables for gun
-    public int NormalDamage;
-    public int CriticalDamage;
-    public float firerate;
-    public float Range;
-    public float Reloadtime;
-    public int maxammo;
-    public int currentammo;
-    public int impactforce;
-    public float nextimetofire;
+    
+    // Auto and pistol
+    public float bulletForce;
+
+    // Auto
+    public float fireRate;
+
+    // Grenade launcher
+    public float explosionRange;
+    public float upPowerExplosion;
+    public float powerOfExplosion;
+    public float playerExplosionForce;
+    public float playerUpForce;
+
+    // Melee
+    public float meleeAddForce;
+    public float upForceMelee;
+
+    // All except Melee
+    public int normalDamage;
+    public int criticalDamage;
+    public float range;
+    public float reloadTime;
+    public int maxAmmo;
+    public int currentAmmo;
+    public int impactForce;
+    public float nextTimeToFire;
     public Object weaponPrefab;
+    public Object bullet;
+    public int bulletCount = 1;
     public string hoverText;
     public float hoverVisibleDistance;
-    public float explosionRange;
-    public float uppowerexplosion;
-    public float powerofexplosion;
-    public float playersexplosionforce;
-    public float playersupforce;
     public float grenades;
-    public float meeeleaddforce;
-    public float upforcemeele;
-    public float bulletforce;
+
+    public bool canSpread = false;
+    public float spreadAmount;
+    public float bulletSpreadVariation;
 }
 

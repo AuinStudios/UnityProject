@@ -4,22 +4,19 @@ using UnityEngine;
 
 public class Hitrigger : MonoBehaviour
 {
+    // This is Obselete and not longer in use
 
-
-
-
+    /**
+     
     [SerializeField] [Range(1f, 10f)] float lerptime;
-    [SerializeField] Vector3[] mypositions;
+    [SerializeField]
+    public Vector3[] mypositions;
     int poseindex = 0;
 
     int length;
 
     float t = 0f;
 
-
-
-
-   
 
 
     private void Start()
@@ -30,17 +27,17 @@ public class Hitrigger : MonoBehaviour
   
     private void OnTriggerStay(Collider other)
     { 
-                 if (gameObject.name == "door")
-        
-   transform.position = Vector3.Lerp(transform.position, mypositions[poseindex], lerptime * Time.deltaTime);
-
-
-        t = Mathf.Lerp(t, 1f, lerptime * Time.deltaTime);
-        if (t > .9f)
+        if (gameObject.name == "door")
         {
-            t = 0f;
-            poseindex++;
-            poseindex = (poseindex >= length) ? 0 : poseindex;
+            transform.position = Vector3.Lerp(transform.position, mypositions[poseindex], lerptime * Time.deltaTime);
+
+            t = Mathf.Lerp(t, 1f, lerptime * Time.deltaTime);
+            if (t > .9f)
+            {
+                t = 0f;
+                poseindex++;
+                poseindex = (poseindex >= length) ? 0 : poseindex;
+            }
         }
     }
 
@@ -59,4 +56,6 @@ public class Hitrigger : MonoBehaviour
             poseindex = (poseindex >= length) ? 0 : poseindex;
         }
     }
+
+     */
 }

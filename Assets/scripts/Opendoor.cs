@@ -16,7 +16,7 @@ public class Opendoor : MonoBehaviour
 
     [Header("Movement settings")]
     [SerializeField]
-    Vector3 TargetPosition;
+    Vector3 targetPosition = new Vector3(0.0f, 0.0f, 0.0f);
     [Range(0.1f, 5.0f)]
     public float MovingSpeed = 1.0f;
     public bool canDropDown = true;
@@ -33,7 +33,7 @@ public class Opendoor : MonoBehaviour
 
     GameObject enemy;
     Collider enemyCollider;
-    Collider gameobject;
+    Collider gameObjectCollider;
     Vector3 startPosition;
     Vector3 size = Vector3.zero;
     bool isMovingDown = false;
@@ -56,7 +56,7 @@ public class Opendoor : MonoBehaviour
     private void OnDrawGizmos()
     {
         // ------ Drawing path line ------
-        Debug.DrawLine(MovingObject.gameObject.transform.position, TargetPosition, DebugGizmoLine);
+        Debug.DrawLine(MovingObject.gameObject.transform.position, targetPosition, DebugGizmoLine);
         // -------------------------------
 
         // ------ Changing all Gizmos color and size from here and down ------
@@ -73,7 +73,7 @@ public class Opendoor : MonoBehaviour
 
         // ------ Drawing object end position ------
         // Set the Gizmo position = to the TargetPosition & set the rotation of the Gizmo = to the rotation of the MovingObject rotation 
-        Gizmos.matrix = Matrix4x4.TRS(TargetPosition, Quaternion.Euler(MovingObject.transform.rotation.eulerAngles), Vector3.one);
+        Gizmos.matrix = Matrix4x4.TRS(targetPosition, Quaternion.Euler(MovingObject.transform.rotation.eulerAngles), Vector3.one);
         // Get the scale of the MovingObject
         Vector3 ObjectSize = MovingObject.gameObject.transform.localScale;
         // Drawing the Qizmo in a wire box style with the correct size and matrix.
@@ -89,14 +89,14 @@ public class Opendoor : MonoBehaviour
             if (collider == extraTriggers.GetComponent<Collider>())
             {
                 // Moving MovingObject to TargetPosition
-                MovingObject.transform.position = Vector3.MoveTowards(MovingObject.transform.position, TargetPosition, MovingSpeed * Time.deltaTime);
+                MovingObject.transform.position = Vector3.MoveTowards(MovingObject.transform.position, targetPosition, MovingSpeed * Time.deltaTime);
             }
         }
 
         if (collider == enemyCollider)
         {
             // Moving MovingObject to TargetPosition
-            MovingObject.transform.position = Vector3.MoveTowards(MovingObject.transform.position, TargetPosition, MovingSpeed * Time.deltaTime);
+            MovingObject.transform.position = Vector3.MoveTowards(MovingObject.transform.position, targetPosition, MovingSpeed * Time.deltaTime);
         }
     }
     private void OnCollisionStay(Collision collision)
@@ -106,14 +106,14 @@ public class Opendoor : MonoBehaviour
             if (collision.collider == extra.GetComponent<Collider>())
             {
                 // Moving MovingObject to TargetPosition
-                MovingObject.transform.position = Vector3.MoveTowards(MovingObject.transform.position, TargetPosition, MovingSpeed * Time.deltaTime);
+                MovingObject.transform.position = Vector3.MoveTowards(MovingObject.transform.position, targetPosition, MovingSpeed * Time.deltaTime);
             }
         }
 
         if (collision.collider == enemyCollider)
         {
             // Moving MovingObject to TargetPosition
-            MovingObject.transform.position = Vector3.MoveTowards(MovingObject.transform.position, TargetPosition, MovingSpeed * Time.deltaTime);
+            MovingObject.transform.position = Vector3.MoveTowards(MovingObject.transform.position, targetPosition, MovingSpeed * Time.deltaTime);
         }
     }
 
@@ -159,7 +159,7 @@ public class Opendoor : MonoBehaviour
             }
         }
 
-        if (collider == gameobject && canDropDown)
+        if (collider == gameObjectCollider && canDropDown)
         {
             isMovingDown = false;
         }
@@ -174,7 +174,7 @@ public class Opendoor : MonoBehaviour
             }
         }
 
-        if (collision.collider == gameobject && canDropDown)
+        if (collision.collider == gameObjectCollider && canDropDown)
         {
             isMovingDown = false;
         }

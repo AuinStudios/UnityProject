@@ -29,6 +29,9 @@ public class DELETEPRATIcals : MonoBehaviour
         {
             Destroy(gameObject, destorytimer);
         }
-
+        if (gameObject.name == "KatanaEffect(Clone)")
+        {
+            Destroy(gameObject, destorytimer);
+        }
     }
 }

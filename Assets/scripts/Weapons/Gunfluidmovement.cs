@@ -39,7 +39,7 @@ private void Update()
 
      float t_ymouse = Input.GetAxis("Mouse Y");
  
-      float move_a = Input.GetAxis("VerticalGun");
+     
 
 
 

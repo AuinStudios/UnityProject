@@ -182,6 +182,6 @@ ___
 
 
 ## (26/4/2021)
-### (makeing my own pick up katana script)
+### (made a  pick up katana script added abit of effects on it wlla dd more   and  my cosin helped me organize the scriptableobjects more)
 
 

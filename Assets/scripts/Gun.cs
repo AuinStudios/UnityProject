@@ -21,26 +21,26 @@ public class Gun : MonoBehaviour
    IEnumerator reload()
     {
         isreloadi = true;
-        scriptableobject.currentammo = scriptableobject.maxammo;
-        yield return new WaitForSeconds(scriptableobject.Reloadtime);
+        scriptableobject.currentAmmo = scriptableobject.maxAmmo;
+        yield return new WaitForSeconds(scriptableobject.reloadTime);
         isreloadi = false;
     }
 
   
      void Start()
     {
-        scriptableobject.currentammo = scriptableobject.maxammo;
+        scriptableobject.currentAmmo = scriptableobject.maxAmmo;
     }
 
     // Update is called once per frame
     void Update()
     {
-        guntext.text = Mathf.Clamp((float)scriptableobject.currentammo, 0, float.MaxValue).ToString();
+        guntext.text = Mathf.Clamp((float)scriptableobject.currentAmmo, 0, float.MaxValue).ToString();
 
 
         if (isreloadi)
             return;
-       if  (scriptableobject.currentammo <= 0)
+       if  (scriptableobject.currentAmmo <= 0)
         {
             StartCoroutine(reload());
             return;
@@ -48,7 +48,7 @@ public class Gun : MonoBehaviour
         //    butten to fire the gun
         if (Input.GetKeyDown(KeyCode.Mouse0) &&Time.time >=  nextimetofire) 
         {
-            nextimetofire = Time.time + 1f / scriptableobject.firerate;
+            nextimetofire = Time.time + 1f / scriptableobject.fireRate;
             Shoot();
         }
     }
@@ -56,12 +56,12 @@ public class Gun : MonoBehaviour
     // code to shoot gun
     void Shoot()
     {
-        scriptableobject.currentammo--;
+        scriptableobject.currentAmmo--;
         // makes gun go  S H O O T
         muzzleFlash.Play();
         //  shoots wherever ur looking at
         RaycastHit hit;
-        if (Physics.Raycast(fpscam.transform.position, fpscam.transform.forward, out hit, scriptableobject.Range))
+        if (Physics.Raycast(fpscam.transform.position, fpscam.transform.forward, out hit, scriptableobject.range))
         {// shows in console the fire
             Debug.Log(hit.transform.name);
 
@@ -74,7 +74,7 @@ public class Gun : MonoBehaviour
           
              if (hit.rigidbody != null)
              {
-                hit.rigidbody.AddForce(-hit.normal * scriptableobject.impactforce);
+                hit.rigidbody.AddForce(-hit.normal * scriptableobject.impactForce);
 
 
 

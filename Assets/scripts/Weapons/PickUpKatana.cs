@@ -4,26 +4,18 @@ using UnityEngine;
 
 public class PickUpKatana : MonoBehaviour
 {
-    public PickupKatnanaEffect sart;
+
+    public PickupKatnanaEffect e;
     public Meelesystem mmm;
-    public ParticleSystem effect;
+   
     public void Update()
     {
-        
-        if(sart.enabled == false )
-        {
-            effect.Play();
-        }
-    }
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("bananakatana"))
+       if(e.auraismegagay == false)
         {
             mmm.enabled = true;
         }
-        
-        
     }
+   
 
    
 }

@@ -145,12 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5ee946c98f7bff47bb8160b1a2e2fc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 599913207298766121, guid: 09bf3a042434f5b43adc18bbd21cbf6f, type: 3}
   bulletSpawnPoint: {fileID: 4271424468871635906}
-  bulletCount: 1
-  spreadAmount: 0.15
-  bulletSpeedVariation: 1.5
-  gunboi: {fileID: 1454159574406545801}
   muzzleflash: {fileID: 4271424468871635904}
   scriptableobject: {fileID: 11400000, guid: 320c779459d2c6740b7ae035d9955530, type: 2}
   isreloadi: 0

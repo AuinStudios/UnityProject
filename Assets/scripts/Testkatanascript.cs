@@ -12,11 +12,12 @@ public class Testkatanascript : MonoBehaviour
     {
        
         if (collision.collider.CompareTag("bananakatana"))
-        {// adds force from the transform of the banana looking direction
-            rig.AddForce(bananakatana.forward * scriptableobject.meeeleaddforce * Time.deltaTime);
-            rig.AddForce(Vector3.up  * scriptableobject.upforcemeele * Time.deltaTime);
+        {
+            // adds force from the transform of the banana looking direction
+            rig.AddForce(bananakatana.forward * scriptableobject.meleeAddForce * Time.deltaTime);
+            rig.AddForce(Vector3.up  * scriptableobject.upForceMelee * Time.deltaTime);
             float random = Random.Range(-1f, 1f);
-            rig.AddTorque(new Vector3(random, random, random) * scriptableobject.upforcemeele);
+            rig.AddTorque(new Vector3(random, random, random) * scriptableobject.upForceMelee);
         }
     }
 }

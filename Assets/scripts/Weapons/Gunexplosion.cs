@@ -71,7 +71,7 @@ public class Gunexplosion : MonoBehaviour
             {
                 if (rb != null && (!HIT.CompareTag("gun")))
                 {
-                    rb.AddExplosionForce(scriptableobject.powerofexplosion, explosionpos, scriptableobject.explosionRange, scriptableobject.uppowerexplosion, ForceMode.Impulse);
+                    rb.AddExplosionForce(scriptableobject.powerOfExplosion, explosionpos, scriptableobject.explosionRange, scriptableobject.upPowerExplosion, ForceMode.Impulse);
                    
                 }
             }
@@ -82,7 +82,7 @@ public class Gunexplosion : MonoBehaviour
 
                 if (HIT.CompareTag("Player"))
                 {
-                rb.AddExplosionForce(scriptableobject.playersexplosionforce, explosionpos, scriptableobject.explosionRange, scriptableobject.playersupforce, ForceMode.Impulse);
+                rb.AddExplosionForce(scriptableobject.playerExplosionForce, explosionpos, scriptableobject.explosionRange, scriptableobject.playerUpForce, ForceMode.Impulse);
                 }
 
 

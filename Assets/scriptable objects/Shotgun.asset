@@ -12,26 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 648c455ae647f834fae57ed6dd6b5703, type: 3}
   m_Name: Shotgun
   m_EditorClassIdentifier: 
-  Name: Shotgun
-  Type: 1
-  NormalDamage: 1
-  CriticalDamage: 0
-  firerate: 0.5
-  Range: 50
-  Reloadtime: 4
-  maxammo: 50
-  currentammo: 0
-  impactforce: 0
-  nextimetofire: 0
-  weaponPrefab: {fileID: 6469414901457010775, guid: 1e5933a30a32bd64da6854701a681ae8, type: 3}
-  hoverText: Press e to pickup gun
-  hoverVisibleDistance: 5
+  Name: 
+  type: 3
+  bulletForce: 400000
+  fireRate: 0.5
   explosionRange: 1
-  uppowerexplosion: 0
-  powerofexplosion: 0
-  playersexplosionforce: 1
-  playersupforce: 0
+  upPowerExplosion: 0
+  powerOfExplosion: 0
+  playerExplosionForce: 1
+  playerUpForce: 0
+  meleeAddForce: 0
+  upForceMelee: 0
+  normalDamage: 1
+  criticalDamage: 0
+  range: 60
+  reloadTime: 4
+  maxAmmo: 30
+  currentAmmo: 0
+  impactForce: 0
+  nextTimeToFire: 0
+  weaponPrefab: {fileID: 0}
+  bullet: {fileID: 0}
+  bulletCount: 3
+  hoverText: E
+  hoverVisibleDistance: 5
   grenades: 0
-  meeeleaddforce: 0
-  upforcemeele: 0
-  bulletforce: 400000
+  canSpread: 1
+  spreadAmount: 0.25
+  bulletSpreadVariation: 1.5
