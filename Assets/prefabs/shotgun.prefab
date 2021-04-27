@@ -4886,6 +4886,7 @@ GameObject:
   - component: {fileID: 7043060023819608354}
   - component: {fileID: 6469414901457010728}
   - component: {fileID: 4259794543048811636}
+  - component: {fileID: 296583478}
   m_Layer: 0
   m_Name: shotgun
   m_TagString: gun
@@ -5016,6 +5017,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpawnPoint: {fileID: 6126746255192871598}
+  anim: {fileID: 0}
   muzzleflash: {fileID: 6126746255192871596}
   scriptableobject: {fileID: 11400000, guid: 09752fd41d1cd6b4e822d9b4e0d6152d, type: 2}
   isreloadi: 0
@@ -5043,3 +5045,18 @@ MonoBehaviour:
   dropUpwardForce: 17
   equipped: 0
   ammoui: {fileID: 0}
+  fluid: {fileID: 296583478}
+--- !u!114 &296583478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6469414901457010775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e0ff446f34cda24d9cfc047fde3b0f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intensity: 2
+  smooth: 10

@@ -3,6 +3,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+
 public class Shotgun : MonoBehaviour
 {
 
@@ -11,17 +12,17 @@ public class Shotgun : MonoBehaviour
 
     // variables
     // transforms and vectors shit
-    
+   
     public Transform bulletSpawnPoint;
     private pickupgun gunboi;
-    
+    public Animator anim;
     // ------------------------------------------
     public ParticleSystem muzzleflash;
     public GunsScriptableObject scriptableobject;
     public bool isreloadi = false;
     private float nextimetofire = 1f;
     // --------------------------------------------
-
+    
     public TextMeshProUGUI guntext;
 
     // -------------------------------------------- 
@@ -55,7 +56,7 @@ public class Shotgun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
         // clamps the  ammo to never go down 0
         guntext.text = Mathf.Clamp((float)scriptableobject.currentAmmo, 0, float.MaxValue).ToString();
 
@@ -82,7 +83,13 @@ public class Shotgun : MonoBehaviour
             nextimetofire = Time.time + 1f / scriptableobject.fireRate;
 
             launchboi();
+            
 
+
+
+
+                anim.SetTrigger("shoot");
+            
             scriptableobject.currentAmmo -= scriptableobject.bulletCount;
 
 

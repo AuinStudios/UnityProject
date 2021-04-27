@@ -185,3 +185,6 @@ ___
 ### (made a  pick up katana script added abit of effects on it wlla dd more   and  my cosin helped me organize the scriptableobjects more)
 
 
+## (27/4/2021)
+### ( made gun animation to the guns and fixed a bug)
+

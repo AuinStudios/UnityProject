@@ -1,8 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace Sway
-{
+
 public class Gunfluidmovement : MonoBehaviour
 {
         //variables
@@ -24,11 +23,14 @@ private void Start()
 }
 
 
-private void Update()
-{
-    FluidUpdate();
+  private void Update()
+  {
+      FluidUpdate();
 
-}
+
+
+
+  }
 
 
 
@@ -38,8 +40,8 @@ private void Update()
     float t_xmouse = Input.GetAxis("Mouse X");
 
      float t_ymouse = Input.GetAxis("Mouse Y");
- 
-     
+
+          
 
 
 
@@ -56,5 +58,5 @@ private void Update()
 }
 
 }
-}
+
 

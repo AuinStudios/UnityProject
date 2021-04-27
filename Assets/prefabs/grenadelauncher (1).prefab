@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4561290754395673496}
   - component: {fileID: 8309645144002514466}
   - component: {fileID: 1241132886208374003}
+  - component: {fileID: 358729948}
   m_Layer: 0
   m_Name: grenadelauncher (1)
   m_TagString: gun
@@ -147,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpawnPoint: {fileID: 7704464543187441869}
+  anim: {fileID: 0}
   muzzleflash: {fileID: 862332961750212630}
   scriptableobject: {fileID: 11400000, guid: f418f805647cb32409786e383d34fc77, type: 2}
   isreloadi: 0
@@ -174,6 +176,21 @@ MonoBehaviour:
   dropUpwardForce: 17
   equipped: 0
   ammoui: {fileID: 0}
+  fluid: {fileID: 358729948}
+--- !u!114 &358729948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519873918487786221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e0ff446f34cda24d9cfc047fde3b0f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intensity: 2
+  smooth: 10
 --- !u!1 &862332961750212625
 GameObject:
   m_ObjectHideFlags: 0

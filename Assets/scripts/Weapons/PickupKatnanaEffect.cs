@@ -9,6 +9,7 @@ public class PickupKatnanaEffect : MonoBehaviour
     public float spin = -10f;
     public Animator auraisgaywithme;
     public ParticleSystem pp;
+
     // Update is called once per frame
     public  void Update()
     {
@@ -29,6 +30,11 @@ public class PickupKatnanaEffect : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+          
+
+
+
+
             auraisgaywithme.SetTrigger("blow");
         }
     }

@@ -4886,6 +4886,7 @@ GameObject:
   - component: {fileID: 1166173100181270094}
   - component: {fileID: 2019095791181492771}
   - component: {fileID: 8787602191499182400}
+  - component: {fileID: 1575234757}
   m_Layer: 0
   m_Name: new gun systme
   m_TagString: gun
@@ -5016,6 +5017,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpawnPoint: {fileID: 2635871067513019842}
+  anim: {fileID: 0}
   muzzleflash: {fileID: 2635871067513019840}
   scriptableobject: {fileID: 11400000, guid: eccea11ed9b6da1469a14c38c4583afc, type: 2}
   isreloadi: 0
@@ -5043,3 +5045,18 @@ MonoBehaviour:
   dropUpwardForce: 17
   equipped: 0
   ammoui: {fileID: 0}
+  fluid: {fileID: 1575234757}
+--- !u!114 &1575234757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2906254512234221371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e0ff446f34cda24d9cfc047fde3b0f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intensity: 2
+  smooth: 10

@@ -22,7 +22,7 @@ public class pickupgun : MonoBehaviour
     public static bool slotFull;
     //public GameObject yes;
     public TextMeshProUGUI ammoui;
-    
+    public Gunfluidmovement fluid;
  
 
     
@@ -31,6 +31,7 @@ public class pickupgun : MonoBehaviour
         //Setup
         if (!equipped)
         {
+           
             gunscript.enabled = false;
             rb.isKinematic = false;
             coll.isTrigger = false;
@@ -38,6 +39,7 @@ public class pickupgun : MonoBehaviour
         }
         if (equipped)
         {
+           
             gunscript.enabled = true;
             rb.isKinematic = true;
             coll.isTrigger = true;
@@ -54,6 +56,15 @@ public class pickupgun : MonoBehaviour
             transform.position = new Vector3(0, 0, 0);
         }
 
+        if (slotFull == true)
+        {
+            fluid.enabled = true;
+        }
+
+        if (slotFull == false)
+        {
+            fluid.enabled = false;
+        }
         if (color == false)
         {
             ammoui.color = new Color(0, 0, 0, 0);

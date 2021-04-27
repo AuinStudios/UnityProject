@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1151882916322414670}
   - component: {fileID: 4863139483820840534}
   - component: {fileID: 1454159574406545801}
+  - component: {fileID: 1753903687}
   m_Layer: 0
   m_Name: ak
   m_TagString: gun
@@ -146,6 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpawnPoint: {fileID: 4271424468871635906}
+  anim: {fileID: 0}
   muzzleflash: {fileID: 4271424468871635904}
   scriptableobject: {fileID: 11400000, guid: 320c779459d2c6740b7ae035d9955530, type: 2}
   isreloadi: 0
@@ -173,6 +175,21 @@ MonoBehaviour:
   dropUpwardForce: 17
   equipped: 0
   ammoui: {fileID: 0}
+  fluid: {fileID: 1753903687}
+--- !u!114 &1753903687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4000969147605217595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e0ff446f34cda24d9cfc047fde3b0f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intensity: 2
+  smooth: 10
 --- !u!1 &4271424468871635911
 GameObject:
   m_ObjectHideFlags: 0
