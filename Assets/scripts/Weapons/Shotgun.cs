@@ -28,6 +28,7 @@ public class Shotgun : MonoBehaviour
     // -------------------------------------------- 
     IEnumerator Reload()
     {
+        anim.SetTrigger("Reload");
         isreloadi = true;
         scriptableobject.currentAmmo = scriptableobject.maxAmmo;
         yield return new WaitForSeconds(scriptableobject.reloadTime);
@@ -81,18 +82,19 @@ public class Shotgun : MonoBehaviour
         if (gunboi == enabled && Input.GetKey(KeyCode.Mouse0) && Time.time >= nextimetofire && scriptableobject.currentAmmo >= scriptableobject.bulletCount)
         {
             nextimetofire = Time.time + 1f / scriptableobject.fireRate;
-
-            launchboi();
-            
-
-
-
-
-                anim.SetTrigger("shoot");
-            
             scriptableobject.currentAmmo -= scriptableobject.bulletCount;
-
-
+            launchboi();
+            if (gameObject.CompareTag("uzi"))
+            {
+                anim.SetTrigger("Uzi");
+                    
+            }
+            if (!gameObject.CompareTag("uzi"))
+            {
+              anim.SetTrigger("shoot");
+            }
+            
+            
         }
     }
 

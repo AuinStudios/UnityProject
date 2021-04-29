@@ -9,29 +9,36 @@ using TMPro;
 
 public class pickupgun : MonoBehaviour
 {
-    public static bool color;
-    public Shotgun gunscript;
-    public Rigidbody rb;
-    public BoxCollider coll;
-    public Transform player, gunContainer, fpsCam;
-    //public GunsScriptableObject scriptableobject2;
-    public float pickUpRange;
-    public float dropForwardForce, dropUpwardForce;
-    //public TextMeshProUGUI popup;
-    public bool equipped;
-    public static bool slotFull;
-    //public GameObject yes;
-    public TextMeshProUGUI ammoui;
-    public Gunfluidmovement fluid;
- 
 
-    
+ //Super Important Ones----------------------------------------------------------------------------
+ public Shotgun gunscript;
+ public Rigidbody rb;
+ public Transform player, gunContainer, fpsCam;
+ public BoxCollider coll;
+ //Floats------------------------------------------------------------------------------------------
+ public float pickUpRange;
+ public float dropForwardForce, dropUpwardForce;
+ //Ui-----------------------------------------------------------------------------------------------
+ public TextMeshProUGUI ammoui;
+ // GunFluidmovement -------------------------------------------------------------------------------
+ public Gunfluidmovement fluid;
+ //Bools------------------------------------------------------------------------------------------
+ public bool equipped;
+ public bool isfluidEnabled = false;
+ public static bool color;
+ public static bool slotFull;
+ //Stuff Im Not Useing -----------------------------------------------------------------------------
+ //public GunsScriptableObject scriptableobject2;
+     //public TextMeshProUGUI popup;
+     //public GameObject yes;   
+ // ------------------------------------------------------------------------------------------------    
+
     private void Start()
     {
         //Setup
         if (!equipped)
         {
-           
+            
             gunscript.enabled = false;
             rb.isKinematic = false;
             coll.isTrigger = false;
@@ -56,12 +63,12 @@ public class pickupgun : MonoBehaviour
             transform.position = new Vector3(0, 0, 0);
         }
 
-        if (slotFull == true)
+        if (isfluidEnabled == true)
         {
             fluid.enabled = true;
         }
 
-        if (slotFull == false)
+        if (isfluidEnabled == false)
         {
             fluid.enabled = false;
         }
@@ -86,6 +93,7 @@ public class pickupgun : MonoBehaviour
     {
         equipped = true;
         slotFull = true;
+        isfluidEnabled = true;
         color = true;
         //Make weapon a child of the camera and move it to default position
         transform.SetParent(gunContainer);
@@ -99,20 +107,13 @@ public class pickupgun : MonoBehaviour
        
         //Enable script
         gunscript.enabled = true;
-
-        
-
-        
-
-       
-
-
     }
 
     public void Drop()
     {
         equipped = false;
         slotFull = false;
+        isfluidEnabled = false;
         color = false;
         //Set parent to null
         transform.SetParent(null);

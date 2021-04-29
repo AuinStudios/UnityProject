@@ -28,6 +28,7 @@ TagManager:
   - mover
   - enemypos
   - explosiondamage
+  - uzi
   layers:
   - Default
   - TransparentFX

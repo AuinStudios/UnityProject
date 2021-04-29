@@ -188,3 +188,5 @@ ___
 ## (27/4/2021)
 ### ( made gun animation to the guns and fixed a bug)
 
+## (29/4/2021)
+### (added uzi animation  Organized the pick up gun code abit  fixed a bug where the gun would just   start roateing around after u picked up a diffrent gun bc of the sway  added an reload animation  as well)
