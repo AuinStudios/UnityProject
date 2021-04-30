@@ -13,11 +13,7 @@ public class Gunexplosion : MonoBehaviour
     public GameObject explosiondamage;
     public void Start()
     {
-      if (equip == enabled)
-        {
-            Invoke("blow", blowtimer ) ;
-            
-        }
+     
     }
 
    
@@ -39,13 +35,24 @@ public class Gunexplosion : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("gun"))
         {
-            blow();
+
+          equip = this.gameObject;
             
         }
+         
+     if (collision.gameObject.CompareTag("gun"))
+        {
+            Invoke("blow", blowtimer ) ;
+            
+        }
+        if (gameObject.CompareTag("gun"))
+        {
+            Invoke("blow", blowtimer);
 
-        if (collision.gameObject.CompareTag("CanPickUp"))
+        }
+        if (collision.gameObject &&  !gameObject.CompareTag("explosivebarrel"))
         {
             blow();
 
@@ -59,31 +66,31 @@ public class Gunexplosion : MonoBehaviour
     void blow()
     {
         
-
+       
 
         Vector3 explosionpos = equip.transform.position;
         Collider[] colliders = Physics.OverlapSphere(explosionpos, scriptableobject.explosionRange);
         foreach (Collider HIT in colliders)
         {
             Rigidbody rb = HIT.GetComponent<Rigidbody>();
-            
+
             if (!HIT.CompareTag("Player"))
             {
                 if (rb != null && (!HIT.CompareTag("gun")))
                 {
                     rb.AddExplosionForce(scriptableobject.powerOfExplosion, explosionpos, scriptableobject.explosionRange, scriptableobject.upPowerExplosion, ForceMode.Impulse);
-                   
+
                 }
             }
-                
 
 
-           
 
-                if (HIT.CompareTag("Player"))
-                {
+
+
+            if (HIT.CompareTag("Player"))
+            {
                 rb.AddExplosionForce(scriptableobject.playerExplosionForce, explosionpos, scriptableobject.explosionRange, scriptableobject.playerUpForce, ForceMode.Impulse);
-                }
+            }
 
 
 
@@ -91,13 +98,16 @@ public class Gunexplosion : MonoBehaviour
             Instantiate(explosiondamage, transform.position, transform.rotation);
             if (gameObject.name == "grenadelauncherammo(Clone)")
             {
-              Destroy(gameObject);
-                
+                Destroy(gameObject);
+
             }
 
 
-           
+            if (gameObject.name == "explosivebarrel")
+            {
+                Destroy(gameObject);
 
+            }
 
         }
 

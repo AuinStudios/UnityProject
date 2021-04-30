@@ -33,5 +33,14 @@ public class DELETEPRATIcals : MonoBehaviour
         {
             Destroy(gameObject, destorytimer);
         }
+
+        if (gameObject.name == "barreldamage(Clone)")
+        {
+            Destroy(gameObject, destorytimer);
+        }
+        if (gameObject.name == "barrelexplosion(Clone)")
+        {
+            Destroy(gameObject, destorytimer);
+        }
     }
 }

@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: 
   type: 0
   bulletForce: 0
-  fireRate: 0.5
+  fireRate: 0.4
   explosionRange: 5
   upPowerExplosion: 1
   powerOfExplosion: 300
@@ -25,16 +25,16 @@ MonoBehaviour:
   upForceMelee: 0
   normalDamage: 1
   criticalDamage: 0
-  range: 70
+  range: 60
   reloadTime: 5
   maxAmmo: 5
-  currentAmmo: 5
+  currentAmmo: 1
   impactForce: 0
   nextTimeToFire: 0
   weaponPrefab: {fileID: 519873918487786221, guid: 5b9a7f2b5e9cc6a41968dc11f22511a8, type: 3}
   bullet: {fileID: 6657112099605186555, guid: 659dbfb3d815aac4e87597455a57c485, type: 3}
   bulletCount: 1
-  hoverText: e
+  hoverText: E
   hoverVisibleDistance: 5
   grenades: 0
   canSpread: 0

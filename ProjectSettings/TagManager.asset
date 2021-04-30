@@ -29,6 +29,7 @@ TagManager:
   - enemypos
   - explosiondamage
   - uzi
+  - explosivebarrel
   layers:
   - Default
   - TransparentFX

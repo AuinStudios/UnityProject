@@ -30,10 +30,7 @@ public class PickupKatnanaEffect : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-          
-
-
-
+ 
 
             auraisgaywithme.SetTrigger("blow");
         }

@@ -25,16 +25,16 @@ MonoBehaviour:
   upForceMelee: 0
   normalDamage: 1
   criticalDamage: 0
-  range: 60
-  reloadTime: 4
-  maxAmmo: 30
+  range: 70
+  reloadTime: 3
+  maxAmmo: 20
   currentAmmo: 0
   impactForce: 0
   nextTimeToFire: 0
-  weaponPrefab: {fileID: 0}
-  bullet: {fileID: 0}
-  bulletCount: 3
-  hoverText: E
+  weaponPrefab: {fileID: 6469414901457010775, guid: 1e5933a30a32bd64da6854701a681ae8, type: 3}
+  bullet: {fileID: 5280939337676122326, guid: ac4a4c3c7cb60394c93372eec8433b0b, type: 3}
+  bulletCount: 5
+  hoverText: 
   hoverVisibleDistance: 5
   grenades: 0
   canSpread: 1

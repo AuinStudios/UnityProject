@@ -18,7 +18,22 @@ public class PlayerHealthHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider coll)
     {
-        if (coll.gameObject.tag == "explosiondamage")
+
+
+        if (coll.gameObject.tag == "explosivebarrel")
+        {
+            BulletOwner bulletOwner = coll.gameObject.GetComponent<BulletOwner>();
+
+            if (bulletOwner.isBoss)
+            {
+                Health -= bulletOwner.normalDamage + bulletOwner.criticalDamage;
+            }
+            else
+            {
+                Health -= 5;
+            }
+        }
+            if (coll.gameObject.tag == "explosiondamage")
         {
             BulletOwner bulletOwner = coll.gameObject.GetComponent<BulletOwner>();
 
