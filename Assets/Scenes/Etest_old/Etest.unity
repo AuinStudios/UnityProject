@@ -27772,10 +27772,6 @@ PrefabInstance:
       propertyPath: weaponPickupGUI
       value: 
       objectReference: {fileID: 699765724}
-    - target: {fileID: 3731992905673267177, guid: 10bb53c1d8ab7df4cb9eb6e5d05e54bc, type: 3}
-      propertyPath: intensity
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 6033328416769533610, guid: 10bb53c1d8ab7df4cb9eb6e5d05e54bc, type: 3}
       propertyPath: player
       value: 
