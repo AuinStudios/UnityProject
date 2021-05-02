@@ -78,6 +78,25 @@ public class PickUp : MonoBehaviour
 
             }
         }
+        if (pickObj.CompareTag("explosivebarrel"))
+        {
+
+            if (pickObj.GetComponent<Rigidbody>())
+            {
+                Rigidbody objRig = pickObj.GetComponent<Rigidbody>();
+                objRig.useGravity = false;
+                objRig.drag = 20f;
+
+                objRig.transform.parent = holdParent;
+                heldObj = pickObj;
+
+
+
+
+
+
+            }
+        }
     }
 
     void DropObject()

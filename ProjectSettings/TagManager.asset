@@ -12,7 +12,6 @@ TagManager:
   - CanPickUp
   - gun
   - test3000
-  - TimeManager
   - plate
   - bullet
   - lava
@@ -25,11 +24,11 @@ TagManager:
   - wall
   - canpickup
   - groundballgame
-  - mover
   - enemypos
   - explosiondamage
   - uzi
   - explosivebarrel
+  - explosiveammo
   layers:
   - Default
   - TransparentFX

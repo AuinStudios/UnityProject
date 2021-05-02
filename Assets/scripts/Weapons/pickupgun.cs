@@ -130,7 +130,7 @@ public class pickupgun : MonoBehaviour
         rb.AddForce(fpsCam.up * dropUpwardForce, ForceMode.Impulse);
         //Add random rotation
         float random = Random.Range(-1f, 1f);
-        rb.AddTorque(new Vector3(random, random, random) * 10);
+        rb.AddTorque(new Vector3(random, random, random) * 100);
 
         //Disable script
         gunscript.enabled = false;

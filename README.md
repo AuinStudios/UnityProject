@@ -193,3 +193,7 @@ ___
 
 ## (30/4/2021)
 ### (im working on makeing a   barrel so far its not  that great ill improve it later on)
+
+
+## (2/5/2021)
+### (importded the barrel model and uzi model and puted the scripts on them and did some codeing on the explosion script)

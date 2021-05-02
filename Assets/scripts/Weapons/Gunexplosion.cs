@@ -11,20 +11,9 @@ public class Gunexplosion : MonoBehaviour
     public RaycastHit hit;
     public GameObject impacteffect;
     public GameObject explosiondamage;
-    public void Start()
-    {
-     
-    }
-
-   
-
 
     public void OnTriggerEnter(Collider other)
     {
-           
-
-
-
 
         if (other.gameObject.CompareTag("forcefield"))
         {
@@ -35,19 +24,19 @@ public class Gunexplosion : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("gun"))
+        if (collision.gameObject.CompareTag("explosiveammo"))
         {
 
           equip = this.gameObject;
             
         }
          
-     if (collision.gameObject.CompareTag("gun"))
+     if (collision.gameObject.CompareTag("explosiveammo"))
         {
             Invoke("blow", blowtimer ) ;
             
         }
-        if (gameObject.CompareTag("gun"))
+        if (gameObject.CompareTag("explosiveammo"))
         {
             Invoke("blow", blowtimer);
 
@@ -59,10 +48,6 @@ public class Gunexplosion : MonoBehaviour
         }
     }
 
-
-
-
-
     void blow()
     {
         
@@ -73,18 +58,16 @@ public class Gunexplosion : MonoBehaviour
         foreach (Collider HIT in colliders)
         {
             Rigidbody rb = HIT.GetComponent<Rigidbody>();
-
+                
             if (!HIT.CompareTag("Player"))
             {
-                if (rb != null && (!HIT.CompareTag("gun")))
+               
+                if (rb != null && (!HIT.CompareTag("explosiveammo")))
                 {
                     rb.AddExplosionForce(scriptableobject.powerOfExplosion, explosionpos, scriptableobject.explosionRange, scriptableobject.upPowerExplosion, ForceMode.Impulse);
 
                 }
             }
-
-
-
 
 
             if (HIT.CompareTag("Player"))
