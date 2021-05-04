@@ -1457,7 +1457,7 @@ MonoBehaviour:
   rig: {fileID: 454259030}
   spawneffect: {fileID: 454259025}
   effect: {fileID: 1881791155571813637, guid: c5fd08013d645ee458ef3755f2ea8964, type: 3}
-  health: 20
+  health: 100
 --- !u!114 &454259029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28647,7 +28647,7 @@ MonoBehaviour:
   rig: {fileID: 2975378079813751263}
   spawneffect: {fileID: 2975378079813751261}
   effect: {fileID: 1881791155571813637, guid: c5fd08013d645ee458ef3755f2ea8964, type: 3}
-  health: 20
+  health: 100
 --- !u!4 &2975378079813751259
 Transform:
   m_ObjectHideFlags: 0
@@ -28935,6 +28935,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7676877909329021746, guid: aa716a393be1f47478de107e72cc4318, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291512783946042238, guid: aa716a393be1f47478de107e72cc4318, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

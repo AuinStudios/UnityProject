@@ -10,28 +10,35 @@ public class Gunexplosion : MonoBehaviour
     public GunsScriptableObject scriptableobject;
     public RaycastHit hit;
     public GameObject impacteffect, explosiondamage  ;
-    
+   
 
     public void OnTriggerEnter(Collider other)
     {
-
+        
         if (other.gameObject.CompareTag("forcefield"))
         {
-            Destroy(gameObject);
+            blow();
          
         }
     }
 
-
-    public void Update()
+    public void FixedUpdate()
     {
+
+
+      
+          
         
+      
         if (equip == enabled)
         {
             Invoke("blow", blowtimer );
 
         }
     }
+
+   
+
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("explosiveammo"))
@@ -41,14 +48,14 @@ public class Gunexplosion : MonoBehaviour
 
         }
   
-        if (collision.gameObject &&  !gameObject.CompareTag("explosivebarrel"))
+        if (collision.gameObject &&  !gameObject.CompareTag("explosivebarrel") && !collision.gameObject.CompareTag("gun"))
         {
             blow();
-            
-           
         }
-    }
 
+        
+    }
+  
     public void blow()
     {
          Instantiate(impacteffect, transform.position, transform.rotation);
@@ -68,14 +75,16 @@ public class Gunexplosion : MonoBehaviour
                 }
             }
         
-            if (HIT.CompareTag("enemy"))
-            {
+             if (HIT.CompareTag("enemy"))
+             {
                 Instantiate(explosiondamage, transform.position, transform.rotation);
-            }
+
+             }
+          
             if (HIT.CompareTag("Player"))
             {
                 rb.AddExplosionForce(scriptableobject.playerExplosionForce, explosionpos, scriptableobject.explosionRange, scriptableobject.playerUpForce, ForceMode.Impulse);
-                Instantiate(explosiondamage, transform.position, transform.rotation);
+               
             }
 
                if (gameObject.name == "grenadelauncherammo(Clone)")
