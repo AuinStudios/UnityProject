@@ -1425,7 +1425,6 @@ GameObject:
   - component: {fileID: 454259030}
   - component: {fileID: 454259029}
   - component: {fileID: 454259028}
-  - component: {fileID: 454259035}
   m_Layer: 0
   m_Name: shooting ass hole 2
   m_TagString: enemy
@@ -1450,7 +1449,6 @@ MonoBehaviour:
   timer: 0.5
   uiText: {fileID: 235412435}
   enemyUIColor: {r: 0.0071456432, g: 1, b: 0, a: 1}
-  test: {fileID: 454259035}
   isVisibleGizmo: 1
   MinUIRange: 10
   MinUIRangeColor: {r: 1, g: 0, b: 0, a: 1}
@@ -1459,6 +1457,7 @@ MonoBehaviour:
   rig: {fileID: 454259030}
   spawneffect: {fileID: 454259025}
   effect: {fileID: 1881791155571813637, guid: c5fd08013d645ee458ef3755f2ea8964, type: 3}
+  health: 20
 --- !u!114 &454259029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1576,19 +1575,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &454259035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454259025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c75ffd6a2278331498ee2a857ee38a52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 30
 --- !u!1 &493131014
 GameObject:
   m_ObjectHideFlags: 0
@@ -27750,7 +27736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: no owner
-  normalDamage: 8
+  normalDamage: 4
   isBoss: 0
   criticalDamage: 1
 --- !u!1001 &1383847891696592835
@@ -28653,7 +28639,6 @@ MonoBehaviour:
   timer: 0.5
   uiText: {fileID: 2975378078613877056}
   enemyUIColor: {r: 0.0071456432, g: 1, b: 0, a: 1}
-  test: {fileID: 2975378079813751266}
   isVisibleGizmo: 1
   MinUIRange: 10
   MinUIRangeColor: {r: 1, g: 0, b: 0, a: 1}
@@ -28662,6 +28647,7 @@ MonoBehaviour:
   rig: {fileID: 2975378079813751263}
   spawneffect: {fileID: 2975378079813751261}
   effect: {fileID: 1881791155571813637, guid: c5fd08013d645ee458ef3755f2ea8964, type: 3}
+  health: 20
 --- !u!4 &2975378079813751259
 Transform:
   m_ObjectHideFlags: 0
@@ -28716,8 +28702,6 @@ GameObject:
   - component: {fileID: 2975378079813751263}
   - component: {fileID: 2975378079813751260}
   - component: {fileID: 2975378079813751258}
-  - component: {fileID: 2975378079813751266}
-  - component: {fileID: 2975378079813751267}
   m_Layer: 0
   m_Name: shooting ass hole
   m_TagString: enemy
@@ -28754,35 +28738,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2975378079813751266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2975378079813751261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c75ffd6a2278331498ee2a857ee38a52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 20
---- !u!114 &2975378079813751267
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2975378079813751261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9daa72d147e6cbe48b47e2f363bf4a5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  owner: no owner
-  normalDamage: 1
-  isBoss: 1
-  criticalDamage: 1
 --- !u!114 &2975378080030943088
 MonoBehaviour:
   m_ObjectHideFlags: 0

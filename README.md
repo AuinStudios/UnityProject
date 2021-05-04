@@ -197,3 +197,9 @@ ___
 
 ## (2/5/2021)
 ### (importded the barrel model and uzi model and puted the scripts on them and did some codeing on the explosion script)
+
+
+
+
+## (2/5/2021)
+### (tried to improve the explodeing script but failed )

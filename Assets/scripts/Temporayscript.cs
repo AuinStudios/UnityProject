@@ -5,7 +5,7 @@ using UnityEngine;
 public class Temporayscript : MonoBehaviour
 {
 
-    public ENEMYHEALTH health;
+
     public shootingAI enemy;
 
 
@@ -13,7 +13,7 @@ public class Temporayscript : MonoBehaviour
     void Update()
     {
         
-        if (enemy.test.health == 0)
+        if (enemy.health == 0)
         {
             transform.position =  new Vector3 (0,100,0);
            

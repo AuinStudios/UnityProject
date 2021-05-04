@@ -12,7 +12,6 @@ public class shootingAI : MonoBehaviour
     public float timer = 0;
     public TextMeshPro uiText;
     public Color enemyUIColor;
-    public ENEMYHEALTH test;
     public bool isVisibleGizmo = true;
     [Range(5.0f, 15.0f)]
     public float MinUIRange = 10.0f;
@@ -27,7 +26,7 @@ public class shootingAI : MonoBehaviour
     public GameObject spawneffect;
     private bool hasFire = false;
     public ParticleSystem effect;
-    
+    public float health = 20f;
     // Start is called before the first frame update
    
 
@@ -40,11 +39,11 @@ public class shootingAI : MonoBehaviour
    
            if (bulletOwner.isBoss)
            {
-               test.health -= bulletOwner.normalDamage + bulletOwner.criticalDamage;
+               health -= bulletOwner.normalDamage + bulletOwner.criticalDamage;
            }
            else
            {
-               test.health -= bulletOwner.normalDamage;
+               health -= bulletOwner.normalDamage;
            }
    
          
@@ -60,11 +59,11 @@ public class shootingAI : MonoBehaviour
 
             if (bulletOwner.isBoss)
             {
-                test.health -= bulletOwner.normalDamage + bulletOwner.criticalDamage;
+                health -= bulletOwner.normalDamage + bulletOwner.criticalDamage;
             }
             else
             {
-                test.health -= bulletOwner.normalDamage;
+                health -= bulletOwner.normalDamage;
             }
 
 
@@ -80,11 +79,11 @@ public class shootingAI : MonoBehaviour
 
             if (bulletOwner.isBoss)
             {
-                test.health -= bulletOwner.normalDamage + bulletOwner.criticalDamage;
+                health -= bulletOwner.normalDamage + bulletOwner.criticalDamage;
             }
             else
             {
-                test.health -=bulletOwner.normalDamage;
+               health -=bulletOwner.normalDamage;
             }
 
 
@@ -98,7 +97,7 @@ public class shootingAI : MonoBehaviour
 
     void Update()
     {
-        if (test.health == 0)
+        if (health == 0)
         {
           
             Destroy(gameObject);
@@ -108,8 +107,8 @@ public class shootingAI : MonoBehaviour
         }
 
 
-        test.health = Mathf.Clamp((float) test.health, 0, float.MaxValue);
-        uiText.text = data.Name + "\n" + test.health;
+        health = Mathf.Clamp((float) health, 0, float.MaxValue);
+        uiText.text = data.Name + "\n" + health;
         float dist = Vector3.Distance(player.transform.position, transform.position);
         if (dist >= MinUIRange && dist <= MaxUIRange)
         {

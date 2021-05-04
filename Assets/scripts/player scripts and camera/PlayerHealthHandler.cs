@@ -43,7 +43,7 @@ public class PlayerHealthHandler : MonoBehaviour
             }
             else
             {
-                Health -= bulletOwner.normalDamage;
+                Health -= 2;
             }
 
 
