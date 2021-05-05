@@ -144,6 +144,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: no owner
-  normalDamage: 10
+  normalDamage: 5
   isBoss: 0
   criticalDamage: 0

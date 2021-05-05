@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8291512783946042238}
   - component: {fileID: 8007529339326425929}
   m_Layer: 0
-  m_Name: Explosive_barrel
+  m_Name: Explosivebarrel
   m_TagString: explosivebarrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,8 +113,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e7fe14e207cd144b987c2c05535343c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  equip: {fileID: 0}
-  blowtimer: 0
+  equip: {fileID: 7044315244514627976}
+  blowtimer: 0.05
   scriptableobject: {fileID: 11400000, guid: f418f805647cb32409786e383d34fc77, type: 2}
   impacteffect: {fileID: 1339933302230635234, guid: 873b857b801e93c4f98379b6a7b1dbc5, type: 3}
   explosiondamage: {fileID: 4540183566423321813, guid: d596822dfc1a580429fa19436ef48ba9, type: 3}

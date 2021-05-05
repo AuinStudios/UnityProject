@@ -20,7 +20,7 @@ public class PlayerHealthHandler : MonoBehaviour
     {
 
 
-        if (coll.gameObject.tag == "explosivebarrel")
+        if (coll.gameObject.CompareTag("explosivebarrel"))
         {
             BulletOwner bulletOwner = coll.gameObject.GetComponent<BulletOwner>();
 
@@ -30,10 +30,10 @@ public class PlayerHealthHandler : MonoBehaviour
             }
             else
             {
-                Health -= 5;
+                Health -= bulletOwner.normalDamage;
             }
         }
-            if (coll.gameObject.tag == "explosiondamage")
+            if (coll.gameObject.CompareTag( "explosiondamage"))
         {
             BulletOwner bulletOwner = coll.gameObject.GetComponent<BulletOwner>();
 
@@ -43,7 +43,7 @@ public class PlayerHealthHandler : MonoBehaviour
             }
             else
             {
-                Health -= 2;
+                Health -= bulletOwner.normalDamage;
             }
 
 

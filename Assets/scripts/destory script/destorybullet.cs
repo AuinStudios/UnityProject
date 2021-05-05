@@ -35,7 +35,10 @@ public class destorybullet : MonoBehaviour
             
         }
 
-        
+        if (collision.gameObject.tag == "explosivebarrel")
+        {
+            destorystuff();
+        }
         if (collision.gameObject.tag == "wall")
         {
             destorystuff();

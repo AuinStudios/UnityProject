@@ -19,7 +19,6 @@ public class shootingAI : MonoBehaviour
     [Range(20.0f, 50.0f)]
     public float MaxUIRange = 40.0f;
     public Color MaxUIRangeColor = Color.green;
-    private float timerdestory = 2f;
     private GameObject bullet;
     private Vector3 offset = new Vector3(0, 1, 0);
     public Rigidbody rig;
@@ -73,6 +72,24 @@ public class shootingAI : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+
+
+        if (other.gameObject.CompareTag("explosivebarrel"))
+        {
+            BulletOwner bulletOwner = other.gameObject.GetComponent<BulletOwner>();
+
+            if (bulletOwner.isBoss)
+            {
+                health -= bulletOwner.normalDamage + bulletOwner.criticalDamage;
+            }
+            else
+            {
+                health -= bulletOwner.normalDamage;
+            }
+        }
+
+
+
         if (other.gameObject.tag == "explosiondamage")
         {
             BulletOwner bulletOwner = other.gameObject.GetComponent<BulletOwner>();

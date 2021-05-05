@@ -14,7 +14,18 @@ public class Gunexplosion : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        
+
+        if (other.gameObject.CompareTag("forcefield"))
+        {
+
+            equip = this.gameObject;
+
+        }
+
+
+
+
+
         if (other.gameObject.CompareTag("forcefield"))
         {
             blow();
@@ -24,12 +35,6 @@ public class Gunexplosion : MonoBehaviour
 
     public void FixedUpdate()
     {
-
-
-      
-          
-        
-      
         if (equip == enabled)
         {
             Invoke("blow", blowtimer );
@@ -41,6 +46,12 @@ public class Gunexplosion : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
+
+        if(gameObject.CompareTag("explosivebarrel") && collision.gameObject.CompareTag("bullet"))
+        {
+            equip = this.gameObject;
+        }
+
         if (collision.gameObject.CompareTag("explosiveammo"))
         {
 
@@ -58,6 +69,10 @@ public class Gunexplosion : MonoBehaviour
   
     public void blow()
     {
+
+
+
+        
          Instantiate(impacteffect, transform.position, transform.rotation);
         Vector3 explosionpos = equip.transform.position;
         Collider[] colliders = Physics.OverlapSphere(explosionpos, scriptableobject.explosionRange);
@@ -68,13 +83,16 @@ public class Gunexplosion : MonoBehaviour
             if (!HIT.CompareTag("Player"))
             {
 
-                if (rb != null && (!HIT.CompareTag("explosiveammo")&& !HIT.CompareTag("bullet")))
+                if (rb != null && (!HIT.CompareTag("explosiveammo")&& !HIT.CompareTag("bullet") && !HIT.CompareTag("explosivebarrel")))
                 {
                     rb.AddExplosionForce(scriptableobject.powerOfExplosion, explosionpos, scriptableobject.explosionRange, scriptableobject.upPowerExplosion, ForceMode.Impulse);
 
                 }
             }
-        
+            if (gameObject.CompareTag("explosivebarrel"))
+            {
+                Instantiate(explosiondamage, transform.position, transform.rotation);
+            }
              if (HIT.CompareTag("enemy"))
              {
                 Instantiate(explosiondamage, transform.position, transform.rotation);
@@ -94,13 +112,17 @@ public class Gunexplosion : MonoBehaviour
                 }
 
 
-                if (gameObject.name == "explosivebarrel")
+                if (gameObject.name == "Explosivebarrel")
                 {
                     Destroy(gameObject);
 
                 }
+                if (gameObject.name == "barreldamage(Clone)")
+                {
+                Destroy(gameObject);
 
             }
+        }
 
         }
     }    
