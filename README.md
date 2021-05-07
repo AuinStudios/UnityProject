@@ -207,3 +207,6 @@ ___
 
 ## (5/5/2021)
 ### (i made the explosion damage abit better added a new effect to the     barrel fixed the barrel not     dieing and spawning to much praticals when dieing)
+
+## (7/5/2021)
+### (fixed uzi animation but pistol now breaks after u shoot with uzi but fixes it self after 1 sec will fix in future)

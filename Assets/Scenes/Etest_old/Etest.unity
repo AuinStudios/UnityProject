@@ -2485,7 +2485,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh18058
+  m_Name: pb_Mesh18064
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15148,6 +15148,10 @@ PrefabInstance:
       propertyPath: guntext
       value: 
       objectReference: {fileID: 1430824010}
+    - target: {fileID: 2019095791181492771, guid: d4d320a609608df41979096fd341406a, type: 3}
+      propertyPath: resetanimationpos
+      value: 
+      objectReference: {fileID: 1201368689}
     - target: {fileID: 2530679634491118977, guid: d4d320a609608df41979096fd341406a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 52.14
@@ -27779,6 +27783,10 @@ PrefabInstance:
       propertyPath: guntext
       value: 
       objectReference: {fileID: 1430824010}
+    - target: {fileID: 1548947464123284021, guid: 10bb53c1d8ab7df4cb9eb6e5d05e54bc, type: 3}
+      propertyPath: resetanimationpos
+      value: 
+      objectReference: {fileID: 1201368689}
     - target: {fileID: 1851410428313897845, guid: 10bb53c1d8ab7df4cb9eb6e5d05e54bc, type: 3}
       propertyPath: weaponPickupGUI
       value: 
@@ -28962,6 +28970,10 @@ PrefabInstance:
       propertyPath: guntext
       value: 
       objectReference: {fileID: 1430824010}
+    - target: {fileID: 6469414901457010728, guid: 1e5933a30a32bd64da6854701a681ae8, type: 3}
+      propertyPath: resetanimationpos
+      value: 
+      objectReference: {fileID: 1201368689}
     - target: {fileID: 6469414901457010775, guid: 1e5933a30a32bd64da6854701a681ae8, type: 3}
       propertyPath: m_Name
       value: shotgun
@@ -29132,5 +29144,9 @@ PrefabInstance:
       propertyPath: guntext
       value: 
       objectReference: {fileID: 1430824010}
+    - target: {fileID: 8309645144002514466, guid: 5b9a7f2b5e9cc6a41968dc11f22511a8, type: 3}
+      propertyPath: resetanimationpos
+      value: 
+      objectReference: {fileID: 1201368689}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b9a7f2b5e9cc6a41968dc11f22511a8, type: 3}

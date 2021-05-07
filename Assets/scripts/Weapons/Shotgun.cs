@@ -12,10 +12,11 @@ public class Shotgun : MonoBehaviour
 
     // variables
     // transforms and vectors shit
-   
-    public Transform bulletSpawnPoint;
+
+    public Transform bulletSpawnPoint, resetanimationpos;
     private pickupgun gunboi;
     public Animator anim;
+    
     // ------------------------------------------
     public ParticleSystem muzzleflash;
     public GunsScriptableObject scriptableobject;
@@ -58,6 +59,7 @@ public class Shotgun : MonoBehaviour
     void Update()
     {
         
+        
         // clamps the  ammo to never go down 0
         guntext.text = Mathf.Clamp((float)scriptableobject.currentAmmo, 0, float.MaxValue).ToString();
 
@@ -77,31 +79,44 @@ public class Shotgun : MonoBehaviour
             StartCoroutine(Reload());
             return;
         }
-       
+
+        if (gameObject.CompareTag("uzi") && !Input.GetKey(KeyCode.Mouse0))
+        {
+        anim.GetComponent<Animator>().enabled = false;
+        resetanimationpos.localPosition = new Vector3(0.669f, -0.6500001f , 1.946f);
+            
+        }
 
         if (gunboi == enabled && Input.GetKey(KeyCode.Mouse0) && Time.time >= nextimetofire && scriptableobject.currentAmmo >= scriptableobject.bulletCount)
         {
+           
+            anim.speed = 1;
+            anim.GetComponent<Animator>().enabled = true;
             nextimetofire = Time.time + 1f / scriptableobject.fireRate;
             scriptableobject.currentAmmo -= scriptableobject.bulletCount;
             launchboi();
-            if (gameObject.CompareTag("uzi"))
-            {
-                anim.SetTrigger("Uzi");
-                    
-            }
-            if (!gameObject.CompareTag("uzi"))
+            //if (gameObject.CompareTag("uzi"))
+            //{
+            //    anim.SetTrigger("Uzi");
+            //    
+            //}
+            if (gameObject.CompareTag("gun"))
             {
               anim.SetTrigger("shoot");
             }
-            
-            
+           
+            if (gameObject.CompareTag("uzi"))
+        {
+            anim.SetTrigger("Uzi");
+
+        }
         }
     }
 
     private void launchboi()
     {
         muzzleflash.Play();
-
+        
         for (int i = 0; i < scriptableobject.bulletCount; i++)
         {
             Vector3 spawnPosition;
