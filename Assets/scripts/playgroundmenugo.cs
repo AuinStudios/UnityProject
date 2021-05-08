@@ -16,7 +16,21 @@ public class playgroundmenugo : MonoBehaviour
 
     public void Playgame()
     {
-        StartCoroutine(loadlevel(SceneManager.GetActiveScene().buildIndex + 2));
+         Time.timeScale = 1;
+        if (gameObject.CompareTag("Restart"))
+        {
+         StartCoroutine(loadlevel(SceneManager.GetActiveScene().buildIndex + 0));
+
+        }
+        if(!(gameObject.CompareTag("Restart") && !((gameObject.CompareTag("Startgame")))))
+        {
+            StartCoroutine(loadlevel(SceneManager.GetActiveScene().buildIndex - 2));
+        }
+
+        if ((gameObject.CompareTag("Startgame")))
+        {
+            StartCoroutine(loadlevel(SceneManager.GetActiveScene().buildIndex + 2));
+        }
     }
 
 

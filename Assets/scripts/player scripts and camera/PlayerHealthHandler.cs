@@ -11,7 +11,7 @@ public class PlayerHealthHandler : MonoBehaviour
     public TextMeshProUGUI textcolorui;
     float startingHealth;
     string enemyName;
-
+    
 
 
 
@@ -90,12 +90,12 @@ public class PlayerHealthHandler : MonoBehaviour
             textcolorui.faceColor = Color.yellow;
         }
 
-        if (Health <= 0)   // 0%
-        {
-            Debug.LogWarning(enemyName + " fucking killed you...");
-
-            SceneManager.LoadScene("menu");
-        }
+      //  if (Health <= 0)   // 0%
+      //  {
+      //      Debug.LogWarning(enemyName + " fucking killed you...");
+      //
+      //      
+      //  }
     }
 
      public void OnCollisionEnter(Collision col)

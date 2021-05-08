@@ -88,14 +88,6 @@ public class destorybullet : MonoBehaviour
     
    public void Update()
     {
-
-
-
-
-
-
-       
-
         if (gameObject.name == ("timebullet(Clone)"))
         {
             destorystuff();

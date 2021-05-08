@@ -26,6 +26,7 @@ public class shootingAI : MonoBehaviour
     private bool hasFire = false;
     public ParticleSystem effect;
     public float health = 20f;
+    public PlayerHealthHandler Playerhealth;
     // Start is called before the first frame update
    
 
@@ -138,6 +139,10 @@ public class shootingAI : MonoBehaviour
        
 
         facetarget();
+        if(Playerhealth.Health >= 0)
+        {
+
+        }
         if (data.Type != EnemyType.NoRange)
         {
             float distance = Vector3.Distance(transform.position, player.transform.position);
@@ -145,8 +150,9 @@ public class shootingAI : MonoBehaviour
             if (distance <= data.Range)
             {
                 timer += Time.deltaTime;
-
-                if (timer >= data.ReloadTime)
+                if (Playerhealth.Health >= 0)
+                {
+if (timer >= data.ReloadTime)
                 {
                     Quaternion rot = Quaternion.LookRotation(player.transform.position);
                     bullet = (GameObject)Instantiate(data.ProjectilePrefab, transform.position + offset, rot);
@@ -162,6 +168,8 @@ public class shootingAI : MonoBehaviour
                     
                     hasFire = true;
                     timer = 0;
+                }
+                
                     
                 }
             }

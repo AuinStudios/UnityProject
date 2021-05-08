@@ -75,7 +75,7 @@ private Rigidbody rb;
 
 //Rotation and look
 private float xRotation;
-private float sensitivity = 50f;
+public float sensitivity = 50f;
 private float sensMultiplier = 1f;
 
 //Movement
@@ -173,10 +173,9 @@ void Start()
 
     private void Update()
 {
-       
+      
 
-
-    MyInput();
+        MyInput();
     Look();
     CheckForWall();
     SonicSpeed();
@@ -578,7 +577,15 @@ private void Look()
         wallRunCameraTilt += Time.deltaTime * maxWallRunCameraTilt * 2;
     if (Math.Abs(wallRunCameraTilt) < maxWallRunCameraTilt && isWallRunning && isWallLeft)
         wallRunCameraTilt -= Time.deltaTime * maxWallRunCameraTilt * 2;
-
+     //makes the   camera stop moveing when the game  is paused
+     if(Time.timeScale == 0)
+     {
+         sensitivity = 0;
+     }
+     if (Time.timeScale == 1)
+     {
+         sensitivity = 50;
+     }
     //Tilts camera back again
     if (wallRunCameraTilt > 0 && !isWallRight && !isWallLeft)
         wallRunCameraTilt -= Time.deltaTime * maxWallRunCameraTilt * 2;

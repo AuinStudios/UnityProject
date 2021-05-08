@@ -8,14 +8,36 @@ public class respawnscript : MonoBehaviour
     public GameObject player;
     [Range(-150.0f, -10.0f)]
     public float RespawnLowLimit = -100.0f;
-    public GameObject RespawnPoint;
-
+    public GameObject RespawnPoint, menu, background, continuee;
+    public Animator pause;
     [Header("scene restart")]
     public KeyCode RestartSceneButton;
     public string sceneToRestart;
+    public PlayerHealthHandler whendeath;
+    public Player test;
+
+    public void Helpme()
+    {
+        if (whendeath.Health <= 0)
+        {
+            continuee.SetActive(false);
+            pause.GetComponent<Animator>().enabled = false;
+            background.GetComponent<CanvasGroup>().alpha = 0.5f;
+            menu.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            test.moveSpeed = 0;
+            test.sensitivity = 0;
+            test.jumpForce = 0;
+        }
+    }
+
+    
 
     void Update()
     {
+        Helpme();
+
         if (player.transform.position.y <= RespawnLowLimit)
         {
             try
@@ -27,12 +49,23 @@ public class respawnscript : MonoBehaviour
 
                 throw;
             }
-            
+
+
+            pause.SetTrigger("start");
         }
 
-        if (Input.GetKeyDown(RestartSceneButton))
+        if (Input.GetKeyDown(RestartSceneButton) && !(whendeath.Health <= 0))
         {
-            SceneManager.LoadScene("menu");
+            pause.GetComponent<Animator>().enabled = false;
+            background.GetComponent<CanvasGroup>().alpha = 0.5f;
+            menu.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            Time.timeScale = 0;
+            continuee.SetActive(true);
         }
+
     }
 }
+    
+

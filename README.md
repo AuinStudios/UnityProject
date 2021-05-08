@@ -210,3 +210,7 @@ ___
 
 ## (7/5/2021)
 ### (fixed uzi animation but pistol now breaks after u shoot with uzi but fixes it self after 1 sec will fix in future)
+
+
+## (8/5/2021)
+### (added a pause menu and a death menu  took me ages to make the pause menu and just changed a few of the code for the death menu but stll i did good today and learnt some stuff like setactive is basically enabled for gameobjects and get compoments and shit)

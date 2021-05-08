@@ -11,7 +11,6 @@ TagManager:
   - bounce
   - CanPickUp
   - gun
-  - test3000
   - plate
   - bullet
   - lava
@@ -29,6 +28,8 @@ TagManager:
   - uzi
   - explosivebarrel
   - explosiveammo
+  - Restart
+  - Startgame
   layers:
   - Default
   - TransparentFX
