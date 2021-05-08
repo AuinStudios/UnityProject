@@ -98,6 +98,8 @@ public class GunScriptableObjectEditor : Editor
                     }
                 }
             }
+
+            //gunsScriptable.animator = EditorGUILayout.ObjectField("Firing animation", gunsScriptable.animator, typeof(Animator), false) as Animator;
         }
 
         serializedObject.ApplyModifiedProperties();

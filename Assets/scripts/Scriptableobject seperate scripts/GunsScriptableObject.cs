@@ -15,7 +15,10 @@ public class GunsScriptableObject : ScriptableObject
     public string Name;
     public guntype type;
     //----------------------------- variables for gun
-    
+
+    // all
+    public Animator animator;
+
     // Auto and pistol
     public float bulletForce;
 
