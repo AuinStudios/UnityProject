@@ -80,14 +80,14 @@ public class Shotgun : MonoBehaviour
             return;
         }
 
-        if (gameObject.CompareTag("uzi") && !Input.GetKey(KeyCode.Mouse0))
+        if (gameObject.CompareTag("uzi") && !Input.GetKey(KeyCode.Mouse0) && (Time.timeScale != 0))
         {
         anim.GetComponent<Animator>().enabled = false;
         resetanimationpos.localPosition = new Vector3(0.669f, -0.6500001f , 1.946f);
             
         }
 
-        if (gunboi == enabled && Input.GetKey(KeyCode.Mouse0) && Time.time >= nextimetofire && scriptableobject.currentAmmo >= scriptableobject.bulletCount)
+        if (gunboi == enabled && Input.GetKey(KeyCode.Mouse0) && Time.time >= nextimetofire &&((Time.timeScale != 0) && scriptableobject.currentAmmo >= scriptableobject.bulletCount))
         {
            
             anim.speed = 1;

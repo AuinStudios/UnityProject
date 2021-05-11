@@ -51,7 +51,7 @@ public class respawnscript : MonoBehaviour
             }
 
 
-            pause.SetTrigger("start");
+           
         }
 
         if (Input.GetKeyDown(RestartSceneButton) && !(whendeath.Health <= 0))
