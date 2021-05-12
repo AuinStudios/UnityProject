@@ -20,7 +20,10 @@ public class Newplayer : MonoBehaviour
     private float sensitivity = 50f;
     private float sensMultiplier = 1f;
     public Transform orientation;
-    Vector3 v3;
+    public GameObject uitransformation;
+    public PlayerHealthHandler health;
+    public ParticleSystem transformationeffect;
+    
     void FixedUpdate()
     {
 
@@ -47,7 +50,7 @@ public class Newplayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-           v3 = rig.velocity;
+           
 
 
 
@@ -56,6 +59,10 @@ public class Newplayer : MonoBehaviour
 
         
         orientation.Rotate(Vector3.up * mouseX);
+
+
+
+
         if (Input.GetKey(KeyCode.W) && isgroundedboi)
         {
             rig.AddForce(player.forward * forwardspeed * Time.deltaTime, ForceMode.Impulse);
@@ -94,7 +101,7 @@ public class Newplayer : MonoBehaviour
 
         }
 
-
+       
         if (Input.GetKey(KeyCode.A) && isgroundedboi)
         {
             rig.AddForce(player.right * left * Time.deltaTime, ForceMode.Impulse);
@@ -106,41 +113,80 @@ public class Newplayer : MonoBehaviour
             rig.AddForce(player.right * left * Time.deltaTime, ForceMode.Impulse);
             
         }
-
-
-        if (!isgroundedboi)
-            {
+        if(transformationeffect.isPlaying == false)
+        {
+            uitransformation.GetComponent<CanvasGroup>().alpha = 0f;
+        }
+        if (Input.GetKeyDown(KeyCode.B) && (gameObject.transform.localScale != new Vector3 (10,10,10)))
+        {
+            transformationeffect.Play();
+            uitransformation.GetComponent<CanvasGroup>().alpha = 0.5f;
+            
+            jumpower = 100000f;
+            maxspeed = 300f;
+            gameObject.transform.localScale = new Vector3(10, 10, 10);
+        }
+        if (Input.GetKeyDown(KeyCode.N) && (gameObject.transform.localScale == new Vector3(10, 10, 10)))
+        {
+            transformationeffect.Play();
+            uitransformation.GetComponent<CanvasGroup>().alpha = 0.5f;
+            jumpower = 30000f;
+            maxspeed = 30f;
+            gameObject.transform.localScale = new Vector3(1, 1, 1);
+        }
+        if (!isgroundedboi )
+        {
             rig.AddForce(player.up * dontjump * Time.deltaTime, ForceMode.Impulse);
 
-
+            rig.drag = 0;
             forwardspeed = 500;
             backwards = -500;
             right = 500;
             left = -500;
-            }
+        }
 
-
-        if (isgroundedboi && (Input.GetKeyDown(KeyCode.Space)))
+        if(health.Health <= 0  && isgroundedboi )
+        {
+            forwardspeed = 0f;
+            backwards = -0f;
+            right = 0f;
+            left = -0f;
+            sensitivity = 0f;
+            sensMultiplier = 0;
+        }
+        if(Time.timeScale == 0)
+        {
+            forwardspeed = 0f;
+            backwards = -0f;
+            right = 0f;
+            left = -0f;
+            sensitivity = 0f;
+            sensMultiplier = 0;
+        }
+        if(Time.timeScale == 1)
+        {
+            sensitivity = 50f;
+            sensMultiplier = 1;
+        }
+        if (isgroundedboi && (Input.GetKeyDown(KeyCode.Space)) )
         {
             rig.AddForce(player.up * jumpower * Time.fixedDeltaTime, ForceMode.Impulse);
-            v3.x = 0;
-            v3.z = 0;
+            
         }
 
-        if (isgroundedboi)
+        if (isgroundedboi && !(health.Health == 0))
         {
 
-            v3.x = 0;
-            v3.z = 0;
-            forwardspeed = 15000f;
-            backwards = -15000f;
-            right = 15000f;
-            left = -15000f;
+            rig.drag = 15;
+            forwardspeed = 8000f;
+            backwards = -8000f;
+            right = 8000f;
+            left = -8000f;
         }
 
 
 
-        rig.velocity = v3;
+       
         transform.position = GFX.transform.position;
 
         

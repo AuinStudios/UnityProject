@@ -8,6 +8,7 @@ public class MoveCamera : MonoBehaviour
     public Transform orientation;
     public float xRotation = 0f;
     public float sensitivity = 50f;
+    public PlayerHealthHandler PlayerHealth;
     private float sensMultiplier = 1f;
     
      
@@ -32,7 +33,10 @@ public class MoveCamera : MonoBehaviour
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         orientation.Rotate(Vector3.up * mouseX);
         
-
+        if(PlayerHealth.Health >= 0)
+        {
+            sensitivity = 0;
+        }
         //makes the   camera stop moveing when the game  is paused
         if (Time.timeScale == 0)
         {
