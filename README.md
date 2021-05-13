@@ -227,4 +227,4 @@ ___
 
 
 ## (13/5/2021)
-### (fixed alot of bugs today removed the size change transformation because it doesnt fit the game  and improved the player movmement just a tiny bit more)
+### (fixed alot of bugs today removed the size change transformation because it doesnt fit the game  and improved the player movmement just a tiny bit more and fixed pause menu and  dieing as well)
