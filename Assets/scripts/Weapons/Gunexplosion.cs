@@ -89,8 +89,9 @@ public class Gunexplosion : MonoBehaviour
 
                 }
             }
-            if (gameObject.CompareTag("explosivebarrel"))
+            if (gameObject.CompareTag("explosivebarrel") && HIT.gameObject.CompareTag("explosiveammo"))
             {
+                equip = this.gameObject;
                 Instantiate(explosiondamage, transform.position, transform.rotation);
             }
              if (HIT.CompareTag("enemy"))

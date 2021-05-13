@@ -12,6 +12,7 @@ public class pickupgun : MonoBehaviour
 
  //Super Important Ones----------------------------------------------------------------------------
  public Shotgun gunscript;
+ public PlayerHealthHandler playerhealth;
  public Rigidbody rb;
  public Transform player, gunContainer, fpsCam;
  public BoxCollider coll;
@@ -82,7 +83,7 @@ public class pickupgun : MonoBehaviour
         }
         //Check if player is in range and "E" is pressed
         Vector3 distanceToPlayer = player.position - transform.position;
-        if (!equipped && distanceToPlayer.magnitude <= pickUpRange && slotFull == false && Input.GetKeyDown(KeyCode.E) ) PickUp() ;
+        if (!equipped && distanceToPlayer.magnitude <= pickUpRange && !(playerhealth.Health <= 0) && slotFull == false && Input.GetKeyDown(KeyCode.E) ) PickUp() ;
      
         //Drop if equipped and "Q" is pressed
         if (equipped && slotFull == true && Input.GetKeyDown(KeyCode.Q)) Drop();

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4741989000614494917}
   - component: {fileID: 8291512783946042238}
   - component: {fileID: 8007529339326425929}
+  - component: {fileID: 466988792}
   m_Layer: 0
   m_Name: Explosivebarrel
   m_TagString: explosivebarrel
@@ -113,8 +114,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e7fe14e207cd144b987c2c05535343c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  equip: {fileID: 7044315244514627976}
-  blowtimer: 0.05
+  equip: {fileID: 0}
+  blowtimer: 0
   scriptableobject: {fileID: 11400000, guid: f418f805647cb32409786e383d34fc77, type: 2}
   impacteffect: {fileID: 1339933302230635234, guid: 873b857b801e93c4f98379b6a7b1dbc5, type: 3}
   explosiondamage: {fileID: 4540183566423321813, guid: d596822dfc1a580429fa19436ef48ba9, type: 3}
@@ -131,3 +132,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6001616, y: 2.4841814, z: 1.6001616}
   m_Center: {x: 0.060705394, y: 0.0060052276, z: 0.0027180314}
+--- !u!114 &466988792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7044315244514627976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc742538487595d42a02301a664392fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptableobject: {fileID: 11400000, guid: 7b22e0f8e0708b6488590e2bc86f1d29, type: 2}
+  rig: {fileID: 4741989000614494917}
+  bananakatana: {fileID: 0}

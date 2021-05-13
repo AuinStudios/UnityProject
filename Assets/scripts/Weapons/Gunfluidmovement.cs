@@ -8,7 +8,7 @@ public class Gunfluidmovement : MonoBehaviour
 
         public float intensity;
         public float smooth;
-        
+    public PlayerHealthHandler Playerhealth;
         private Quaternion originalrotation;
       
 
@@ -25,11 +25,11 @@ private void Start()
 
   private void Update()
   {
+
+    if (!(Playerhealth.Health <= 0))
+    {
       FluidUpdate();
-
-
-
-
+    }
   }
 
 

@@ -224,3 +224,7 @@ ___
 
 ## (12/5/2021)
 ### (Improved the player movement system  and did some bug fixes  and added a size change mode  pause menu is broken tho and dieing is broken as well so torromow ill fix that)
+
+
+## (13/5/2021)
+### (fixed alot of bugs today removed the size change transformation because it doesnt fit the game  and improved the player movmement just a tiny bit more)

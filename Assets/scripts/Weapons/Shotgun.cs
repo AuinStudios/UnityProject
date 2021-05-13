@@ -21,6 +21,7 @@ public class Shotgun : MonoBehaviour
     public ParticleSystem muzzleflash;
     public GunsScriptableObject scriptableobject;
     public bool isreloadi = false;
+    public PlayerHealthHandler Playerhealth;
     private float nextimetofire = 1f;
     // --------------------------------------------
     
@@ -74,7 +75,7 @@ public class Shotgun : MonoBehaviour
 
         if (isreloadi)
             return;
-        if (scriptableobject.currentAmmo == 0)
+        if (scriptableobject.currentAmmo == 0 )
         {
             StartCoroutine(Reload());
             return;
@@ -87,7 +88,7 @@ public class Shotgun : MonoBehaviour
             
         }
 
-        if (gunboi == enabled && Input.GetKey(KeyCode.Mouse0) && Time.time >= nextimetofire &&((Time.timeScale != 0) && scriptableobject.currentAmmo >= scriptableobject.bulletCount))
+        if (gunboi == enabled && Input.GetKey(KeyCode.Mouse0) && !(Playerhealth.Health <=0) &&Time.time >= nextimetofire &&((Time.timeScale != 0) && scriptableobject.currentAmmo >= scriptableobject.bulletCount))
         {
            
             anim.speed = 1;

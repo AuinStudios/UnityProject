@@ -33,7 +33,7 @@ public class MoveCamera : MonoBehaviour
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         orientation.Rotate(Vector3.up * mouseX);
         
-        if(PlayerHealth.Health >= 0)
+        if(PlayerHealth.Health <= 0)
         {
             sensitivity = 0;
         }
@@ -42,7 +42,7 @@ public class MoveCamera : MonoBehaviour
         {
             sensitivity = 0;
         }
-        if (Time.timeScale == 1)
+        if (Time.timeScale == 1 && !(PlayerHealth.Health <= 0))
         {
             sensitivity = 50;
         }

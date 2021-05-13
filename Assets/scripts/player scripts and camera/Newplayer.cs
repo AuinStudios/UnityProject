@@ -20,14 +20,14 @@ public class Newplayer : MonoBehaviour
     private float sensitivity = 50f;
     private float sensMultiplier = 1f;
     public Transform orientation;
-    public GameObject uitransformation;
     public PlayerHealthHandler health;
-    public ParticleSystem transformationeffect;
-    
+  
     void FixedUpdate()
     {
 
-        if (rig.velocity.magnitude > maxspeed && !isgroundedboi)
+    
+
+        if (rig.velocity.magnitude > maxspeed )
         {
 
             speedeffect.Play();
@@ -35,7 +35,7 @@ public class Newplayer : MonoBehaviour
             rig.velocity = Vector3.ClampMagnitude(rig.velocity, maxspeed);
         }
 
-        if (rig.velocity.magnitude < maxspeed && isgroundedboi)
+        if (rig.velocity.magnitude < maxspeed)
         {
             speedeffect.Stop();
         }
@@ -113,39 +113,20 @@ public class Newplayer : MonoBehaviour
             rig.AddForce(player.right * left * Time.deltaTime, ForceMode.Impulse);
             
         }
-        if(transformationeffect.isPlaying == false)
-        {
-            uitransformation.GetComponent<CanvasGroup>().alpha = 0f;
-        }
-        if (Input.GetKeyDown(KeyCode.B) && (gameObject.transform.localScale != new Vector3 (10,10,10)))
-        {
-            transformationeffect.Play();
-            uitransformation.GetComponent<CanvasGroup>().alpha = 0.5f;
-            
-            jumpower = 100000f;
-            maxspeed = 300f;
-            gameObject.transform.localScale = new Vector3(10, 10, 10);
-        }
-        if (Input.GetKeyDown(KeyCode.N) && (gameObject.transform.localScale == new Vector3(10, 10, 10)))
-        {
-            transformationeffect.Play();
-            uitransformation.GetComponent<CanvasGroup>().alpha = 0.5f;
-            jumpower = 30000f;
-            maxspeed = 30f;
-            gameObject.transform.localScale = new Vector3(1, 1, 1);
-        }
+
         if (!isgroundedboi )
         {
-            rig.AddForce(player.up * dontjump * Time.deltaTime, ForceMode.Impulse);
 
+            rig.AddForce(player.up * dontjump * Time.deltaTime, ForceMode.Impulse);
+           
             rig.drag = 0;
-            forwardspeed = 500;
-            backwards = -500;
-            right = 500;
-            left = -500;
+            forwardspeed = 300;
+            backwards = -300;
+            right = 300;
+            left = -300;
         }
 
-        if(health.Health <= 0  && isgroundedboi )
+        if(health.Health <= 0  )
         {
             forwardspeed = 0f;
             backwards = -0f;
@@ -163,7 +144,7 @@ public class Newplayer : MonoBehaviour
             sensitivity = 0f;
             sensMultiplier = 0;
         }
-        if(Time.timeScale == 1)
+        if(Time.timeScale == 1 && !(health.Health <= 0))
         {
             sensitivity = 50f;
             sensMultiplier = 1;
@@ -171,17 +152,21 @@ public class Newplayer : MonoBehaviour
         if (isgroundedboi && (Input.GetKeyDown(KeyCode.Space)) )
         {
             rig.AddForce(player.up * jumpower * Time.fixedDeltaTime, ForceMode.Impulse);
-            
+            rig.drag = 0;
+            forwardspeed = 300;
+            backwards = -300;
+            right = 300;
+            left = -300;
         }
 
-        if (isgroundedboi && !(health.Health == 0))
+        if (isgroundedboi && !(health.Health <= 0))
         {
-
+            
             rig.drag = 15;
-            forwardspeed = 8000f;
-            backwards = -8000f;
-            right = 8000f;
-            left = -8000f;
+            forwardspeed = 4000f;
+            backwards = -4000f;
+            right = 4000f;
+            left = -4000f;
         }
 
 

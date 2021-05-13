@@ -11,14 +11,14 @@ public class PickUp : MonoBehaviour
     public float pickUpRange = 5f;
     public GameObject heldObj;
     public string TagName;
-
+    public PlayerHealthHandler Playerhealth;
     public Transform holdParent;
 
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.E))
+      
+        if (Input.GetKeyDown(KeyCode.E) && !(Playerhealth.Health <= 0))
         {
             //if (heldObj.CompareTag(TagName))
             //{

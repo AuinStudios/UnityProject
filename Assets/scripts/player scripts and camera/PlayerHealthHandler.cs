@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerHealthHandler : MonoBehaviour
 {
-    [Range(10, 500)]
+    [Range(0, 500)]
     public float Health = 100;
     public TextMeshProUGUI HealthText;
     public TextMeshProUGUI textcolorui;
