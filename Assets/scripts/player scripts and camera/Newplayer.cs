@@ -25,12 +25,15 @@ public class Newplayer : MonoBehaviour
     void FixedUpdate()
     {
 
-    
+        if (rig.velocity.magnitude > maxspeed && !isgroundedboi)
+        {
+          speedeffect.Play();
+        }
 
-        if (rig.velocity.magnitude > maxspeed )
+            if (rig.velocity.magnitude > maxspeed )
         {
 
-            speedeffect.Play();
+            
 
             rig.velocity = Vector3.ClampMagnitude(rig.velocity, maxspeed);
         }
@@ -50,65 +53,33 @@ public class Newplayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-           
-
-
-
         float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.fixedDeltaTime * sensMultiplier;
-        float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.fixedDeltaTime * sensMultiplier;
 
         
         orientation.Rotate(Vector3.up * mouseX);
 
-
-
-
-        if (Input.GetKey(KeyCode.W) && isgroundedboi)
+        if (Input.GetKey(KeyCode.W))
         {
             rig.AddForce(player.forward * forwardspeed * Time.deltaTime, ForceMode.Impulse);
         }
-        if (Input.GetKey(KeyCode.W) && !isgroundedboi)
+        if (Input.GetKey(KeyCode.S))
         {
-            rig.AddForce(player.forward * forwardspeed * Time.deltaTime, ForceMode.Impulse);
+            rig.AddForce(player.forward * backwards * Time.deltaTime, ForceMode.Impulse);
         }
-
         if (Input.GetKeyDown(KeyCode.H) && !isgroundedboi)
         {
             rig.velocity = Vector3.ClampMagnitude(rig.velocity, 1000);
             rig.AddForce(player.forward * dash * Time.deltaTime, ForceMode.Impulse);
 
         }
-        if (Input.GetKey(KeyCode.S) &&isgroundedboi)
-        {
-            rig.AddForce(player.forward * backwards * Time.deltaTime, ForceMode.Impulse);
-           
-        }
 
-        if (Input.GetKey(KeyCode.S) && !isgroundedboi)
-        {
-            rig.AddForce(player.forward * backwards * Time.deltaTime, ForceMode.Impulse);
-
-        }
-        if (Input.GetKey(KeyCode.D) && isgroundedboi)
+        if (Input.GetKey(KeyCode.D))
         {
             rig.AddForce(player.right * right * Time.deltaTime, ForceMode.Impulse);
            
         }
-
-        if (Input.GetKey(KeyCode.D) && !isgroundedboi)
-        {
-            rig.AddForce(player.right * right * Time.deltaTime, ForceMode.Impulse);
-
-        }
-
        
-        if (Input.GetKey(KeyCode.A) && isgroundedboi)
-        {
-            rig.AddForce(player.right * left * Time.deltaTime, ForceMode.Impulse);
-            
-        }
-
-        if (Input.GetKey(KeyCode.A) && !isgroundedboi)
+        if (Input.GetKey(KeyCode.A))
         {
             rig.AddForce(player.right * left * Time.deltaTime, ForceMode.Impulse);
             
@@ -118,12 +89,12 @@ public class Newplayer : MonoBehaviour
         {
 
             rig.AddForce(player.up * dontjump * Time.deltaTime, ForceMode.Impulse);
-           
+            maxspeed = 30;
             rig.drag = 0;
-            forwardspeed = 300;
-            backwards = -300;
-            right = 300;
-            left = -300;
+            forwardspeed = 500;
+            backwards = -500;
+            right = 500;
+            left = -500;
         }
 
         if(health.Health <= 0  )
@@ -152,21 +123,16 @@ public class Newplayer : MonoBehaviour
         if (isgroundedboi && (Input.GetKeyDown(KeyCode.Space)) )
         {
             rig.AddForce(player.up * jumpower * Time.fixedDeltaTime, ForceMode.Impulse);
-            rig.drag = 0;
-            forwardspeed = 300;
-            backwards = -300;
-            right = 300;
-            left = -300;
         }
 
         if (isgroundedboi && !(health.Health <= 0))
         {
-            
+            maxspeed = 28;
             rig.drag = 15;
-            forwardspeed = 4000f;
-            backwards = -4000f;
-            right = 4000f;
-            left = -4000f;
+            forwardspeed = 8000f;
+            backwards = -8000f;
+            right = 8000f;
+            left = -8000f;
         }
 
 

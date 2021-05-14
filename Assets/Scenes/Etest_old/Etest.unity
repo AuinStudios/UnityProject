@@ -29696,7 +29696,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1695635068036432805}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: -1.53, z: -0.04}
+  m_LocalPosition: {x: 0.007, y: -1.142, z: -0.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1695635068435680606}
@@ -29730,8 +29730,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5603421
-  m_Center: {x: 0, y: -0.060342073, z: 0}
+  m_Radius: 0.4335214
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1695635068435680592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29887,7 +29887,7 @@ MonoBehaviour:
   player: {fileID: 1695635067410593136}
   maxspeed: 27
   GFX: {fileID: 1695635068435680598}
-  jumpower: 32000
+  jumpower: 20000
   isgroundedboi: 0
   speedeffect: {fileID: 1429165638}
   orientation: {fileID: 1695635067410593136}
