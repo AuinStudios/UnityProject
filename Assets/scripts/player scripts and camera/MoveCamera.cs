@@ -3,15 +3,15 @@ using UnityEngine;
 
 public class MoveCamera : MonoBehaviour
 {
-    public GameObject player;
-    public Transform playerCam;
+    
+    
     public Transform orientation;
     public float xRotation = 0f;
     public float sensitivity = 50f;
     public PlayerHealthHandler PlayerHealth;
     private float sensMultiplier = 1f;
-    
-     
+    public float uprecoil = 0f;
+    public float testingsmooth = 0f;
    
   
     public void Start()
@@ -24,9 +24,9 @@ public class MoveCamera : MonoBehaviour
     public void  Update()
     {
         
-        transform.position = player.transform.position;
+        
         float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.fixedDeltaTime * sensMultiplier;
-        float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.fixedDeltaTime * sensMultiplier;
+        float mouseY = uprecoil  +  Input.GetAxis("Mouse Y") * sensitivity * Time.fixedDeltaTime * sensMultiplier;
 
         xRotation -= mouseY;
         xRotation = Mathf.Clamp( xRotation ,-80, 80);

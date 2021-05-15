@@ -234,4 +234,5 @@ ___
 ## (15/5/2021)
 ### (im finally satfied with the player movement and i  fixed the pick up glitch  that glitched abit the items and some balacening stuff)
 
+1) and i added recoil to guns its not that great  and i fixed the recoil bug and u can now only  reload ammo with r
 

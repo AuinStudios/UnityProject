@@ -281,7 +281,6 @@ RectTransform:
   - {fileID: 1430824009}
   - {fileID: 1657402761}
   - {fileID: 894568332}
-  - {fileID: 321616893}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1005,55 +1004,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 1060616046}
   transitiontime: 1.2
---- !u!1 &321616892
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 321616893}
-  - component: {fileID: 321616895}
-  m_Layer: 9
-  m_Name: Camera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &321616893
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 321616892}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -540.5612, y: -273.86584, z: -6.1035724}
-  m_LocalScale: {x: 0.98092645, y: 0.98092645, z: 0.98092645}
-  m_Children: []
-  m_Father: {fileID: 50719673}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &321616895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 321616892}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f40552933c1308d42861d3e424e0cacf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1695635068815624094}
-  playerCam: {fileID: 321616893}
-  orientation: {fileID: 50719673}
-  xRotation: 0
-  sensitivity: 50
-  PlayerHealth: {fileID: 0}
 --- !u!1 &321921818
 GameObject:
   m_ObjectHideFlags: 0
@@ -3838,7 +3788,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143054466}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.97213, y: 0.06999993, z: 31.360254}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1201368689}
@@ -4032,12 +3982,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f40552933c1308d42861d3e424e0cacf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1695635068815624094}
-  playerCam: {fileID: 321616893}
   orientation: {fileID: 1695635068815624093}
   xRotation: 0
   sensitivity: 50
   PlayerHealth: {fileID: 1695635068435680597}
+  uprecoil: 0
+  testingsmooth: 0
 --- !u!1 &1150405335
 GameObject:
   m_ObjectHideFlags: 0
@@ -16661,6 +16611,10 @@ PrefabInstance:
       propertyPath: Playerhealth
       value: 
       objectReference: {fileID: 1695635068435680597}
+    - target: {fileID: 2019095791181492771, guid: d4d320a609608df41979096fd341406a, type: 3}
+      propertyPath: test
+      value: 
+      objectReference: {fileID: 1143054474}
     - target: {fileID: 2530679634491118977, guid: d4d320a609608df41979096fd341406a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 52.14
@@ -29473,6 +29427,10 @@ PrefabInstance:
       propertyPath: Playerhealth
       value: 
       objectReference: {fileID: 1695635068435680597}
+    - target: {fileID: 1548947464123284021, guid: 10bb53c1d8ab7df4cb9eb6e5d05e54bc, type: 3}
+      propertyPath: test
+      value: 
+      objectReference: {fileID: 1143054474}
     - target: {fileID: 1851410428313897845, guid: 10bb53c1d8ab7df4cb9eb6e5d05e54bc, type: 3}
       propertyPath: weaponPickupGUI
       value: 
@@ -30758,6 +30716,10 @@ PrefabInstance:
       propertyPath: guntext
       value: 
       objectReference: {fileID: 1430824010}
+    - target: {fileID: 6469414901457010728, guid: 1e5933a30a32bd64da6854701a681ae8, type: 3}
+      propertyPath: test
+      value: 
+      objectReference: {fileID: 1143054474}
     - target: {fileID: 6469414901457010775, guid: 1e5933a30a32bd64da6854701a681ae8, type: 3}
       propertyPath: m_Name
       value: shotgun
@@ -30944,5 +30906,9 @@ PrefabInstance:
       propertyPath: Playerhealth
       value: 
       objectReference: {fileID: 1695635068435680597}
+    - target: {fileID: 8309645144002514466, guid: 5b9a7f2b5e9cc6a41968dc11f22511a8, type: 3}
+      propertyPath: test
+      value: 
+      objectReference: {fileID: 1143054474}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b9a7f2b5e9cc6a41968dc11f22511a8, type: 3}

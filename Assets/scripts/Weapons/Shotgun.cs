@@ -16,7 +16,7 @@ public class Shotgun : MonoBehaviour
     public Transform bulletSpawnPoint, resetanimationpos;
     private pickupgun gunboi;
     public Animator anim;
-    
+    public MoveCamera test;
     // ------------------------------------------
     public ParticleSystem muzzleflash;
     public GunsScriptableObject scriptableobject;
@@ -36,7 +36,7 @@ public class Shotgun : MonoBehaviour
         yield return new WaitForSeconds(scriptableobject.reloadTime);
         isreloadi = false;
     }
-
+ 
     // ----------------------------------------------
 
 
@@ -72,14 +72,14 @@ public class Shotgun : MonoBehaviour
         }
 
 
-
-        if (isreloadi)
-            return;
-        if (scriptableobject.currentAmmo == 0 )
-        {
-            StartCoroutine(Reload());
-            return;
-        }
+        // this is for when the  bullets are 0 to reload
+        //if (isreloadi)
+        //    return;
+        //if (scriptableobject.currentAmmo == 0 )
+        //{
+        //    StartCoroutine(Reload());
+        //    return;
+        //}
 
         if (gameObject.CompareTag("uzi") && !Input.GetKey(KeyCode.Mouse0) && (Time.timeScale != 0))
         {
@@ -87,10 +87,14 @@ public class Shotgun : MonoBehaviour
         resetanimationpos.localPosition = new Vector3(0.669f, -0.6500001f , 1.946f);
             
         }
-
-        if (gunboi == enabled && Input.GetKey(KeyCode.Mouse0) && !(Playerhealth.Health <=0) &&Time.time >= nextimetofire &&((Time.timeScale != 0) && scriptableobject.currentAmmo >= scriptableobject.bulletCount))
+       if (Input.GetKey(KeyCode.Mouse0) && isreloadi == false)
         {
-           
+            test.uprecoil = 0;
+        }
+       
+        if (gunboi == enabled && Input.GetKey(KeyCode.Mouse0) && !(Playerhealth.Health <=0) &&Time.time >= nextimetofire &&((Time.timeScale != 0) && scriptableobject.currentAmmo >= scriptableobject.bulletCount) && !isreloadi)
+        {
+            test.testingsmooth = 0f;
             anim.speed = 1;
             anim.GetComponent<Animator>().enabled = true;
             nextimetofire = Time.time + 1f / scriptableobject.fireRate;
@@ -101,14 +105,17 @@ public class Shotgun : MonoBehaviour
             //    anim.SetTrigger("Uzi");
             //    
             //}
-            if (gameObject.CompareTag("gun"))
+            if (gameObject.CompareTag("gun") && isreloadi == false)
             {
               anim.SetTrigger("shoot");
+                test.uprecoil = 2f ;
             }
            
-            if (gameObject.CompareTag("uzi"))
+            if (gameObject.CompareTag("uzi") && isreloadi == false)
         {
-            anim.SetTrigger("Uzi");
+                
+                test.uprecoil = 0.6f;
+                anim.SetTrigger("Uzi");
 
         }
         }
