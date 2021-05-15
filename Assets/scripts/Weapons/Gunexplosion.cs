@@ -100,7 +100,7 @@ public class Gunexplosion : MonoBehaviour
 
              }
           
-            if (HIT.CompareTag("Player"))
+            if (HIT.CompareTag("Player") )
             {
                 rb.AddExplosionForce(scriptableobject.playerExplosionForce, explosionpos, scriptableobject.explosionRange, scriptableobject.playerUpForce, ForceMode.Impulse);
                

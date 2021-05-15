@@ -228,3 +228,10 @@ ___
 
 ## (13/5/2021)
 ### (fixed alot of bugs today removed the size change transformation because it doesnt fit the game  and improved the player movmement just a tiny bit more and fixed pause menu and  dieing as well)
+
+
+
+## (15/5/2021)
+### (im finally satfied with the player movement and i  fixed the pick up glitch  that glitched abit the items and some balacening stuff)
+
+

@@ -15,36 +15,64 @@ public class Newplayer : MonoBehaviour
     public GameObject GFX;
     public float jumpower = 60000f;
     public bool isgroundedboi;
-    private float dontjump = 0f;
+    private float dontjump = -6f;
     public ParticleSystem speedeffect;
     private float sensitivity = 50f;
     private float sensMultiplier = 1f;
     public Transform orientation;
     public PlayerHealthHandler health;
-  
+    private float maxVertSpeed = 200;
     void FixedUpdate()
     {
+       
 
-        if (rig.velocity.magnitude > maxspeed && !isgroundedboi)
+        Vector3 xzVel = new Vector3(rig.velocity.x, 0, rig.velocity.z);
+        Vector3 yVel = new Vector3(0, rig.velocity.y, 0);
+
+        xzVel = Vector3.ClampMagnitude(xzVel, maxspeed);
+        yVel = Vector3.ClampMagnitude(yVel, maxVertSpeed);
+
+        rig.velocity = xzVel + yVel;
+
+
+        if (rig.velocity.magnitude > maxspeed)
         {
           speedeffect.Play();
         }
 
-            if (rig.velocity.magnitude > maxspeed )
-        {
-
-            
-
-            rig.velocity = Vector3.ClampMagnitude(rig.velocity, maxspeed);
-        }
+      
 
         if (rig.velocity.magnitude < maxspeed)
         {
             speedeffect.Stop();
         }
 
+        if (isgroundedboi && !(health.Health <= 0))
+        {
+            
+            rig.drag = 10;
+            forwardspeed = 5000f;
+            backwards = -5000f;
+            right = 5000f;
+            left = -5000f;
+        }
+        if (!isgroundedboi )
+        {
 
+            rig.AddForce(player.up * dontjump * Time.deltaTime, ForceMode.VelocityChange);
+            
+            rig.drag = 1;
+            forwardspeed = 500;
+            backwards = -500;
+            right = 500;
+            left = -500;
+        }
+        if (isgroundedboi && (Input.GetKey(KeyCode.Space)) )
+        {
+            rig.AddForce(player.up * jumpower * Time.fixedDeltaTime, ForceMode.Impulse);
+            
 
+        }
     }
 
    
@@ -57,7 +85,7 @@ public class Newplayer : MonoBehaviour
 
         
         orientation.Rotate(Vector3.up * mouseX);
-
+        //SHIT FUCKING HORRIBLE  MOVEMENT CODE
         if (Input.GetKey(KeyCode.W))
         {
             rig.AddForce(player.forward * forwardspeed * Time.deltaTime, ForceMode.Impulse);
@@ -65,14 +93,7 @@ public class Newplayer : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
         {
             rig.AddForce(player.forward * backwards * Time.deltaTime, ForceMode.Impulse);
-        }
-        if (Input.GetKeyDown(KeyCode.H) && !isgroundedboi)
-        {
-            rig.velocity = Vector3.ClampMagnitude(rig.velocity, 1000);
-            rig.AddForce(player.forward * dash * Time.deltaTime, ForceMode.Impulse);
-
-        }
-
+        } 
         if (Input.GetKey(KeyCode.D))
         {
             rig.AddForce(player.right * right * Time.deltaTime, ForceMode.Impulse);
@@ -84,18 +105,38 @@ public class Newplayer : MonoBehaviour
             rig.AddForce(player.right * left * Time.deltaTime, ForceMode.Impulse);
             
         }
-
-        if (!isgroundedboi )
+       
+        if((Input.GetKey(KeyCode.A) && (Input.GetKey(KeyCode.W) && isgroundedboi)))
         {
-
-            rig.AddForce(player.up * dontjump * Time.deltaTime, ForceMode.Impulse);
-            maxspeed = 30;
-            rig.drag = 0;
-            forwardspeed = 500;
-            backwards = -500;
-            right = 500;
-            left = -500;
+            left = -2700f;
+            forwardspeed = 2700;
         }
+
+        if ((Input.GetKey(KeyCode.D) && (Input.GetKey(KeyCode.W) && isgroundedboi)))
+        {
+            right = 2700f;
+            forwardspeed = 2700;
+        }
+
+        if ((Input.GetKey(KeyCode.D) && (Input.GetKey(KeyCode.S) && isgroundedboi)))
+        {
+            right = 2700f;
+            backwards = -2700;
+        }
+
+        if ((Input.GetKey(KeyCode.A) && (Input.GetKey(KeyCode.S) && isgroundedboi)))
+        {
+            left = -2700f;
+            backwards = -2700;
+        }
+       
+ if (Input.GetKeyDown(KeyCode.H) && !isgroundedboi)
+        {
+            rig.velocity = Vector3.ClampMagnitude(rig.velocity, 1000);
+            rig.AddForce(player.forward * dash * Time.deltaTime, ForceMode.VelocityChange);
+
+        }
+     
 
         if(health.Health <= 0  )
         {
@@ -120,20 +161,8 @@ public class Newplayer : MonoBehaviour
             sensitivity = 50f;
             sensMultiplier = 1;
         }
-        if (isgroundedboi && (Input.GetKeyDown(KeyCode.Space)) )
-        {
-            rig.AddForce(player.up * jumpower * Time.fixedDeltaTime, ForceMode.Impulse);
-        }
+       
 
-        if (isgroundedboi && !(health.Health <= 0))
-        {
-            maxspeed = 28;
-            rig.drag = 15;
-            forwardspeed = 8000f;
-            backwards = -8000f;
-            right = 8000f;
-            left = -8000f;
-        }
 
 
 
