@@ -236,3 +236,8 @@ ___
 
 1) and i added recoil to guns its not that great  and i fixed the recoil bug and u can now only  reload ammo with r
 
+
+
+
+## (16/5/2021)
+### (fixed some bugs spented like almost all of the day makeing a fucking tank   and  made the  player jump abit better and less glitchy)

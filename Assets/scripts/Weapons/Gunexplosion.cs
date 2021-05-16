@@ -112,7 +112,10 @@ public class Gunexplosion : MonoBehaviour
 
                 }
 
-
+                 if (gameObject.name == "Tankammo(Clone)")
+                 {
+                Destroy(gameObject);
+                 }
                 if (gameObject.name == "Explosivebarrel")
                 {
                     Destroy(gameObject);
@@ -122,7 +125,7 @@ public class Gunexplosion : MonoBehaviour
                 {
                 Destroy(gameObject);
 
-            }
+                }
         }
 
         }

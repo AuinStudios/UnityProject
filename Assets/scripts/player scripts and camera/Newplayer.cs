@@ -22,10 +22,10 @@ public class Newplayer : MonoBehaviour
     public Transform orientation;
     public PlayerHealthHandler health;
     private float maxVertSpeed = 200;
+   
+    
     void FixedUpdate()
     {
-       
-
         Vector3 xzVel = new Vector3(rig.velocity.x, 0, rig.velocity.z);
         Vector3 yVel = new Vector3(0, rig.velocity.y, 0);
 
@@ -49,7 +49,7 @@ public class Newplayer : MonoBehaviour
 
         if (isgroundedboi && !(health.Health <= 0))
         {
-            
+            jumpower = 7000f;
             rig.drag = 10;
             forwardspeed = 5000f;
             backwards = -5000f;
@@ -59,7 +59,7 @@ public class Newplayer : MonoBehaviour
         if (!isgroundedboi )
         {
 
-            rig.AddForce(player.up * dontjump * Time.deltaTime, ForceMode.VelocityChange);
+            jumpower = 0f;
             
             rig.drag = 1;
             forwardspeed = 500;
@@ -75,16 +75,16 @@ public class Newplayer : MonoBehaviour
         }
     }
 
+
+
    
-
-
     // Update is called once per frame
     void Update()
     {
         float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.fixedDeltaTime * sensMultiplier;
-
+       orientation.Rotate(Vector3.up * mouseX);
         
-        orientation.Rotate(Vector3.up * mouseX);
+       
         //SHIT FUCKING HORRIBLE  MOVEMENT CODE
         if (Input.GetKey(KeyCode.W))
         {
@@ -130,7 +130,7 @@ public class Newplayer : MonoBehaviour
             backwards = -2700;
         }
        
- if (Input.GetKeyDown(KeyCode.H) && !isgroundedboi)
+        if (Input.GetKeyDown(KeyCode.H) && !isgroundedboi)
         {
             rig.velocity = Vector3.ClampMagnitude(rig.velocity, 1000);
             rig.AddForce(player.forward * dash * Time.deltaTime, ForceMode.VelocityChange);
@@ -161,18 +161,9 @@ public class Newplayer : MonoBehaviour
             sensitivity = 50f;
             sensMultiplier = 1;
         }
-       
-
-
-
-
-       
         transform.position = GFX.transform.position;
-
-        
-
     }
-    public void OnTriggerEnter(Collider other)
+    public void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Ground"))
         {
@@ -180,8 +171,8 @@ public class Newplayer : MonoBehaviour
 
         }
 
+       
 
-      
     }
 
     public void OnTriggerExit(Collider other)
@@ -192,6 +183,4 @@ public class Newplayer : MonoBehaviour
 
         }
     }
-    
 }
-

@@ -20,7 +20,6 @@ TagManager:
   - explosionfield
   - Ground
   - bananakatana
-  - wall
   - canpickup
   - groundballgame
   - enemypos
@@ -30,6 +29,7 @@ TagManager:
   - explosiveammo
   - Restart
   - Startgame
+  - Cannon
   layers:
   - Default
   - TransparentFX

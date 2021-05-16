@@ -115,6 +115,9 @@ public class shootingAI : MonoBehaviour
 
     void Update()
     {
+
+     
+
         if (health == 0)
         {
           

@@ -16,12 +16,14 @@ public class Shotgun : MonoBehaviour
     public Transform bulletSpawnPoint, resetanimationpos;
     private pickupgun gunboi;
     public Animator anim;
+    public Animator temporay;
     public MoveCamera test;
     // ------------------------------------------
     public ParticleSystem muzzleflash;
     public GunsScriptableObject scriptableobject;
     public bool isreloadi = false;
     public PlayerHealthHandler Playerhealth;
+    public Shotgun ammotext;
     private float nextimetofire = 1f;
     // --------------------------------------------
     
@@ -91,8 +93,11 @@ public class Shotgun : MonoBehaviour
         {
             test.uprecoil = 0;
         }
-       
-        if (gunboi == enabled && Input.GetKey(KeyCode.Mouse0) && !(Playerhealth.Health <=0) &&Time.time >= nextimetofire &&((Time.timeScale != 0) && scriptableobject.currentAmmo >= scriptableobject.bulletCount) && !isreloadi)
+       if (gameObject.GetComponent<Shotgun>().enabled == true)
+            {
+                guntext.color = new Color(233, 210, 21, 255);
+            }
+        if (  Input.GetKey(KeyCode.Mouse0) && !(Playerhealth.Health <=0) &&Time.time >= nextimetofire &&((Time.timeScale != 0) && scriptableobject.currentAmmo >= scriptableobject.bulletCount) && !isreloadi)
         {
             test.testingsmooth = 0f;
             anim.speed = 1;
@@ -110,7 +115,11 @@ public class Shotgun : MonoBehaviour
               anim.SetTrigger("shoot");
                 test.uprecoil = 2f ;
             }
-           
+            if (gameObject.CompareTag("Cannon") && isreloadi == false)
+            {
+                temporay.SetTrigger("Shoottank");
+                test.uprecoil = 2f;
+            }
             if (gameObject.CompareTag("uzi") && isreloadi == false)
         {
                 
