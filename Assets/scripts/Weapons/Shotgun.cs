@@ -17,7 +17,7 @@ public class Shotgun : MonoBehaviour
     private pickupgun gunboi;
     public Animator anim;
     public Animator temporay;
-    public MoveCamera test;
+    public MoveCamera Camerarecoil;
     // ------------------------------------------
     public ParticleSystem muzzleflash;
     public GunsScriptableObject scriptableobject;
@@ -89,44 +89,39 @@ public class Shotgun : MonoBehaviour
         resetanimationpos.localPosition = new Vector3(0.669f, -0.6500001f , 1.946f);
             
         }
-       if (Input.GetKey(KeyCode.Mouse0) && isreloadi == false)
+        if (Input.GetKey(KeyCode.Mouse0) && isreloadi == false)
         {
-            test.uprecoil = 0;
+            Camerarecoil.uprecoil = 0;
         }
-       if (gameObject.GetComponent<Shotgun>().enabled == true)
+            if (gameObject.GetComponent<Shotgun>().enabled == true)
             {
                 guntext.color = new Color(233, 210, 21, 255);
             }
         if (  Input.GetKey(KeyCode.Mouse0) && !(Playerhealth.Health <=0) &&Time.time >= nextimetofire &&((Time.timeScale != 0) && scriptableobject.currentAmmo >= scriptableobject.bulletCount) && !isreloadi)
         {
-            test.testingsmooth = 0f;
+            Camerarecoil.testingsmooth = 0f;
             anim.speed = 1;
             anim.GetComponent<Animator>().enabled = true;
             nextimetofire = Time.time + 1f / scriptableobject.fireRate;
             scriptableobject.currentAmmo -= scriptableobject.bulletCount;
             launchboi();
-            //if (gameObject.CompareTag("uzi"))
-            //{
-            //    anim.SetTrigger("Uzi");
-            //    
-            //}
             if (gameObject.CompareTag("gun") && isreloadi == false)
             {
               anim.SetTrigger("shoot");
-                test.uprecoil = 2f ;
+                Camerarecoil.uprecoil = 2f ;
             }
             if (gameObject.CompareTag("Cannon") && isreloadi == false)
             {
                 temporay.SetTrigger("Shoottank");
-                test.uprecoil = 2f;
+                
             }
             if (gameObject.CompareTag("uzi") && isreloadi == false)
-        {
-                
-                test.uprecoil = 0.6f;
+            {
+
+                Camerarecoil.uprecoil = 0.6f;
                 anim.SetTrigger("Uzi");
 
-        }
+            }
         }
     }
 

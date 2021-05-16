@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Tank : MonoBehaviour
 {
     
@@ -43,7 +44,7 @@ public class Tank : MonoBehaviour
         if (!isgroundedboi)
         {
             
-            rig.drag = 0;
+            rig.drag = 1;
             forwardspeed = 0;
             backwards = 0;
             right = 0;
@@ -116,11 +117,17 @@ public class Tank : MonoBehaviour
 
         }
 
-        if (!(other.gameObject.CompareTag("Ground")))
+      
+
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
         {
             isgroundedboi = false;
 
         }
-
     }
+
 }

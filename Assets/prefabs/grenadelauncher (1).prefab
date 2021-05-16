@@ -148,10 +148,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpawnPoint: {fileID: 7704464543187441869}
+  resetanimationpos: {fileID: 0}
   anim: {fileID: 0}
+  temporay: {fileID: 0}
+  Camerarecoil: {fileID: 0}
   muzzleflash: {fileID: 862332961750212630}
   scriptableobject: {fileID: 11400000, guid: f418f805647cb32409786e383d34fc77, type: 2}
   isreloadi: 0
+  Playerhealth: {fileID: 0}
+  ammotext: {fileID: 0}
   guntext: {fileID: 0}
 --- !u!114 &1241132886208374003
 MonoBehaviour:
@@ -166,6 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunscript: {fileID: 8309645144002514466}
+  playerhealth: {fileID: 0}
   rb: {fileID: 862332962585589448}
   player: {fileID: 0}
   gunContainer: {fileID: 0}
@@ -192,6 +198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   intensity: 2
   smooth: 10
+  Playerhealth: {fileID: 0}
 --- !u!1 &862332961750212625
 GameObject:
   m_ObjectHideFlags: 0

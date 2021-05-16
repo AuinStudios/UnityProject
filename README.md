@@ -241,3 +241,8 @@ ___
 
 ## (16/5/2021)
 ### (fixed some bugs spented like almost all of the day makeing a fucking tank   and  made the  player jump abit better and less glitchy)
+
+
+1) FINALLY FIXED THE FUCKING TANK GLITCHING UNDER THE WOLRLD AND THE GUNS ALSO NOT WORKING
+2) removed bolly being able to be picked up bc the ragdoll is heavily unstable
+3) and fixed more bugs

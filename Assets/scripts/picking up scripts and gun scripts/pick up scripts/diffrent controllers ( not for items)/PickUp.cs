@@ -8,7 +8,7 @@ public class PickUp : MonoBehaviour
 
     // variables
     public float moveForce = 250f;
-    public float pickUpRange = 5f;
+    public float pickUpRange = 10f;
     public GameObject heldObj;
     public string TagName;
     public PlayerHealthHandler Playerhealth;
@@ -42,7 +42,7 @@ public class PickUp : MonoBehaviour
             //}
         }
 
-        if (heldObj != null)
+        if (heldObj != null ) 
         {
             moveObject();
         }

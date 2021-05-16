@@ -8,14 +8,13 @@ public class Newplayer : MonoBehaviour
     public Transform player;
     public float maxspeed = 300f;
     private float forwardspeed =17000f;
-    private float dash = 1000000f;
+    private float dash = 50000f;
     private float backwards = -17000f;
     private float right = 17000f;
     private float left = -17000f;
     public GameObject GFX;
     public float jumpower = 60000f;
     public bool isgroundedboi;
-    private float dontjump = -6f;
     public ParticleSystem speedeffect;
     private float sensitivity = 50f;
     private float sensMultiplier = 1f;

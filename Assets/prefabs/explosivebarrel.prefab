@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8291512783946042238}
   - component: {fileID: 8007529339326425929}
   - component: {fileID: 466988792}
+  - component: {fileID: 466988793}
   m_Layer: 0
   m_Name: Explosivebarrel
   m_TagString: explosivebarrel
@@ -147,3 +148,19 @@ MonoBehaviour:
   scriptableobject: {fileID: 11400000, guid: 7b22e0f8e0708b6488590e2bc86f1d29, type: 2}
   rig: {fileID: 4741989000614494917}
   bananakatana: {fileID: 0}
+--- !u!114 &466988793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7044315244514627976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9daa72d147e6cbe48b47e2f363bf4a5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: no owner
+  normalDamage: 0
+  isBoss: 0
+  criticalDamage: 1

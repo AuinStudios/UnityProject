@@ -1,23 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class vehicle : MonoBehaviour
 { 
     private float vechileneterdistance  = 7f;
     public Rigidbody rig;
+    public Rigidbody tanknotmove;
     public MoveCamera cameraenable;
     public Newplayer enableplayer;
     public Shotgun cannonactivate;
+    public PickUp deactivte;
     public Tank tankactivte;
     public GameObject gunisenabled;
     public Transform Playerexitank;
     public Transform cameraresetrot;
     public Transform Playerintank;
     public Transform player;
+    public TextMeshProUGUI guntext;
     public static bool invechicle;
- public void Tankmode()
+    public void Tankmode()
     {
+
+       
+        deactivte.enabled = false;
+        guntext.color = new Color(0, 0, 0, 0);
         gunisenabled.SetActive(false);
         invechicle = true;
         tankactivte.enabled = true;
@@ -34,6 +42,7 @@ public class vehicle : MonoBehaviour
     }
     public void PlayerMode()
     {
+        deactivte.enabled = true;
         gunisenabled.SetActive(true);
         invechicle = false;
         cameraresetrot.localRotation = Quaternion.identity;
@@ -53,13 +62,22 @@ public class vehicle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         Vector3 distanceToPlayer = Playerintank.position - transform.position;
+        if(tankactivte.enabled == false)
+        {
+          tanknotmove.constraints = RigidbodyConstraints.FreezeAll;
+        }
+        if (tankactivte.enabled == true)
+        {
+            tanknotmove.constraints = RigidbodyConstraints.FreezeRotation;
+
+        }
+        Vector3 distanceToPlayer = Playerintank.position - transform.position;
          if(enableplayer.enabled == false)
          {
          rig.position = Playerintank.position;
          transform.position = Playerintank.position;
          }
-        if(  distanceToPlayer.magnitude <= vechileneterdistance && Input.GetKeyDown(KeyCode.E))
+        if(  distanceToPlayer.magnitude <= vechileneterdistance && Input.GetKeyDown(KeyCode.T))
         {
             Tankmode();
         }
@@ -68,9 +86,4 @@ public class vehicle : MonoBehaviour
             PlayerMode();
         }
     }
-
-
-
-
-  
 }
