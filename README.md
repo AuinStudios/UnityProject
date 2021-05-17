@@ -246,3 +246,9 @@ ___
 1) FINALLY FIXED THE FUCKING TANK GLITCHING UNDER THE WOLRLD AND THE GUNS ALSO NOT WORKING
 2) removed bolly being able to be picked up bc the ragdoll is heavily unstable
 3) and fixed more bugs
+
+
+
+
+## (17/5/2021)
+### (made it so it doesnt totally glitch while shooting and then reloading to glitch abit on the uzi)

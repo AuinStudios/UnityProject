@@ -32,6 +32,8 @@ public class Shotgun : MonoBehaviour
     // -------------------------------------------- 
     IEnumerator Reload()
     {
+        anim.SetBool("isuzistop", false);
+        anim.GetComponent<Animator>().enabled = true;
         anim.SetTrigger("Reload");
         isreloadi = true;
         scriptableobject.currentAmmo = scriptableobject.maxAmmo;
@@ -62,7 +64,11 @@ public class Shotgun : MonoBehaviour
     void Update()
     {
         
-        
+        if (isreloadi)
+        {
+
+            anim.GetComponent<Animator>().enabled = true;
+        }
         // clamps the  ammo to never go down 0
         guntext.text = Mathf.Clamp((float)scriptableobject.currentAmmo, 0, float.MaxValue).ToString();
 
@@ -71,9 +77,13 @@ public class Shotgun : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             StartCoroutine(Reload());
+            
         }
 
-
+        if(scriptableobject.currentAmmo == 0)
+        {
+            anim.SetBool("isuzistop", false);
+        }
         // this is for when the  bullets are 0 to reload
         //if (isreloadi)
         //    return;
@@ -83,14 +93,17 @@ public class Shotgun : MonoBehaviour
         //    return;
         //}
 
-        if (gameObject.CompareTag("uzi") && !Input.GetKey(KeyCode.Mouse0) && (Time.timeScale != 0))
+        if (gameObject.CompareTag("uzi") && !Input.GetKey(KeyCode.Mouse0)  &&  (Time.timeScale != 0) && !isreloadi)
         {
-        anim.GetComponent<Animator>().enabled = false;
+            anim.SetBool("isuzistop", false);
+            anim.GetComponent<Animator>().enabled = false;
+           
         resetanimationpos.localPosition = new Vector3(0.669f, -0.6500001f , 1.946f);
             
         }
-        if (Input.GetKey(KeyCode.Mouse0) && isreloadi == false)
+        if (Input.GetKey(KeyCode.Mouse0))
         {
+
             Camerarecoil.uprecoil = 0;
         }
             if (gameObject.GetComponent<Shotgun>().enabled == true)
@@ -99,28 +112,28 @@ public class Shotgun : MonoBehaviour
             }
         if (  Input.GetKey(KeyCode.Mouse0) && !(Playerhealth.Health <=0) &&Time.time >= nextimetofire &&((Time.timeScale != 0) && scriptableobject.currentAmmo >= scriptableobject.bulletCount) && !isreloadi)
         {
+            
+            anim.GetComponent<Animator>().enabled = true;
             Camerarecoil.testingsmooth = 0f;
             anim.speed = 1;
-            anim.GetComponent<Animator>().enabled = true;
             nextimetofire = Time.time + 1f / scriptableobject.fireRate;
             scriptableobject.currentAmmo -= scriptableobject.bulletCount;
             launchboi();
-            if (gameObject.CompareTag("gun") && isreloadi == false)
+            if (gameObject.CompareTag("gun") && !isreloadi)
             {
               anim.SetTrigger("shoot");
                 Camerarecoil.uprecoil = 2f ;
             }
-            if (gameObject.CompareTag("Cannon") && isreloadi == false)
+            if (gameObject.CompareTag("Cannon") && !isreloadi)
             {
                 temporay.SetTrigger("Shoottank");
                 
             }
-            if (gameObject.CompareTag("uzi") && isreloadi == false)
+            if (gameObject.CompareTag("uzi") && !isreloadi )
             {
 
                 Camerarecoil.uprecoil = 0.6f;
-                anim.SetTrigger("Uzi");
-
+                anim.SetBool("isuzistop", true);
             }
         }
     }
