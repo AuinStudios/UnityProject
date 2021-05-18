@@ -22,6 +22,7 @@ public class Tank : MonoBehaviour
     private float maxVertSpeed = 200;
     private float xRotation = 0f;
     public Transform tankturn;
+   
     void FixedUpdate()
     {
         Vector3 xzVel = new Vector3(rig.velocity.x, 0, rig.velocity.z);
@@ -56,6 +57,7 @@ public class Tank : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.fixedDeltaTime * sensMultiplier;
         float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.fixedDeltaTime * sensMultiplier;
         xRotation -= mouseY;

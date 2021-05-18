@@ -16,10 +16,10 @@ MonoBehaviour:
   type: 0
   animator: {fileID: 0}
   bulletForce: 0
-  fireRate: 0.3
+  fireRate: 0.1
   explosionRange: 10
   upPowerExplosion: 1
-  powerOfExplosion: 1000
+  powerOfExplosion: 700
   playerExplosionForce: 1
   playerUpForce: 0
   meleeAddForce: 0
@@ -28,15 +28,15 @@ MonoBehaviour:
   criticalDamage: 0
   range: 100
   reloadTime: 5
-  maxAmmo: 1000
-  currentAmmo: 0
+  maxAmmo: 1
+  currentAmmo: 1
   impactForce: 0
   nextTimeToFire: 0
   weaponPrefab: {fileID: 3947531224265215015, guid: 7f8bbd77a92f012438571d4ffafcc68c, type: 3}
   bullet: {fileID: 6572709969530606131, guid: e1c62ed29ab70d84a8b1433c57aa0263, type: 3}
   bulletCount: 1
   hoverText: 
-  hoverVisibleDistance: 1
+  hoverVisibleDistance: 5
   grenades: 0
   canSpread: 0
   spreadAmount: 0

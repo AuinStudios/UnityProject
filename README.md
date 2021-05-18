@@ -252,3 +252,13 @@ ___
 
 ## (17/5/2021)
 ### (made it so it doesnt totally glitch while shooting and then reloading to glitch abit on the uzi)
+
+
+
+
+## (18/5/2021)
+### (made it so u cant drop the weapons unless ur not clicking or reloading and fixed the weapons for now  rebalanced the tank didnt do much today cuz lazy)
+
+
+
+1) also made it so the tank does its own damage instead of the grenadelaunchers

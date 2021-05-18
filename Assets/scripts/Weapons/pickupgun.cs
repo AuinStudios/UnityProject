@@ -10,7 +10,8 @@ using TMPro;
 public class pickupgun : MonoBehaviour
 {
 
- //Super Important Ones----------------------------------------------------------------------------
+    //Super Important Ones----------------------------------------------------------------------------
+    public Animator anim;
  public Shotgun gunscript;
  public PlayerHealthHandler playerhealth;
  public Rigidbody rb;
@@ -86,7 +87,7 @@ public class pickupgun : MonoBehaviour
         if (!equipped && distanceToPlayer.magnitude <= pickUpRange && !(playerhealth.Health <= 0) && slotFull == false && Input.GetKeyDown(KeyCode.E) ) PickUp() ;
      
         //Drop if equipped and "Q" is pressed
-        if (equipped && slotFull == true && Input.GetKeyDown(KeyCode.Q)) Drop();
+        if (equipped && slotFull == true && !Input.GetKey(KeyCode.Mouse0) &&gunscript.isreloadi == false && Input.GetKeyDown(KeyCode.Q)) Drop();
 
     }
 

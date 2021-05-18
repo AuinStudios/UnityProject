@@ -114,7 +114,7 @@ MonoBehaviour:
   blowtimer: 1000
   scriptableobject: {fileID: 11400000, guid: 74266b772aeafcb41a92e5a070e77040, type: 2}
   impacteffect: {fileID: 6890023512862090658, guid: 19a1a11daae0de54fbc570c2564b4121, type: 3}
-  explosiondamage: {fileID: 4428648584275038696, guid: f9ff99019bbe58f4fae38fe07150034a, type: 3}
+  explosiondamage: {fileID: 429252632169953736, guid: eed86c1c17d6f314e80805710a1b582d, type: 3}
 --- !u!54 &4262568798340677136
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -144,6 +144,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: no owner
-  normalDamage: 5
+  normalDamage: 1
   isBoss: 0
   criticalDamage: 0

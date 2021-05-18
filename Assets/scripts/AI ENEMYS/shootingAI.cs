@@ -89,9 +89,20 @@ public class shootingAI : MonoBehaviour
             }
         }
 
+        if (other.gameObject.name == "TankDamage(Clone)")
+        {
+            BulletOwner bulletOwner = other.gameObject.GetComponent<BulletOwner>();
 
-
-        if (other.gameObject.tag == "explosiondamage")
+            if (bulletOwner.isBoss)
+            {
+                health -= bulletOwner.normalDamage + bulletOwner.criticalDamage;
+            }
+            else
+            {
+                health -= bulletOwner.normalDamage;
+            }
+        }
+            if (other.gameObject.tag == "explosiondamage")
         {
             BulletOwner bulletOwner = other.gameObject.GetComponent<BulletOwner>();
 

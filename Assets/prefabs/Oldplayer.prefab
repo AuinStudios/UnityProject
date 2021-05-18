@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 1695635068576658985}
   - component: {fileID: 1695635068576658984}
   m_Layer: 9
-  m_Name: Player
+  m_Name: Oldplayer
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,10 +137,9 @@ MonoBehaviour:
   maxWallSpeed: 8000
   maxWallRunCameraTilt: 16
   wallRunCameraTilt: 15
-  transition: {fileID: 0}
-  transitiontime: 1
   playerCam: {fileID: 0}
   orientation: {fileID: 1695635067521273356}
+  sensitivity: 50
   moveSpeed: 80000
   maxSpeed: 15
   grounded: 0

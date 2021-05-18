@@ -8466,7 +8466,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh77902
+  m_Name: pb_Mesh18244
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21992,6 +21992,10 @@ PrefabInstance:
       propertyPath: ammoui
       value: 
       objectReference: {fileID: 1430824010}
+    - target: {fileID: 8787602191499182400, guid: d4d320a609608df41979096fd341406a, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1201368691}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4d320a609608df41979096fd341406a, type: 3}
 --- !u!1 &1810165022
@@ -34815,6 +34819,10 @@ PrefabInstance:
       propertyPath: ammoui
       value: 
       objectReference: {fileID: 1430824010}
+    - target: {fileID: 6033328416769533610, guid: 10bb53c1d8ab7df4cb9eb6e5d05e54bc, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1201368691}
     - target: {fileID: 6319352112945179976, guid: 10bb53c1d8ab7df4cb9eb6e5d05e54bc, type: 3}
       propertyPath: m_Name
       value: Uzi
@@ -35955,6 +35963,10 @@ PrefabInstance:
       propertyPath: ammoui
       value: 
       objectReference: {fileID: 1430824010}
+    - target: {fileID: 4259794543048811636, guid: 1e5933a30a32bd64da6854701a681ae8, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1201368691}
     - target: {fileID: 5948175658110065389, guid: 1e5933a30a32bd64da6854701a681ae8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 52.14
@@ -36189,6 +36201,10 @@ PrefabInstance:
       propertyPath: ammoui
       value: 
       objectReference: {fileID: 1430824010}
+    - target: {fileID: 1241132886208374003, guid: 5b9a7f2b5e9cc6a41968dc11f22511a8, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1201368691}
     - target: {fileID: 4561290754395673496, guid: 5b9a7f2b5e9cc6a41968dc11f22511a8, type: 3}
       propertyPath: weaponPickupGUI
       value: 

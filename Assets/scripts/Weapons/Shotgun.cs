@@ -32,6 +32,7 @@ public class Shotgun : MonoBehaviour
     // -------------------------------------------- 
     IEnumerator Reload()
     {
+        anim.GetComponent<Animator>().speed = 1;
         anim.SetBool("isuzistop", false);
         anim.GetComponent<Animator>().enabled = true;
         anim.SetTrigger("Reload");
@@ -92,13 +93,13 @@ public class Shotgun : MonoBehaviour
         //    StartCoroutine(Reload());
         //    return;
         //}
-
+       
         if (gameObject.CompareTag("uzi") && !Input.GetKey(KeyCode.Mouse0)  &&  (Time.timeScale != 0) && !isreloadi)
         {
             anim.SetBool("isuzistop", false);
-            anim.GetComponent<Animator>().enabled = false;
-           
-        resetanimationpos.localPosition = new Vector3(0.669f, -0.6500001f , 1.946f);
+            anim.GetComponent<Animator>().playbackTime = 0;
+            
+            resetanimationpos.localPosition = new Vector3(0.669f, -0.6500001f , 1.946f);
             
         }
         if (Input.GetKey(KeyCode.Mouse0))
@@ -112,26 +113,33 @@ public class Shotgun : MonoBehaviour
             }
         if (  Input.GetKey(KeyCode.Mouse0) && !(Playerhealth.Health <=0) &&Time.time >= nextimetofire &&((Time.timeScale != 0) && scriptableobject.currentAmmo >= scriptableobject.bulletCount) && !isreloadi)
         {
-            
-            anim.GetComponent<Animator>().enabled = true;
+
+           
             Camerarecoil.testingsmooth = 0f;
-            anim.speed = 1;
             nextimetofire = Time.time + 1f / scriptableobject.fireRate;
             scriptableobject.currentAmmo -= scriptableobject.bulletCount;
             launchboi();
             if (gameObject.CompareTag("gun") && !isreloadi)
             {
-              anim.SetTrigger("shoot");
+                anim.GetComponent<Animator>().speed = 1;
+                anim.SetTrigger("shoot");
                 Camerarecoil.uprecoil = 2f ;
             }
-            if (gameObject.CompareTag("Cannon") && !isreloadi)
+            if (gameObject.CompareTag("Cannon") && !isreloadi )
             {
+                anim.GetComponent<Animator>().speed = 1;
                 temporay.SetTrigger("Shoottank");
-                
+                if (isreloadi)
+                    return;
+                if (scriptableobject.currentAmmo == 0)
+                {
+                    StartCoroutine(Reload());
+                    return;
+                }
             }
             if (gameObject.CompareTag("uzi") && !isreloadi )
             {
-
+                anim.GetComponent<Animator>().speed = 4;
                 Camerarecoil.uprecoil = 0.6f;
                 anim.SetBool("isuzistop", true);
             }
