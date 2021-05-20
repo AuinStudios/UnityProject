@@ -262,3 +262,13 @@ ___
 
 
 1) also made it so the tank does its own damage instead of the grenadelaunchers
+
+
+
+
+
+## (19/5/2021)
+### (Made the tank able to cilmb up slopes its kinda clunky rn so its not that great but took me hours to make)
+
+
+

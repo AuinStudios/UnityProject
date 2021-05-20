@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class rotatest : MonoBehaviour
+public class resetfall : MonoBehaviour
 {
+
+    public Rigidbody rig;
+    public Tank a;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +16,9 @@ public class rotatest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, 1, 0);
+      if(a.enabled== true && Input.GetKeyDown(KeyCode.Y))
+        {
+            rig.isKinematic = true;
+        }
     }
 }

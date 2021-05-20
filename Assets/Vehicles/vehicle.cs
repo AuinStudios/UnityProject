@@ -8,6 +8,7 @@ public class vehicle : MonoBehaviour
     private float vechileneterdistance  = 7f;
     public Rigidbody rig;
     public Rigidbody tanknotmove;
+    public Rigidbody test;
     public MoveCamera cameraenable;
     public Newplayer enableplayer;
     public Shotgun cannonactivate;
@@ -20,6 +21,8 @@ public class vehicle : MonoBehaviour
     public Transform player;
     public TextMeshProUGUI guntext;
     public static bool invechicle;
+    
+    public static bool grounded;
     public void Tankmode()
     {
 
@@ -36,12 +39,14 @@ public class vehicle : MonoBehaviour
         gameObject.GetComponent<CapsuleCollider>().enabled = false;
         cameraenable.enabled = false;
         rig.isKinematic = true;
+       
         rig.interpolation = RigidbodyInterpolation.None;
         rig.collisionDetectionMode = CollisionDetectionMode.ContinuousSpeculative;
         cannonactivate.enabled = true;
     }
     public void PlayerMode()
     {
+        
         deactivte.enabled = true;
         gunisenabled.SetActive(true);
         invechicle = false;
@@ -65,11 +70,14 @@ public class vehicle : MonoBehaviour
         if(tankactivte.enabled == false)
         {
           tanknotmove.constraints = RigidbodyConstraints.FreezeAll;
+          test.constraints = RigidbodyConstraints.FreezeAll;
+            
         }
         if (tankactivte.enabled == true)
         {
-            tanknotmove.constraints = RigidbodyConstraints.FreezeRotation;
-
+            tanknotmove.constraints = RigidbodyConstraints.None;
+            test.constraints = RigidbodyConstraints.FreezeRotation;
+            
         }
         Vector3 distanceToPlayer = Playerintank.position - transform.position;
          if(enableplayer.enabled == false)
@@ -81,9 +89,28 @@ public class vehicle : MonoBehaviour
         {
             Tankmode();
         }
-        if (invechicle == true && Input.GetKeyDown(KeyCode.G))
+        if (invechicle == true && Input.GetKeyDown(KeyCode.G) && grounded)
         {
             PlayerMode();
+        }
+      
+    }
+ 
+    public void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            grounded = true;
+
+        }
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            grounded = false;
+
         }
     }
 }

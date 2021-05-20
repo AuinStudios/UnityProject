@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class Tank : MonoBehaviour
 {
-    
+   
+
     public Rigidbody rig;
     public Transform player;
     public float maxspeed = 300f;
@@ -13,7 +14,6 @@ public class Tank : MonoBehaviour
     private float backwards = -17000f;
     private float right = 17000f;
     private float left = -17000f;
-    public float jumpower = 60000f;
     public bool isgroundedboi;
     private float sensitivity = 0.1f;
     private float sensMultiplier = 0.1f;
@@ -22,7 +22,8 @@ public class Tank : MonoBehaviour
     private float maxVertSpeed = 200;
     private float xRotation = 0f;
     public Transform tankturn;
-   
+    public GameObject gfx;
+    public GameObject cameraposrot;
     void FixedUpdate()
     {
         Vector3 xzVel = new Vector3(rig.velocity.x, 0, rig.velocity.z);
@@ -44,12 +45,11 @@ public class Tank : MonoBehaviour
         }
         if (!isgroundedboi)
         {
+
+            rig.drag = 0f;
+            rig.constraints = RigidbodyConstraints.FreezeRotationY;
+                
             
-            rig.drag = 1;
-            forwardspeed = 0;
-            backwards = 0;
-            right = 0;
-            left = 0;
         }
       
     }
@@ -57,6 +57,9 @@ public class Tank : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        transform.rotation = cameraposrot.transform.rotation;
+        gfx.transform.position = transform.position;
 
         float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.fixedDeltaTime * sensMultiplier;
         float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.fixedDeltaTime * sensMultiplier;
@@ -66,35 +69,38 @@ public class Tank : MonoBehaviour
         tankturn.Rotate(Vector3.up * mouseX);
         
         //SHIT FUCKING HORRIBLE  MOVEMENT CODE
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) && isgroundedboi)
         {
             rig.AddForce(player.forward * forwardspeed * Time.deltaTime, ForceMode.Impulse);
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) && isgroundedboi)
         {
             rig.AddForce(player.forward * backwards * Time.deltaTime, ForceMode.Impulse);
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) && isgroundedboi)
         {
-            transform.Rotate(Vector3.up *  right * Time.deltaTime);
+            gfx.transform.Rotate(Vector3.up *  right * Time.deltaTime);
 
         }
 
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) && isgroundedboi)
         {
-            transform.Rotate(Vector3.up * left * Time.deltaTime);
+            gfx.transform.Rotate(Vector3.up * left * Time.deltaTime);
 
         }
-
-        if (health.Health <= 0)
+        if (Input.GetKeyDown(KeyCode.Y))
         {
+            gfx.transform.rotation = Quaternion.identity;
+        }
+            if (health.Health <= 0)
+            {
             forwardspeed = 0f;
             backwards = -0f;
             right = 0f;
             left = -0f;
             sensitivity = 0f;
             sensMultiplier = 0;
-        }
+            }
         if (Time.timeScale == 0)
         {
             forwardspeed = 0f;

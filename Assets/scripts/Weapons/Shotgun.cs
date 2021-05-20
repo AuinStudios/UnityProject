@@ -35,7 +35,7 @@ public class Shotgun : MonoBehaviour
         anim.GetComponent<Animator>().speed = 1;
         anim.SetBool("isuzistop", false);
         anim.GetComponent<Animator>().enabled = true;
-        anim.SetTrigger("Reload");
+        
         isreloadi = true;
         scriptableobject.currentAmmo = scriptableobject.maxAmmo;
         yield return new WaitForSeconds(scriptableobject.reloadTime);
@@ -75,10 +75,10 @@ public class Shotgun : MonoBehaviour
 
 
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R) && !gameObject.CompareTag("Cannon"))
         {
             StartCoroutine(Reload());
-            
+            anim.SetTrigger("Reload");
         }
 
         if(scriptableobject.currentAmmo == 0)
@@ -93,8 +93,8 @@ public class Shotgun : MonoBehaviour
         //    StartCoroutine(Reload());
         //    return;
         //}
-       
-        if (gameObject.CompareTag("uzi") && !Input.GetKey(KeyCode.Mouse0)  &&  (Time.timeScale != 0) && !isreloadi)
+      
+            if (gameObject.CompareTag("uzi") && !Input.GetKey(KeyCode.Mouse0)  &&  (Time.timeScale != 0) && !isreloadi)
         {
             anim.SetBool("isuzistop", false);
             anim.GetComponent<Animator>().playbackTime = 0;
@@ -127,6 +127,7 @@ public class Shotgun : MonoBehaviour
             }
             if (gameObject.CompareTag("Cannon") && !isreloadi )
             {
+                
                 anim.GetComponent<Animator>().speed = 1;
                 temporay.SetTrigger("Shoottank");
                 if (isreloadi)

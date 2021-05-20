@@ -4,17 +4,10 @@ using UnityEngine;
 
 public class TankHeadposition : MonoBehaviour
 {
-    public Transform tankposhead;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
+    public Transform parentobject;
     // Update is called once per frame
     void Update()
     {
-        transform.position = tankposhead.position;
-        
+        transform.rotation = parentobject.rotation;
     }
 }
