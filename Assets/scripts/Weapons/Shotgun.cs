@@ -95,13 +95,13 @@ public class Shotgun : MonoBehaviour
         //}
       
             if (gameObject.CompareTag("uzi") && !Input.GetKey(KeyCode.Mouse0)  &&  (Time.timeScale != 0) && !isreloadi)
-        {
+            {
             anim.SetBool("isuzistop", false);
             anim.GetComponent<Animator>().playbackTime = 0;
             
             resetanimationpos.localPosition = new Vector3(0.669f, -0.6500001f , 1.946f);
             
-        }
+            }
         if (Input.GetKey(KeyCode.Mouse0))
         {
 
@@ -114,7 +114,8 @@ public class Shotgun : MonoBehaviour
         if (  Input.GetKey(KeyCode.Mouse0) && !(Playerhealth.Health <=0) &&Time.time >= nextimetofire &&((Time.timeScale != 0) && scriptableobject.currentAmmo >= scriptableobject.bulletCount) && !isreloadi)
         {
 
-           
+            
+            
             Camerarecoil.testingsmooth = 0f;
             nextimetofire = Time.time + 1f / scriptableobject.fireRate;
             scriptableobject.currentAmmo -= scriptableobject.bulletCount;

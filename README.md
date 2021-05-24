@@ -270,5 +270,6 @@ ___
 ## (19/5/2021)
 ### (Made the tank able to cilmb up slopes its kinda clunky rn so its not that great but took me hours to make)
 
-
+## (24/5/2021)
+### (FINallY I FIXED THE FREAKING   MINIGUN ROTATIONS AND CLAMP AND THIS ALL HAPPENDED BECAUSE I DIDNT PUT LOCAL GOD IM SO DUMB)
 

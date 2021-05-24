@@ -17,10 +17,13 @@ public class Tank : MonoBehaviour
     public bool isgroundedboi;
     private float sensitivity = 0.1f;
     private float sensMultiplier = 0.1f;
+    public Tank rotate;
     public PlayerHealthHandler health;
     public Transform aimcannon;
     private float maxVertSpeed = 200;
     private float xRotation = 0f;
+    private float minigunsrot;
+    public Transform minigunupandown;
     public Transform tankturn;
     public GameObject gfx;
     public GameObject cameraposrot;
@@ -61,11 +64,16 @@ public class Tank : MonoBehaviour
         transform.rotation = cameraposrot.transform.rotation;
         gfx.transform.position = transform.position;
 
-        float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.fixedDeltaTime * sensMultiplier;
-        float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.fixedDeltaTime * sensMultiplier;
+        float mouseY = Input.GetAxis("Mouse Y") * sensitivity  * Time.fixedDeltaTime * sensMultiplier;
+        float mouseX = Input.GetAxis("Mouse X") * sensitivity *  Time.fixedDeltaTime * sensMultiplier;
         xRotation -= mouseY;
+        minigunsrot -= mouseY;
+        minigunsrot = Mathf.Clamp(minigunsrot, -40f, 30f);
         xRotation = Mathf.Clamp(xRotation, -20, 10);
         aimcannon.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        minigunupandown.localRotation = Quaternion.Euler(minigunsrot, 0f, 0f);
+       
+        
         tankturn.Rotate(Vector3.up * mouseX);
         
         //SHIT FUCKING HORRIBLE  MOVEMENT CODE

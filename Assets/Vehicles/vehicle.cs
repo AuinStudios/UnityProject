@@ -6,6 +6,8 @@ using TMPro;
 public class vehicle : MonoBehaviour
 { 
     private float vechileneterdistance  = 7f;
+    public Animator anim;
+    public Animator minigunsappear;
     public Rigidbody rig;
     public Rigidbody tanknotmove;
     public Rigidbody test;
@@ -14,6 +16,7 @@ public class vehicle : MonoBehaviour
     public Shotgun cannonactivate;
     public PickUp deactivte;
     public Tank tankactivte;
+    public GameObject enableguns;
     public GameObject gunisenabled;
     public Transform Playerexitank;
     public Transform cameraresetrot;
@@ -46,7 +49,7 @@ public class vehicle : MonoBehaviour
     }
     public void PlayerMode()
     {
-        
+        enableguns.SetActive(false);
         deactivte.enabled = true;
         gunisenabled.SetActive(true);
         invechicle = false;
@@ -93,9 +96,22 @@ public class vehicle : MonoBehaviour
         {
             PlayerMode();
         }
-      
+        if (enableguns.active == true)
+        {
+                anim.SetTrigger("Activiteminigun");
+                minigunsappear.SetTrigger("Activiteminigun");
+        }
+        if (invechicle == true && Input.GetKeyDown(KeyCode.F))
+        {
+          
+
+                
+                enableguns.SetActive(true);
+            
+        }
+
     }
- 
+
     public void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Ground"))
