@@ -105,7 +105,7 @@ public class pickupgun : MonoBehaviour
 
         //Make Rigidbody kinematic and BoxCollider a trigger
         rb.isKinematic = true;
-        coll.isTrigger = true;
+        
        
         //Enable script
         gunscript.enabled = true;
@@ -122,7 +122,7 @@ public class pickupgun : MonoBehaviour
 
         //Make Rigidbody not kinematic and BoxCollider normal
         rb.isKinematic = false;
-        coll.isTrigger = false;
+       
 
         //Gun carries momentum of player
         rb.velocity = player.GetComponent<Rigidbody>().velocity;

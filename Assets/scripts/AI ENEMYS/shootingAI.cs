@@ -71,9 +71,27 @@ public class shootingAI : MonoBehaviour
     }
 
 
+
+    public void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("flamethrower"))
+        {
+            BulletOwner bulletOwner = other.gameObject.GetComponent<BulletOwner>();
+
+            if (bulletOwner.isBoss)
+            {
+                health -= bulletOwner.normalDamage + bulletOwner.criticalDamage;
+            }
+            else
+            {
+                health -= bulletOwner.normalDamage;
+            }
+        }
+    }
     public void OnTriggerEnter(Collider other)
     {
-
+        
+        
 
         if (other.gameObject.CompareTag("explosivebarrel"))
         {
@@ -88,7 +106,7 @@ public class shootingAI : MonoBehaviour
                 health -= bulletOwner.normalDamage;
             }
         }
-
+       
         if (other.gameObject.name == "TankDamage(Clone)")
         {
             BulletOwner bulletOwner = other.gameObject.GetComponent<BulletOwner>();
@@ -116,7 +134,7 @@ public class shootingAI : MonoBehaviour
             }
 
 
-        }
+            }
     }
 
   
@@ -124,11 +142,8 @@ public class shootingAI : MonoBehaviour
 
 
 
-    void Update()
-    {
-
-     
-
+         void Update()
+        {
         if (health == 0)
         {
           
@@ -137,7 +152,6 @@ public class shootingAI : MonoBehaviour
             
             
         }
-
 
         health = Mathf.Clamp((float) health, 0, float.MaxValue);
         uiText.text = data.Name + "\n" + health;
@@ -166,7 +180,7 @@ public class shootingAI : MonoBehaviour
                 timer += Time.deltaTime;
                 if (Playerhealth.Health >= 0)
                 {
-if (timer >= data.ReloadTime)
+                if (timer >= data.ReloadTime)
                 {
                     Quaternion rot = Quaternion.LookRotation(player.transform.position);
                     bullet = (GameObject)Instantiate(data.ProjectilePrefab, transform.position + offset, rot);

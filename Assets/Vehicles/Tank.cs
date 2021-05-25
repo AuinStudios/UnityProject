@@ -23,7 +23,7 @@ public class Tank : MonoBehaviour
     private float maxVertSpeed = 200;
     private float xRotation = 0f;
     private float minigunsrot;
-    public Transform minigunupandown;
+    public Transform   firstminigun , secoundminigun;
     public Transform tankturn;
     public GameObject gfx;
     public GameObject cameraposrot;
@@ -71,9 +71,9 @@ public class Tank : MonoBehaviour
         minigunsrot = Mathf.Clamp(minigunsrot, -40f, 30f);
         xRotation = Mathf.Clamp(xRotation, -20, 10);
         aimcannon.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        minigunupandown.localRotation = Quaternion.Euler(minigunsrot, 0f, 0f);
-       
-        
+        firstminigun.localRotation = Quaternion.Euler(minigunsrot, 0f, 0f);
+        secoundminigun.localRotation = Quaternion.Euler(minigunsrot, 0f, 0f);
+
         tankturn.Rotate(Vector3.up * mouseX);
         
         //SHIT FUCKING HORRIBLE  MOVEMENT CODE

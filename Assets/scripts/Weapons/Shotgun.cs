@@ -25,6 +25,7 @@ public class Shotgun : MonoBehaviour
     public PlayerHealthHandler Playerhealth;
     public Shotgun ammotext;
     private float nextimetofire = 1f;
+    private float xRotation;
     // --------------------------------------------
     
     public TextMeshProUGUI guntext;
@@ -107,11 +108,22 @@ public class Shotgun : MonoBehaviour
 
             Camerarecoil.uprecoil = 0;
         }
+        // shit muzzleflash code
+
+        if (scriptableobject.currentAmmo >= 1)
+        {
+            muzzleflash.Stop();
+        }
+        if (Input.GetKey(KeyCode.Mouse0) && !(Playerhealth.Health <= 0) && Time.time >= nextimetofire && ((Time.timeScale != 0) && scriptableobject.currentAmmo >= scriptableobject.bulletCount) && gameObject.CompareTag("flamethrower") && !isreloadi)
+        {
+            muzzleflash.Play();
+            scriptableobject.currentAmmo -= scriptableobject.bulletCount;
+        }
             if (gameObject.GetComponent<Shotgun>().enabled == true)
             {
                 guntext.color = new Color(233, 210, 21, 255);
             }
-        if (  Input.GetKey(KeyCode.Mouse0) && !(Playerhealth.Health <=0) &&Time.time >= nextimetofire &&((Time.timeScale != 0) && scriptableobject.currentAmmo >= scriptableobject.bulletCount) && !isreloadi)
+        if (  Input.GetKey(KeyCode.Mouse0) && !(Playerhealth.Health <=0) &&Time.time >= nextimetofire &&((Time.timeScale != 0) && scriptableobject.currentAmmo >= scriptableobject.bulletCount) &&!gameObject.CompareTag("flamethrower") && !isreloadi)
         {
 
             
@@ -126,6 +138,11 @@ public class Shotgun : MonoBehaviour
                 anim.SetTrigger("shoot");
                 Camerarecoil.uprecoil = 2f ;
             }
+
+                
+           
+
+
             if (gameObject.CompareTag("Cannon") && !isreloadi )
             {
                 
@@ -150,8 +167,13 @@ public class Shotgun : MonoBehaviour
 
     private void launchboi()
     {
-        muzzleflash.Play();
+        if (scriptableobject.currentAmmo >= 1)
+        {
+           muzzleflash.Play();
+        }
         
+        
+
         for (int i = 0; i < scriptableobject.bulletCount; i++)
         {
             Vector3 spawnPosition;

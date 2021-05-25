@@ -101,15 +101,16 @@ public class vehicle : MonoBehaviour
                 anim.SetTrigger("Activiteminigun");
                 minigunsappear.SetTrigger("Activiteminigun");
         }
-        if (invechicle == true && Input.GetKeyDown(KeyCode.F))
+        if (invechicle == true && Input.GetKeyDown(KeyCode.F) && !cannonactivate.isreloadi)
         {
-          
-
-                
+            cannonactivate.enabled = false;
                 enableguns.SetActive(true);
-            
         }
-
+        if (invechicle == true && Input.GetKeyDown(KeyCode.H) && !cannonactivate.isreloadi)
+        {
+            enableguns.SetActive(false);
+            cannonactivate.enabled = true;
+        }
     }
 
     public void OnTriggerStay(Collider other)

@@ -34,7 +34,7 @@ public class Newplayer : MonoBehaviour
         rig.velocity = xzVel + yVel;
 
 
-        if (rig.velocity.magnitude > maxspeed)
+        if (rig.velocity.magnitude > maxspeed && (!(health.Health <= 0f)))
         {
           speedeffect.Play();
         }
@@ -169,9 +169,6 @@ public class Newplayer : MonoBehaviour
             isgroundedboi = true;
 
         }
-
-       
-
     }
 
     public void OnTriggerExit(Collider other)

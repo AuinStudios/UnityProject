@@ -273,3 +273,5 @@ ___
 ## (24/5/2021)
 ### (FINallY I FIXED THE FREAKING   MINIGUN ROTATIONS AND CLAMP AND THIS ALL HAPPENDED BECAUSE I DIDNT PUT LOCAL GOD IM SO DUMB)
 
+## (25/5/2021)
+### (made flamethrower improved the minigun on the tank alot and  did some bug fixes and added modes between the minigun and cannon)

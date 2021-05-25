@@ -30,6 +30,8 @@ TagManager:
   - Restart
   - Startgame
   - Cannon
+  - Minigun
+  - flamethrower
   layers:
   - Default
   - TransparentFX

@@ -14,7 +14,7 @@ public class respawnscript : MonoBehaviour
     public KeyCode RestartSceneButton;
     public string sceneToRestart;
     public PlayerHealthHandler whendeath;
-    public Player test;
+    public Newplayer whendeadplayer;
 
     public void Helpme()
     {
@@ -26,9 +26,8 @@ public class respawnscript : MonoBehaviour
             menu.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            test.moveSpeed = 0;
-            test.sensitivity = 0;
-            test.jumpForce = 0;
+            whendeadplayer.maxspeed = 0;
+           
         }
     }
 
