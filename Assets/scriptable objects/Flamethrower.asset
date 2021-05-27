@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Flamethrower
   m_EditorClassIdentifier: 
   Name: 
-  type: 0
+  type: 3
   animator: {fileID: 0}
   bulletForce: 0
-  fireRate: 0.1
+  fireRate: 7
   explosionRange: 1
   upPowerExplosion: 0
   powerOfExplosion: 0
@@ -27,16 +27,16 @@ MonoBehaviour:
   normalDamage: 1
   criticalDamage: 0
   range: 1
-  reloadTime: 1
-  maxAmmo: 1
-  currentAmmo: 0
+  reloadTime: 3
+  maxAmmo: 1000
+  currentAmmo: 849
   impactForce: 0
   nextTimeToFire: 0
-  weaponPrefab: {fileID: 0}
-  bullet: {fileID: 0}
+  weaponPrefab: {fileID: 6526032023153994687, guid: e3af8a03512bf864e8cb4813870acb7d, type: 3}
+  bullet: {fileID: 599913207298766121, guid: 09bf3a042434f5b43adc18bbd21cbf6f, type: 3}
   bulletCount: 1
-  hoverText: 
-  hoverVisibleDistance: 1
+  hoverText: e
+  hoverVisibleDistance: 5
   grenades: 0
   canSpread: 0
   spreadAmount: 0

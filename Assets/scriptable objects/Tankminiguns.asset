@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Tankminiguns
   m_EditorClassIdentifier: 
   Name: 
-  type: 0
+  type: 3
   animator: {fileID: 0}
-  bulletForce: 0
-  fireRate: 0.1
+  bulletForce: 400000
+  fireRate: 25
   explosionRange: 1
   upPowerExplosion: 0
   powerOfExplosion: 0
@@ -26,17 +26,17 @@ MonoBehaviour:
   upForceMelee: 0
   normalDamage: 1
   criticalDamage: 0
-  range: 1
-  reloadTime: 1
-  maxAmmo: 1
-  currentAmmo: 0
+  range: 70
+  reloadTime: 5
+  maxAmmo: 1000
+  currentAmmo: 654
   impactForce: 0
   nextTimeToFire: 0
-  weaponPrefab: {fileID: 0}
-  bullet: {fileID: 0}
+  weaponPrefab: {fileID: 8697068011325480922, guid: 47d72cb38127bfa4eb8c2ef311cb13d7, type: 3}
+  bullet: {fileID: 599913207298766121, guid: 09bf3a042434f5b43adc18bbd21cbf6f, type: 3}
   bulletCount: 1
-  hoverText: 
-  hoverVisibleDistance: 1
+  hoverText: e
+  hoverVisibleDistance: 5
   grenades: 0
   canSpread: 0
   spreadAmount: 0

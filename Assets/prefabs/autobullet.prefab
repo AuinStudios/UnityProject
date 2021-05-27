@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: 
-  normalDamage: 0
+  normalDamage: 1
   isBoss: 0
   criticalDamage: 1
 --- !u!114 &6350635709042746158
