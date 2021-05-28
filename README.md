@@ -275,3 +275,7 @@ ___
 
 ## (25/5/2021)
 ### (made flamethrower improved the minigun on the tank alot and  did some bug fixes and added modes between the minigun and cannon)
+
+
+## (28/5/2021)
+### (made a flamethrower effect useing an asset pack of images like glowing ones and other crap like lighting because i cant make alot of effects with only an circle)

@@ -109,7 +109,11 @@ public class Shotgun : MonoBehaviour
             Camerarecoil.uprecoil = 0;
         }
         // shit muzzleflash code
+        if (!(Input.GetKey(KeyCode.Mouse0)))
+        {
 
+            muzzleflash.Stop();
+        }
         if (scriptableobject.currentAmmo >= 1)
         {
             muzzleflash.Stop();
@@ -117,7 +121,8 @@ public class Shotgun : MonoBehaviour
         if (Input.GetKey(KeyCode.Mouse0) && !(Playerhealth.Health <= 0) && Time.time >= nextimetofire && ((Time.timeScale != 0) && scriptableobject.currentAmmo >= scriptableobject.bulletCount) && gameObject.CompareTag("flamethrower") && !isreloadi)
         {
             muzzleflash.Play();
-            scriptableobject.currentAmmo -= scriptableobject.bulletCount;
+           
+            scriptableobject.currentAmmo -= 1;
         }
             if (gameObject.GetComponent<Shotgun>().enabled == true)
             {

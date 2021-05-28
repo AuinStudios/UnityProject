@@ -59,7 +59,7 @@ public class pickupgun : MonoBehaviour
    
     private void Update()
     {
-
+        
         if (slotFull == false && transform.position.y <= -90)
         {
             transform.position = new Vector3(0, 0, 0);
@@ -93,6 +93,7 @@ public class pickupgun : MonoBehaviour
 
     public void PickUp()
     {
+      
         equipped = true;
         slotFull = true;
         isfluidEnabled = true;
