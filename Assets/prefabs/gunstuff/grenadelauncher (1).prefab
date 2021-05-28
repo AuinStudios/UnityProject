@@ -135,6 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponPickupGUI: {fileID: 0}
   gun: {fileID: 11400000, guid: f418f805647cb32409786e383d34fc77, type: 2}
+  notshowwhenequiped: {fileID: 1241132886208374003}
 --- !u!114 &8309645144002514466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,7 +157,7 @@ MonoBehaviour:
   scriptableobject: {fileID: 11400000, guid: f418f805647cb32409786e383d34fc77, type: 2}
   isreloadi: 0
   Playerhealth: {fileID: 0}
-  ammotext: {fileID: 0}
+  ammotext: {fileID: 8309645144002514466}
   guntext: {fileID: 0}
 --- !u!114 &1241132886208374003
 MonoBehaviour:
@@ -170,6 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9420c289207dfcd4c82d48f371ecd4ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   gunscript: {fileID: 8309645144002514466}
   playerhealth: {fileID: 0}
   rb: {fileID: 862332962585589448}

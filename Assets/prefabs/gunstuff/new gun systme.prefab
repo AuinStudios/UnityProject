@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2635871067513019847}
   m_LocalRotation: {x: -0, y: -0, z: -1, w: 0}
-  m_LocalPosition: {x: 0, y: 0.391, z: 0.888}
+  m_LocalPosition: {x: 0, y: 0.391, z: 1.107}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2530679634491118977}
@@ -5004,6 +5004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponPickupGUI: {fileID: 0}
   gun: {fileID: 11400000, guid: eccea11ed9b6da1469a14c38c4583afc, type: 2}
+  notshowwhenequiped: {fileID: 8787602191499182400}
 --- !u!114 &2019095791181492771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5025,7 +5026,7 @@ MonoBehaviour:
   scriptableobject: {fileID: 11400000, guid: eccea11ed9b6da1469a14c38c4583afc, type: 2}
   isreloadi: 0
   Playerhealth: {fileID: 0}
-  ammotext: {fileID: 0}
+  ammotext: {fileID: 2019095791181492771}
   guntext: {fileID: 0}
 --- !u!114 &8787602191499182400
 MonoBehaviour:
@@ -5039,6 +5040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9420c289207dfcd4c82d48f371ecd4ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   gunscript: {fileID: 2019095791181492771}
   playerhealth: {fileID: 0}
   rb: {fileID: 2635871066541165342}

@@ -278,4 +278,4 @@ ___
 
 
 ## (28/5/2021)
-### (made a flamethrower effect useing an asset pack of images like glowing ones and other crap like lighting because i cant make alot of effects with only an circle)
+### (made a flamethrower effect useing an asset pack of images like glowing ones and other crap like lighting because i cant make alot of effects with only an circle and made an day and night cycle made the lighting abit less bright  and made it cyan to fix some coloring issues for flamethrower and other  stuff and fixed some other stuff)

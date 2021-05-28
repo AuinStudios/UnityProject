@@ -49,7 +49,7 @@ public class shootingAI : MonoBehaviour
          
        }
 
-
+     
 
 
 
@@ -70,13 +70,12 @@ public class shootingAI : MonoBehaviour
         }
     }
 
-
-
-    public void OnTriggerStay(Collider other)
+ 
+    public void OnTriggerStay(Collider col)
     {
-        if (other.gameObject.CompareTag("flamethrower"))
+        if (col.gameObject.CompareTag("flamethrower"))
         {
-            BulletOwner bulletOwner = other.gameObject.GetComponent<BulletOwner>();
+            BulletOwner bulletOwner = col.gameObject.GetComponent<BulletOwner>();
 
             if (bulletOwner.isBoss)
             {

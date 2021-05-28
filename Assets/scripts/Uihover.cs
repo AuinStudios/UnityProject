@@ -8,7 +8,7 @@ public class Uihover : MonoBehaviour
 
     public TextMeshProUGUI weaponPickupGUI;
     public GunsScriptableObject gun;
-    
+    public pickupgun notshowwhenequiped;
     private GameObject player;
 
     private void Start()
@@ -18,15 +18,19 @@ public class Uihover : MonoBehaviour
 
     private void OnMouseOver()
     {
-        weaponPickupGUI.text = gun.hoverText + "\n";
+        if (!notshowwhenequiped.equipped)
+        {
 
-        if (Vector3.Distance(this.gameObject.transform.position, player.transform.position) <= gun.hoverVisibleDistance)
-        {
-            weaponPickupGUI.color = new Color(0, 255, 200, 200);
-        }
-        else
-        {
-            weaponPickupGUI.color = new Color(0, 0, 0, 0);
+            weaponPickupGUI.text = gun.hoverText + "\n";
+
+            if (Vector3.Distance(this.gameObject.transform.position, player.transform.position) <= gun.hoverVisibleDistance)
+            {
+                weaponPickupGUI.color = new Color(0, 255, 200, 200);
+            }
+            else
+            {
+                weaponPickupGUI.color = new Color(0, 0, 0, 0);
+            }
         }
     }
     private void OnMouseExit()

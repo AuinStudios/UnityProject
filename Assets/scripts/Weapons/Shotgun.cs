@@ -111,23 +111,29 @@ public class Shotgun : MonoBehaviour
         // shit muzzleflash code
         if (!(Input.GetKey(KeyCode.Mouse0)))
         {
-
+            if (gameObject.CompareTag("flamethrower"))
+            {
+             muzzleflash.GetComponent<BoxCollider>().enabled = false;
+            }
+            
             muzzleflash.Stop();
         }
         if (scriptableobject.currentAmmo >= 1)
         {
             muzzleflash.Stop();
         }
+        // flamethrower 
         if (Input.GetKey(KeyCode.Mouse0) && !(Playerhealth.Health <= 0) && Time.time >= nextimetofire && ((Time.timeScale != 0) && scriptableobject.currentAmmo >= scriptableobject.bulletCount) && gameObject.CompareTag("flamethrower") && !isreloadi)
         {
             muzzleflash.Play();
-           
+            muzzleflash.GetComponent<BoxCollider>().enabled = true;
             scriptableobject.currentAmmo -= 1;
         }
             if (gameObject.GetComponent<Shotgun>().enabled == true)
             {
                 guntext.color = new Color(233, 210, 21, 255);
             }
+            //  grenadelaunchers + guns etc
         if (  Input.GetKey(KeyCode.Mouse0) && !(Playerhealth.Health <=0) &&Time.time >= nextimetofire &&((Time.timeScale != 0) && scriptableobject.currentAmmo >= scriptableobject.bulletCount) &&!gameObject.CompareTag("flamethrower") && !isreloadi)
         {
 
