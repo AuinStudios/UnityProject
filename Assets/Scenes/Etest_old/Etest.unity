@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -282,7 +282,7 @@ RectTransform:
   - {fileID: 1657402761}
   - {fileID: 894568332}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1629,9 +1629,13 @@ MonoBehaviour:
   MaxUIRangeColor: {r: 0, g: 1, b: 0, a: 1}
   rig: {fileID: 454259030}
   spawneffect: {fileID: 454259025}
+  burneffect: {fileID: 9173385431601952686, guid: 9bf8e07d7e3e3d2458e4297d9c8960b9, type: 3}
+  test:
+  - {fileID: 9173385431601952686, guid: 9bf8e07d7e3e3d2458e4297d9c8960b9, type: 3}
   effect: {fileID: 1881791155571813637, guid: c5fd08013d645ee458ef3755f2ea8964, type: 3}
   health: 100
   Playerhealth: {fileID: 1695635068435680597}
+  test3: 0
 --- !u!114 &454259029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1741,13 +1745,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 454259025}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -6.4, y: 0.08, z: 140.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1487683805}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &484276403
 GameObject:
@@ -6856,7 +6860,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &493131018
 MonoBehaviour:
@@ -6963,7 +6967,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &576888221
 GameObject:
@@ -8386,7 +8390,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &971900916 stripped
 MonoBehaviour:
@@ -26116,7 +26120,7 @@ Transform:
   - {fileID: 800511886}
   - {fileID: 1352920246}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1454638566
 GameObject:
@@ -26865,7 +26869,7 @@ Transform:
   m_LocalScale: {x: 1.2625214, y: 1.2625214, z: 1.2625214}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1602991190
 MonoBehaviour:
@@ -28077,7 +28081,7 @@ Transform:
   m_Children:
   - {fileID: 1907637453}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1900163565
 GameObject:
@@ -40351,7 +40355,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2088603942
 GameObject:
@@ -40456,6 +40460,98 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9989168, y: 1.37228, z: 0.08327926}
   m_Center: {x: -0.0113704605, y: 0.21223821, z: -0.59260875}
+--- !u!1 &2122362677
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2122362679}
+  - component: {fileID: 2122362678}
+  m_Layer: 0
+  m_Name: flamethrower light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &2122362678
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122362677}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 0.23888007, b: 0, a: 1}
+  m_Intensity: 2.3
+  m_Range: 5
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 0.5
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: NaN, y: NaN, z: 0, w: 1e-45}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &2122362679
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122362677}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 34.42, z: 2.633}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 570637172895310228}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2130760720
 GameObject:
   m_ObjectHideFlags: 0
@@ -40921,7 +41017,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.9999586, w: 0.009101894}
   m_LocalPosition: {x: 0.046, y: 0.341, z: 0.728}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2122362679}
   m_Father: {fileID: 570637172895310212}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -178.957}
@@ -44851,18 +44948,18 @@ ParticleSystem:
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
-    enabled: 0
+    enabled: 1
     collisionShape0: {fileID: 454259034}
-    collisionShape1: {fileID: 0}
-    collisionShape2: {fileID: 0}
+    collisionShape1: {fileID: 1539883273}
+    collisionShape2: {fileID: 2975378079813751259}
     collisionShape3: {fileID: 0}
     collisionShape4: {fileID: 0}
     collisionShape5: {fileID: 0}
     inside: 1
     outside: 2
-    enter: 2
+    enter: 1
     exit: 2
-    radiusScale: 1
+    radiusScale: 0.3
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -44873,17 +44970,17 @@ ParticleSystem:
       properties: 0
       emitProbability: 1
   LightsModule:
-    enabled: 0
+    enabled: 1
     ratio: 0.5
-    light: {fileID: 0}
+    light: {fileID: 2122362678}
     randomDistribution: 1
-    color: 1
+    color: 0
     range: 1
     intensity: 1
     rangeCurve:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 1
+      minMaxState: 3
+      scalar: 2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -44935,9 +45032,9 @@ ParticleSystem:
         m_RotationOrder: 4
     intensityCurve:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 3
-      minScalar: 1
+      minScalar: 0.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -44986,7 +45083,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    maxLights: 20
+    maxLights: 40
   TrailModule:
     enabled: 0
     mode: 0
@@ -51856,9 +51953,13 @@ MonoBehaviour:
   MaxUIRangeColor: {r: 0, g: 1, b: 0, a: 1}
   rig: {fileID: 2975378079813751263}
   spawneffect: {fileID: 2975378079813751261}
+  burneffect: {fileID: 9173385431601952686, guid: 9bf8e07d7e3e3d2458e4297d9c8960b9, type: 3}
+  test:
+  - {fileID: 9173385431601952686, guid: 9bf8e07d7e3e3d2458e4297d9c8960b9, type: 3}
   effect: {fileID: 1881791155571813637, guid: c5fd08013d645ee458ef3755f2ea8964, type: 3}
   health: 100
   Playerhealth: {fileID: 1695635068435680597}
+  test3: 0
 --- !u!4 &2975378079813751259
 Transform:
   m_ObjectHideFlags: 0
@@ -51872,7 +51973,7 @@ Transform:
   m_Children:
   - {fileID: 2975378080030943091}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2975378079813751260
 MonoBehaviour:
@@ -52246,7 +52347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8404417848707698347, guid: 316c2aeec558aa146912089aaced3c9d, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8404417848707698347, guid: 316c2aeec558aa146912089aaced3c9d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

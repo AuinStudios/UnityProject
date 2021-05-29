@@ -32,6 +32,7 @@ TagManager:
   - Cannon
   - Minigun
   - flamethrower
+  - afterburntdamage
   layers:
   - Default
   - TransparentFX

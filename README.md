@@ -279,3 +279,9 @@ ___
 
 ## (28/5/2021)
 ### (made a flamethrower effect useing an asset pack of images like glowing ones and other crap like lighting because i cant make alot of effects with only an circle and made an day and night cycle made the lighting abit less bright  and made it cyan to fix some coloring issues for flamethrower and other  stuff and fixed some other stuff)
+
+
+
+
+## (29/5/2021)
+### (added lighting to the  flamethrower fixed a bug  and i made afterburnt damage but is VERY glitchy right now and clunkly because i dont know how to not instiance more then 1  object)

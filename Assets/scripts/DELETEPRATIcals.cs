@@ -19,7 +19,10 @@ public class DELETEPRATIcals : MonoBehaviour
             Destroy(gameObject, destorytimer);
 
         }
-
+        if (gameObject.CompareTag("afterburntdamage"))
+        {
+            Destroy(gameObject, destorytimer);
+        }
 
         if (gameObject.name == "explosion(Clone)")
         {

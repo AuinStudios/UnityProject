@@ -1,7 +1,7 @@
 ﻿
 using UnityEngine;
 
-public class rotategun : MonoBehaviour
+public class Rotatesun : MonoBehaviour
 {
 
     public void Update()

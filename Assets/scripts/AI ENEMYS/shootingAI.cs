@@ -6,7 +6,17 @@ using TMPro;
 
 public class shootingAI : MonoBehaviour
 {
+    //[System.Serializable]
+    //public class Pool
+    //{
+    //    public string tag;
+    //    public GameObject prefab;
+    //    public int size;
+    //}
+    //public List<Pool> pools;
+    //public Dictionary<string, Queue<GameObject>> pooll;
 
+    // ------------------------
     public EnemyData data;
     public GameObject player;
     public float timer = 0;
@@ -24,14 +34,30 @@ public class shootingAI : MonoBehaviour
     public Rigidbody rig;
     public GameObject spawneffect;
     private bool hasFire = false;
+    public GameObject burneffect;
+    public GameObject[] test;
     public ParticleSystem effect;
     public float health = 20f;
     public PlayerHealthHandler Playerhealth;
+    public bool test3;
+    private float test44;
     // Start is called before the first frame update
-   
 
+    //public void Start()
+    //{
+    //    pooll = new Dictionary<string, Queue<GameObject>>();
+    //
+    //    foreach (Pool pol in pools)
+    //    {
+    //        Queue<GameObject> objectpool = new Queue<GameObject>();
+    //        for (int i = 0; i < pol.size; i++)
+    //        {
+    //            GameObject obj = Instantiate(pol.prefab);
+    //        }
+    //    }
+    //}
 
-   public void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
    {
        if (collision.gameObject.tag == "bullet")
        {
@@ -73,8 +99,27 @@ public class shootingAI : MonoBehaviour
  
     public void OnTriggerStay(Collider col)
     {
+
+        if (col.gameObject.CompareTag("afterburntdamage"))
+        {
+            BulletOwner bulletOwner = col.gameObject.GetComponent<BulletOwner>();
+
+            if (bulletOwner.isBoss)
+            {
+                health -= bulletOwner.normalDamage + bulletOwner.criticalDamage;
+            }
+            else
+            {
+                health -= bulletOwner.normalDamage;
+            }
+        }
         if (col.gameObject.CompareTag("flamethrower"))
         {
+            
+             
+               
+            burneffect.transform.position = gameObject.transform.position;
+            burneffect.GetComponent<BoxCollider>().enabled = true;
             BulletOwner bulletOwner = col.gameObject.GetComponent<BulletOwner>();
 
             if (bulletOwner.isBoss)
@@ -89,13 +134,34 @@ public class shootingAI : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
-        
-        
 
-        if (other.gameObject.CompareTag("explosivebarrel"))
+        if (other.gameObject.CompareTag("flamethrower"))
         {
+
+            Instantiate(burneffect);
+
+
+            burneffect.transform.position = gameObject.transform.position;
+            burneffect.GetComponent<BoxCollider>().enabled = true;
             BulletOwner bulletOwner = other.gameObject.GetComponent<BulletOwner>();
 
+            if (bulletOwner.isBoss)
+            {
+                health -= bulletOwner.normalDamage + bulletOwner.criticalDamage;
+            }
+            else
+            {
+                health -= bulletOwner.normalDamage;
+            }
+        }
+        
+        
+        
+        
+                if (other.gameObject.CompareTag("explosivebarrel"))
+        {
+            BulletOwner bulletOwner = other.gameObject.GetComponent<BulletOwner>();
+            
             if (bulletOwner.isBoss)
             {
                 health -= bulletOwner.normalDamage + bulletOwner.criticalDamage;
@@ -134,15 +200,21 @@ public class shootingAI : MonoBehaviour
 
 
             }
+        
+        
     }
+    
+
+    
 
   
 
 
 
 
-         void Update()
-        {
+    void Update()
+    {
+
         if (health == 0)
         {
           
