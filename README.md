@@ -285,3 +285,8 @@ ___
 
 ## (29/5/2021)
 ### (added lighting to the  flamethrower fixed a bug  and i made afterburnt damage but is VERY glitchy right now and clunkly because i dont know how to not instiance more then 1  object)
+
+
+
+## (30/5/2021)
+### (i couldnt figure out how to not instiance only  1  object at a time so i jut made them to be in the world  but they are disbaled and when the player hits them with a flamethrower they get enabeld and play the effect its not as efficent as instianceing but its abit more effective then just leting them activite all the time and also fixed some bugs and made the player falling physics better bc it was super terrible beforce bc of the drag)

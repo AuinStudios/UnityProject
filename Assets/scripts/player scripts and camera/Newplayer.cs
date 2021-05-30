@@ -46,7 +46,7 @@ public class Newplayer : MonoBehaviour
             speedeffect.Stop();
         }
 
-        if (isgroundedboi && !(health.Health <= 0))
+        if (isgroundedboi  && !(health.Health <= 0))
         {
             jumpower = 7000f;
             rig.drag = 10;
@@ -59,12 +59,12 @@ public class Newplayer : MonoBehaviour
         {
 
             jumpower = 0f;
-            
-            rig.drag = 1;
-            forwardspeed = 500;
-            backwards = -500;
-            right = 500;
-            left = -500;
+            rig.AddForce(player.up * -100 * Time.fixedDeltaTime, ForceMode.Impulse);
+            rig.drag = 0.5f;
+            forwardspeed = 400;
+            backwards = -400;
+            right = 400;
+            left = -400;
         }
         if (isgroundedboi && (Input.GetKey(KeyCode.Space)) )
         {
