@@ -5208,6 +5208,7 @@ MonoBehaviour:
   gunContainer: {fileID: 0}
   fpsCam: {fileID: 0}
   coll: {fileID: 8590686191544924653}
+  guncol: {fileID: 0}
   pickUpRange: 5
   dropForwardForce: 200
   dropUpwardForce: 100

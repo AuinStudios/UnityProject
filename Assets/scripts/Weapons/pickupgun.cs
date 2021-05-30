@@ -17,6 +17,7 @@ public class pickupgun : MonoBehaviour
  public Rigidbody rb;
  public Transform player, gunContainer, fpsCam;
  public BoxCollider coll;
+ public GameObject guncol;
  //Floats------------------------------------------------------------------------------------------
  public float pickUpRange;
  public float dropForwardForce, dropUpwardForce;
@@ -29,11 +30,15 @@ public class pickupgun : MonoBehaviour
  public bool isfluidEnabled = false;
  public static bool color;
  public static bool slotFull;
- //Stuff Im Not Useing -----------------------------------------------------------------------------
- //public GunsScriptableObject scriptableobject2;
-     //public TextMeshProUGUI popup;
-     //public GameObject yes;   
- // ------------------------------------------------------------------------------------------------    
+    //Stuff Im Not Useing -----------------------------------------------------------------------------
+    //public GunsScriptableObject scriptableobject2;
+    //public TextMeshProUGUI popup;
+    //public GameObject yes;   
+    // ------------------------------------------------------------------------------------------------    
+
+
+   
+
 
     private void Start()
     {
@@ -56,10 +61,17 @@ public class pickupgun : MonoBehaviour
         }
     }
 
-   
+ 
     private void Update()
     {
-        
+        if(slotFull == true)
+        {
+            guncol.SetActive(true);
+        }
+        if (slotFull == false)
+        {
+            guncol.SetActive(false);
+        }
         if (slotFull == false && transform.position.y <= -90)
         {
             transform.position = new Vector3(0, 0, 0);

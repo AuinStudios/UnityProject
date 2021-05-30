@@ -25,7 +25,6 @@ public class Shotgun : MonoBehaviour
     public PlayerHealthHandler Playerhealth;
     public Shotgun ammotext;
     private float nextimetofire = 1f;
-    private float xRotation;
     // --------------------------------------------
     
     public TextMeshProUGUI guntext;
@@ -170,7 +169,7 @@ public class Shotgun : MonoBehaviour
             if (gameObject.CompareTag("uzi") && !isreloadi )
             {
                 anim.GetComponent<Animator>().speed = 4;
-                Camerarecoil.uprecoil = 0.6f;
+                Camerarecoil.uprecoil = 0.3f;
                 anim.SetBool("isuzistop", true);
             }
         }

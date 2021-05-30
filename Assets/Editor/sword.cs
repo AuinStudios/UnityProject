@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class sword : baseitem
 {
-    public Gun gun;
+
 
     private void Update()
     {

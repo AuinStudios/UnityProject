@@ -119,8 +119,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.1299943, y: 0.70049685, z: 0.7118261}
-  m_Center: {x: -0.004594952, y: 0.15343961, z: 0.3735577}
+  m_Size: {x: 0.1299943, y: 0.75321215, z: 1.0551348}
+  m_Center: {x: -0.004594952, y: 0.12708196, z: 0.3598032}
 --- !u!114 &4561290754395673496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,6 +179,7 @@ MonoBehaviour:
   gunContainer: {fileID: 0}
   fpsCam: {fileID: 0}
   coll: {fileID: 862332962585589451}
+  guncol: {fileID: 0}
   pickUpRange: 5
   dropForwardForce: 200
   dropUpwardForce: 100
@@ -5081,7 +5082,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7704464543187441869}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: bulletspawnpos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5095,7 +5096,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7704464543187441868}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.39082086, z: 0.895}
+  m_LocalPosition: {x: 0, y: 0.39082086, z: 1.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 899917555081422935}

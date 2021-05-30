@@ -290,3 +290,6 @@ ___
 
 ## (30/5/2021)
 ### (i couldnt figure out how to not instiance only  1  object at a time so i jut made them to be in the world  but they are disbaled and when the player hits them with a flamethrower they get enabeld and play the effect its not as efficent as instianceing but its abit more effective then just leting them activite all the time and also fixed some bugs and made the player falling physics better bc it was super terrible beforce bc of the drag)
+
+
+1) (also made it so that the gun doesnt go trhough walls or  the ground anymore but if ur on slopes nad ur looking abit down and goin forward bc of the gun collideing to the slope it will make u not move not a major glithc but it might be annoying)
