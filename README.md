@@ -293,3 +293,10 @@ ___
 
 
 1) (also made it so that the gun doesnt go trhough walls or  the ground anymore but if ur on slopes nad ur looking abit down and goin forward bc of the gun collideing to the slope it will make u not move not a major glithc but it might be annoying)
+
+
+
+
+
+## (6/06/2021)
+### (added better lighting to my game and might add options today as well)

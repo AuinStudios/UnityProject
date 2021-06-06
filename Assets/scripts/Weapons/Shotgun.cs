@@ -18,6 +18,7 @@ public class Shotgun : MonoBehaviour
     public Animator anim;
     public Animator temporay;
     public MoveCamera Camerarecoil;
+    public WeaponSwap swap;
     // ------------------------------------------
     public ParticleSystem muzzleflash;
     public GunsScriptableObject scriptableobject;
@@ -65,6 +66,9 @@ public class Shotgun : MonoBehaviour
     void Update()
     {
         
+
+
+
         if (isreloadi)
         {
 

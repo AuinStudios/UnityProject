@@ -29,5 +29,5 @@ Material:
     - Vector1_FAF4EC7F: 0.4
     - Vector1_FE1F3DBE: 0.48
     m_Colors:
-    - Color_3AA5E885: {r: 0, g: 34.18926, b: 44.72704, a: 0}
+    - Color_3AA5E885: {r: 0, g: 0.19652307, b: 0.4339623, a: 1}
   m_BuildTextureStacks: []

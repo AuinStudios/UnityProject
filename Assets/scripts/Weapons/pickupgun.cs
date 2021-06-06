@@ -18,6 +18,8 @@ public class pickupgun : MonoBehaviour
  public Transform player, gunContainer, fpsCam;
  public BoxCollider coll;
  public GameObject guncol;
+    public GameObject weaponswap;
+    public WeaponSwap swap;
  //Floats------------------------------------------------------------------------------------------
  public float pickUpRange;
  public float dropForwardForce, dropUpwardForce;
@@ -64,14 +66,22 @@ public class pickupgun : MonoBehaviour
  
     private void Update()
     {
-        if(slotFull == true)
+
+        if(weaponswap.transform.childCount >= 4)
+        {
+            slotFull = true;
+        }
+        if (swap.selectedweapon > 0)
         {
             guncol.SetActive(true);
         }
-        if (slotFull == false)
+
+        if (swap.selectedweapon <= 0)
         {
             guncol.SetActive(false);
         }
+     
+     
         if (slotFull == false && transform.position.y <= -90)
         {
             transform.position = new Vector3(0, 0, 0);
@@ -99,7 +109,7 @@ public class pickupgun : MonoBehaviour
         if (!equipped && distanceToPlayer.magnitude <= pickUpRange && !(playerhealth.Health <= 0) && slotFull == false && Input.GetKeyDown(KeyCode.E) ) PickUp() ;
      
         //Drop if equipped and "Q" is pressed
-        if (equipped && slotFull == true && !Input.GetKey(KeyCode.Mouse0) &&gunscript.isreloadi == false && Input.GetKeyDown(KeyCode.Q)) Drop();
+        if (equipped  && !Input.GetKey(KeyCode.Mouse0) &&gunscript.isreloadi == false && Input.GetKeyDown(KeyCode.Q)) Drop();
 
     }
 
@@ -107,8 +117,8 @@ public class pickupgun : MonoBehaviour
     {
       
         equipped = true;
-        slotFull = true;
         isfluidEnabled = true;
+        gameObject.SetActive(false);
         color = true;
         //Make weapon a child of the camera and move it to default position
         transform.SetParent(gunContainer);
