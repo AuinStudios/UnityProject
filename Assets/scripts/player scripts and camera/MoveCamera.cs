@@ -12,19 +12,25 @@ public class MoveCamera : MonoBehaviour
     private float sensMultiplier = 1f;
     public float uprecoil = 0f;
     public float testingsmooth = 0f;
-   
+    public Options op;
+   public Camera cam;
   
     public void Start()
     {
+       
+        
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        
+
     }
 
 
     public void  Update()
     {
-        
-        
+
+        Camera.main.fieldOfView = PlayerPrefs.GetFloat("slidernumber", op.slidervalue.value);
         float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.fixedDeltaTime * sensMultiplier;
         float mouseY = uprecoil  +  Input.GetAxis("Mouse Y") * sensitivity * Time.fixedDeltaTime * sensMultiplier;
 

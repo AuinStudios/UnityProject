@@ -300,3 +300,6 @@ ___
 
 ## (6/06/2021)
 ### (added better lighting to my game and might add options today as well)
+
+
+1) (FUCKKING HELL THAT TOOK SO LONG FOR THE FOV SETTINGS OPTIONS but i finally made it so u can change ur fov it saves between scenes but when u leave the scene in the  game the  thing resets back to its default values in the menu ill fix that in future)

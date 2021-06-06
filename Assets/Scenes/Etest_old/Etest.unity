@@ -14489,6 +14489,8 @@ MonoBehaviour:
   PlayerHealth: {fileID: 1695635068435680597}
   uprecoil: 0
   testingsmooth: 0
+  op: {fileID: 7074664219490799787, guid: 95fc72afa15b40c4a9d2c15ab7387fc6, type: 3}
+  cam: {fileID: 1143054472}
 --- !u!114 &1143054475
 MonoBehaviour:
   m_ObjectHideFlags: 0
