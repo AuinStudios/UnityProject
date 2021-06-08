@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using TMPro;
+using UnityEngine.EventSystems;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,14 +27,20 @@ public class Options : MonoBehaviour
     }
     public void disableop()
     {
+        if(EventSystem.current.alreadySelecting == true)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+
+        }
+       
         menu.SetActive(true);
         options.SetActive(false);
     }
     
 
-        public void slider(float test3)
-          {
-        slidernumber = test3;     
-        
-        }
+    public void slider(float test3)
+      {
+    slidernumber = test3;     
+    
+    }
 }

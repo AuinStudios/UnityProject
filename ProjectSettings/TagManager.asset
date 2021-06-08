@@ -33,6 +33,7 @@ TagManager:
   - flamethrower
   - afterburntdamage
   - flamethrowerhitdamage
+  - Menueffect
   layers:
   - Default
   - TransparentFX

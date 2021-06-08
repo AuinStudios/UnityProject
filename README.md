@@ -303,3 +303,8 @@ ___
 
 
 1) (FUCKKING HELL THAT TOOK SO LONG FOR THE FOV SETTINGS OPTIONS but i finally made it so u can change ur fov it saves between scenes but when u leave the scene in the  game the  thing resets back to its default values in the menu ill fix that in future)
+
+
+
+## (09/06/2021)
+### (theses few days i been working on an options ui thing  it took me 2  days but i finally made it so when u hover over the tab thing it gets abit bigger then becomes abit dark and if u click on it it becomes super dark and  abit bigger but it means u selected it right now  when u hold click on it it  becomes highlighted for some reason and when u click in the air it fixes it self probably is selected not sure but i been working on this for hours so imma stop and torromow im gonna add section changeing to the tabs)
