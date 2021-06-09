@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
 public class Options : MonoBehaviour
@@ -11,6 +12,7 @@ public class Options : MonoBehaviour
     public GameObject options;
     public   float slidernumber = 0;
     public int maxvalue = 80;
+    public TextMeshProUGUI textui;
     public Slider slidervalue;
     // Update is called once per frame
     void Update()
@@ -40,7 +42,9 @@ public class Options : MonoBehaviour
 
     public void slider(float test3)
       {
-    slidernumber = test3;     
-    
+     slidernumber = test3;
+        
+       textui.text = Mathf.Clamp((int)slidernumber, 0, int.MaxValue).ToString();
+        
     }
 }

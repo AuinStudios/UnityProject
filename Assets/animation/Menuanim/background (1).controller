@@ -49,7 +49,7 @@ AnimatorStateTransition:
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
+  m_CanTransitionToSelf: 0
 --- !u!1102 &-6225664266951396333
 AnimatorState:
   serializedVersion: 5
@@ -244,7 +244,7 @@ AnimatorStateMachine:
     m_Position: {x: 270, y: 90, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2060031800086678699}
-    m_Position: {x: 40, y: 30, z: 0}
+    m_Position: {x: 30, y: 10, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4623326500833372955}
     m_Position: {x: 280, y: 30, z: 0}
@@ -253,17 +253,17 @@ AnimatorStateMachine:
     m_Position: {x: -170, y: 90, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2172905012003038901}
-    m_Position: {x: 50, y: 150, z: 0}
+    m_Position: {x: 40, y: 150, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
-  - {fileID: -3652516183949331618}
   - {fileID: 5883506920752898513}
+  - {fileID: -3652516183949331618}
   - {fileID: -7757044449449553924}
   - {fileID: -9120360390813788571}
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 70, y: 100, z: 0}
+  m_AnyStatePosition: {x: 60, y: 100, z: 0}
   m_EntryPosition: {x: 290, y: -30, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

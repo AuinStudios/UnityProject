@@ -306,5 +306,11 @@ ___
 
 
 
-## (09/06/2021)
+## (08/06/2021)
 ### (theses few days i been working on an options ui thing  it took me 2  days but i finally made it so when u hover over the tab thing it gets abit bigger then becomes abit dark and if u click on it it becomes super dark and  abit bigger but it means u selected it right now  when u hold click on it it  becomes highlighted for some reason and when u click in the air it fixes it self probably is selected not sure but i been working on this for hours so imma stop and torromow im gonna add section changeing to the tabs)
+
+
+
+
+## (09/06/2021)
+###  today i made a  score thing when u  scroll the fov and crap but i cant get the tab swtich to work i feel so dumb i want to quit so badly because i have been working on this stupid simple options for almost a  week and im STLL SOMEHOW NOT DONE
