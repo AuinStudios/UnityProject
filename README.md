@@ -314,3 +314,10 @@ ___
 
 ## (09/06/2021)
 ###  today i made a  score thing when u  scroll the fov and crap but i cant get the tab swtich to work i feel so dumb i want to quit so badly because i have been working on this stupid simple options for almost a  week and im STLL SOMEHOW NOT DONE
+
+
+
+
+## (10/06/2021)
+###  i finally fixed the options but i deleted something important an d so i have to redo everything but a tleast i had the code so i fixed that 
+torromow im gonna add graphiciss ettings and other settings now that most of the  changeing settings  code is done

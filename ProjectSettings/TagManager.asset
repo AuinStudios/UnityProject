@@ -33,7 +33,7 @@ TagManager:
   - flamethrower
   - afterburntdamage
   - flamethrowerhitdamage
-  - Fovslider
+  - Cameraoptions
   layers:
   - Default
   - TransparentFX

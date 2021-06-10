@@ -21,8 +21,11 @@ public class Newplayer : MonoBehaviour
     public Transform orientation;
     public PlayerHealthHandler health;
     private float maxVertSpeed = 200;
-   
-    
+
+    public void Awake()
+    {
+       
+    }
     void FixedUpdate()
     {
         Vector3 xzVel = new Vector3(rig.velocity.x, 0, rig.velocity.z);
@@ -70,24 +73,25 @@ public class Newplayer : MonoBehaviour
         {
             rig.AddForce(player.up * jumpower * Time.fixedDeltaTime, ForceMode.Impulse);
             
-
+       
         }
     }
 
+ 
 
+  
 
    
-    // Update is called once per frame
     void Update()
     {
-        float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.fixedDeltaTime * sensMultiplier;
-       orientation.Rotate(Vector3.up * mouseX);
+         float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.fixedDeltaTime * sensMultiplier;
+        orientation.Rotate(Vector3.up * mouseX);
+
         
-       
         //SHIT FUCKING HORRIBLE  MOVEMENT CODE
         if (Input.GetKey(KeyCode.W))
         {
-            rig.AddForce(player.forward * forwardspeed * Time.deltaTime, ForceMode.Impulse);
+           rig.AddForce(player.forward * forwardspeed * Time.deltaTime, ForceMode.Impulse);
         }
         if (Input.GetKey(KeyCode.S))
         {
@@ -98,45 +102,45 @@ public class Newplayer : MonoBehaviour
             rig.AddForce(player.right * right * Time.deltaTime, ForceMode.Impulse);
            
         }
-       
+        
         if (Input.GetKey(KeyCode.A))
         {
             rig.AddForce(player.right * left * Time.deltaTime, ForceMode.Impulse);
             
         }
-       
+        
         if((Input.GetKey(KeyCode.A) && (Input.GetKey(KeyCode.W) && isgroundedboi)))
         {
             left = -2700f;
             forwardspeed = 2700;
         }
-
+        
         if ((Input.GetKey(KeyCode.D) && (Input.GetKey(KeyCode.W) && isgroundedboi)))
         {
             right = 2700f;
             forwardspeed = 2700;
         }
-
+        
         if ((Input.GetKey(KeyCode.D) && (Input.GetKey(KeyCode.S) && isgroundedboi)))
         {
             right = 2700f;
             backwards = -2700;
         }
-
+        
         if ((Input.GetKey(KeyCode.A) && (Input.GetKey(KeyCode.S) && isgroundedboi)))
         {
             left = -2700f;
             backwards = -2700;
         }
-       
+        
         if (Input.GetKeyDown(KeyCode.H) && !isgroundedboi)
         {
             rig.velocity = Vector3.ClampMagnitude(rig.velocity, 1000);
             rig.AddForce(player.forward * dash * Time.deltaTime, ForceMode.VelocityChange);
-
+        
         }
-     
-
+        
+        
         if(health.Health <= 0  )
         {
             forwardspeed = 0f;

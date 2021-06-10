@@ -4,7 +4,6 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 public class optionsEffects : MonoBehaviour
 {
-    public Image selectedcolor;
     public GameObject activitecameraop;
     public bool stophighlight;
     
@@ -12,27 +11,36 @@ public class optionsEffects : MonoBehaviour
     {
     
         gameObject.GetComponent<Animator>().enabled = true;
+
+       
+          
         if (EventSystem.current.alreadySelecting != gameObject)
         {
 
             stophighlight = false;
             EventSystem.current.SetSelectedGameObject(gameObject);
         }
-         
 
-            if (EventSystem.current.currentSelectedGameObject == gameObject)
-            {
+        if (EventSystem.current.currentSelectedGameObject == gameObject)
+        {
+        
+        
+         stophighlight = true;
+         gameObject.GetComponent<Animator>().SetTrigger("Pressed");
+        gameObject.GetComponent<Animator>().SetBool("isonmouse", true);
+        }
+
+         if(EventSystem.current.currentSelectedGameObject != gameObject.CompareTag("Cameraoptions"))
+         {
+            activitecameraop.SetActive(false);
+         }
+        else 
+         activitecameraop.SetActive(true);
            
-            if(gameObject.name == "CameraOp")
-            {
-                activitecameraop.SetActive(true);
-            }
+                
+            
+           
 
-             stophighlight = true;
-             gameObject.GetComponent<Animator>().SetTrigger("Pressed");
-            gameObject.GetComponent<Animator>().SetBool("isonmouse", true);
-            }
-     
 
     }
     public void highlighted()
@@ -57,16 +65,8 @@ public class optionsEffects : MonoBehaviour
     }
     public void unSelected()
     {
-        stophighlight = false;    
-        if(EventSystem.current.currentSelectedGameObject != gameObject)
-            {
-            if(gameObject.name != "CameraOp")
-            {
-             activitecameraop.SetActive(false);
-            }
-          
-            }
-       
+ 
+       stophighlight = false;   
         gameObject.GetComponent<Animator>().SetTrigger("Normal");
         if (EventSystem.current.currentSelectedGameObject != null )
         {

@@ -14,4 +14,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Etest_old/Etest.unity
     guid: 5ebe306bcae00144a8c3dcfaa32036dd
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: c623aaf816b83d84693db1d0a87e3c37, type: 2}
