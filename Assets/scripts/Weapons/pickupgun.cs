@@ -118,7 +118,7 @@ public class pickupgun : MonoBehaviour
       
         equipped = true;
         isfluidEnabled = true;
-        gameObject.SetActive(false);
+        gameObject.layer = LayerMask.NameToLayer("Weapon");
         color = true;
         //Make weapon a child of the camera and move it to default position
         transform.SetParent(gunContainer);
@@ -139,6 +139,7 @@ public class pickupgun : MonoBehaviour
         equipped = false;
         slotFull = false;
         isfluidEnabled = false;
+        gameObject.layer = LayerMask.NameToLayer("Default");
         color = false;
         //Set parent to null
         transform.SetParent(null);

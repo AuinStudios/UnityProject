@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3087652277108067224}
   - component: {fileID: 3087652277108067226}
   - component: {fileID: 3087652277108067227}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: muzzleflash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4887,7 +4887,7 @@ GameObject:
   - component: {fileID: 1851410428313897845}
   - component: {fileID: 6033328416769533610}
   - component: {fileID: 3731992905673267177}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Uzi
   m_TagString: uzi
   m_Icon: {fileID: 0}
@@ -5008,6 +5008,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   temporay: {fileID: 0}
   Camerarecoil: {fileID: 0}
+  swap: {fileID: 0}
   muzzleflash: {fileID: 3087652277108067226}
   scriptableobject: {fileID: 11400000, guid: 320c779459d2c6740b7ae035d9955530, type: 2}
   isreloadi: 0
@@ -5050,6 +5051,8 @@ MonoBehaviour:
   fpsCam: {fileID: 0}
   coll: {fileID: 4307012998287244470}
   guncol: {fileID: 0}
+  weaponswap: {fileID: 0}
+  swap: {fileID: 0}
   pickUpRange: 5
   dropForwardForce: 200
   dropUpwardForce: 100
@@ -5081,7 +5084,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1044298163117225006}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Bulletspawnpos
   m_TagString: Untagged
   m_Icon: {fileID: 0}

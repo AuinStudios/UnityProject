@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8309645144002514466}
   - component: {fileID: 1241132886208374003}
   - component: {fileID: 358729948}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: grenadelauncher (1)
   m_TagString: gun
   m_Icon: {fileID: 0}
@@ -153,6 +153,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   temporay: {fileID: 0}
   Camerarecoil: {fileID: 0}
+  swap: {fileID: 0}
   muzzleflash: {fileID: 862332961750212630}
   scriptableobject: {fileID: 11400000, guid: f418f805647cb32409786e383d34fc77, type: 2}
   isreloadi: 0
@@ -180,6 +181,8 @@ MonoBehaviour:
   fpsCam: {fileID: 0}
   coll: {fileID: 862332962585589451}
   guncol: {fileID: 0}
+  weaponswap: {fileID: 0}
+  swap: {fileID: 0}
   pickUpRange: 5
   dropForwardForce: 200
   dropUpwardForce: 100
@@ -213,7 +216,7 @@ GameObject:
   - component: {fileID: 862332961750212628}
   - component: {fileID: 862332961750212630}
   - component: {fileID: 862332961750212631}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: muzzleflash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5081,7 +5084,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7704464543187441869}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: bulletspawnpos
   m_TagString: Untagged
   m_Icon: {fileID: 0}

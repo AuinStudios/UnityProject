@@ -321,3 +321,8 @@ ___
 ## (10/06/2021)
 ###  i finally fixed the options but i deleted something important an d so i have to redo everything but a tleast i had the code so i fixed that 
 torromow im gonna add graphiciss ettings and other settings now that most of the  changeing settings  code is done
+
+
+
+## (24/06/2021)
+###  made it so that  the gun  doesnt look liek it nocilps but its useing an 2nd camera to render  the guns  and fixed the player not moveing cuz of options

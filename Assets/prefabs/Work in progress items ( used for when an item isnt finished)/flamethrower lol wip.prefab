@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8129965925667256105}
   - component: {fileID: 8129965925667256104}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: flamethrower light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0.5
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 8590686191544924170}
   - component: {fileID: 8590686191544924200}
   - component: {fileID: 8590686191544924511}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: flamethrower effect
   m_TagString: flamethrowerhitdamage
   m_Icon: {fileID: 0}
@@ -4955,7 +4955,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ff8e41be545ad76498863d07e2442cd3, type: 2}
+  - {fileID: 2100000, guid: ea9f272cbe01f7d4bb4ecdaf4be79bb6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5047,7 +5047,7 @@ GameObject:
   - component: {fileID: 8590686191544924199}
   - component: {fileID: 8590686191544924221}
   - component: {fileID: 8590686191544924210}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: flamethrower lol wip
   m_TagString: flamethrower
   m_Icon: {fileID: 0}
@@ -5167,6 +5167,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   temporay: {fileID: 0}
   Camerarecoil: {fileID: 0}
+  swap: {fileID: 0}
   muzzleflash: {fileID: 8590686191544924669}
   scriptableobject: {fileID: 11400000, guid: 5c22d7e127b5bc04a95a8497359de230, type: 2}
   isreloadi: 0
@@ -5209,6 +5210,8 @@ MonoBehaviour:
   fpsCam: {fileID: 0}
   coll: {fileID: 8590686191544924653}
   guncol: {fileID: 0}
+  weaponswap: {fileID: 0}
+  swap: {fileID: 0}
   pickUpRange: 5
   dropForwardForce: 200
   dropUpwardForce: 100
