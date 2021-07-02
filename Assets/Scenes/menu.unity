@@ -1484,6 +1484,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.716558, y: 8.681188, z: 2}
   m_Center: {x: -0.1084572, y: -0.06372259, z: -8.126454e-10}
+--- !u!1 &504133801 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1472105291, guid: 95fc72afa15b40c4a9d2c15ab7387fc6, type: 3}
+  m_PrefabInstance: {fileID: 4961202632350652297}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &516690944 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3566498126885615606, guid: 6ea5a30cca67bed44928b0392ffb9f82, type: 3}
@@ -1711,12 +1716,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menu: {fileID: 359407773}
   options: {fileID: 1977707508}
+  lighting: {fileID: 504133801}
   slidernumber: 0
   maxvalue: 100
   textui: {fileID: 0}
   slidervalue: {fileID: 6495782681316100430}
   boolcounter: 0
-  toggled: 0
 --- !u!1 &712897561
 GameObject:
   m_ObjectHideFlags: 0
@@ -2904,7 +2909,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh18868
+  m_Name: pb_Mesh57146
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3711,7 +3716,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh18808
+  m_Name: pb_Mesh57094
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7513,10 +7518,6 @@ PrefabInstance:
     - target: {fileID: 7074664219490799785, guid: 95fc72afa15b40c4a9d2c15ab7387fc6, type: 3}
       propertyPath: m_Name
       value: Options
-      objectReference: {fileID: 0}
-    - target: {fileID: 7074664219490799785, guid: 95fc72afa15b40c4a9d2c15ab7387fc6, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7074664219490799786, guid: 95fc72afa15b40c4a9d2c15ab7387fc6, type: 3}
       propertyPath: m_LocalPosition.x

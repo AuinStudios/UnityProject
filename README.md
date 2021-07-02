@@ -326,3 +326,10 @@ torromow im gonna add graphiciss ettings and other settings now that most of the
 
 ## (24/06/2021)
 ###  made it so that  the gun  doesnt look liek it nocilps but its useing an 2nd camera to render  the guns  and fixed the player not moveing cuz of options
+
+
+
+
+
+## (02/07/2021)
+###  made a camerashake effect nad the past week i been fixing most of the bugs and i forgot to save my github so i done it here

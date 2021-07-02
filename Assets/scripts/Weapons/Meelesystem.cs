@@ -8,7 +8,7 @@ public class Meelesystem : MonoBehaviour
     public Transform ye;
    public  Rigidbody rig;
     public GunsScriptableObject scriptableobject;
-    
+    public Animator camerashake;
 
 
   
@@ -38,5 +38,20 @@ public class Meelesystem : MonoBehaviour
         
         
         
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject)
+        {
+            camerashake.SetBool("Shakeorno", true);
+        }
+    }
+    public void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject)
+        {
+            camerashake.SetBool("Shakeorno" , false);
+        }
     }
 }

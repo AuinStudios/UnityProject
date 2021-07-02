@@ -10,24 +10,28 @@ public class Options : MonoBehaviour
 
     public GameObject menu;
     public GameObject options;
+    public GameObject lighting;
     public   float slidernumber = 0;
     public int maxvalue = 80;
     public TextMeshProUGUI textui;
     public Slider slidervalue;
     public int boolcounter;
-    public bool toggled;
     // Update is called once per frame
     void Update()
     {
        slidernumber = Mathf.Clamp((int)slidernumber, 0, maxvalue);
        PlayerPrefs.SetFloat("slidernumber", slidervalue.value);
-        if(toggled == true)
+        if (lighting.GetComponent<Toggle>().isOn == true)
         {
-            PlayerPrefs.SetInt("boolcounter", 1);
+        
+            PlayerPrefs.SetInt("boolcounter", boolcounter = 1);
 
         }
-        else
-            PlayerPrefs.SetInt("boolcounter", 0);
+        else if (lighting.GetComponent<Toggle>().isOn == false)
+        {
+         PlayerPrefs.SetInt("boolcounter", boolcounter = 0);
+        }
+           
     }
     
     public void disableothers()
@@ -45,28 +49,28 @@ public class Options : MonoBehaviour
         menu.SetActive(true);
         options.SetActive(false);
     }
-    
-
+   
     public void slider(float test3)
       {
      slidernumber = test3;
-        
        textui.text = Mathf.Clamp((int)slidernumber, 0, int.MaxValue).ToString();
         
     }
 
-
-
     public void togglebetterlighting(bool isenabeld)
     {
-        toggled = isenabeld;
-        if (gameObject.GetComponent<Toggle>().isOn == true)
-        {
+        lighting.GetComponent<Toggle>().isOn = isenabeld;
+        if (lighting.GetComponent<Toggle>().isOn == true)
+        { 
+            
             isenabeld = true;
+            Debug.Log("beans");
+          
         }
         else
             isenabeld = false;
-
+       
+        Debug.Log("nobeans");
 
     }
 }

@@ -36,22 +36,13 @@ public class optionsEffects : MonoBehaviour
          }
         else 
          activitecameraop.SetActive(true);
-           
-                
-            
-           
-
-
     }
     public void highlighted()
     {
-       
-
             if (EventSystem.current.currentSelectedGameObject != gameObject&& (stophighlight != true))
             {
             gameObject.GetComponent<Animator>().SetTrigger("Highlighted");
             }
-  
     }
 
     public void unhighlighted()
@@ -74,7 +65,4 @@ public class optionsEffects : MonoBehaviour
         }
      
     }
-     
-
-  
 }
