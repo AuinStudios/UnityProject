@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class takecamrotHead : MonoBehaviour
 {
-    public Transform camrot;
-    public Transform pointa;
-    public Transform pointb;
+    public Transform camRot;
+    public Transform pointA;
+    public Transform pointB;
     [SerializeField] public float shakevalue = 0.5f;
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.rotation = camrot.rotation;
+        gameObject.transform.rotation = camRot.rotation;
 
-        camrot.position= Vector3.Lerp(pointa.position, pointb.position, shakevalue);
+        camRot.position= Vector3.Lerp(pointA.position, pointB.position, shakevalue );
        
     }
 }

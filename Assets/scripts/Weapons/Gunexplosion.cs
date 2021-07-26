@@ -10,7 +10,6 @@ public class Gunexplosion : MonoBehaviour
     public GunsScriptableObject scriptableobject;
     public RaycastHit hit;
     public GameObject impacteffect, explosiondamage  ;
-   
 
     public void OnTriggerEnter(Collider other)
     {
@@ -61,7 +60,9 @@ public class Gunexplosion : MonoBehaviour
   
         if (collision.gameObject &&  !gameObject.CompareTag("explosivebarrel") && !collision.gameObject.CompareTag("gun"))
         {
+
             blow();
+            
         }
 
         
@@ -69,11 +70,9 @@ public class Gunexplosion : MonoBehaviour
   
     public void blow()
     {
-
-
-
-        
          Instantiate(impacteffect, transform.position, transform.rotation);
+
+       
         Vector3 explosionpos = equip.transform.position;
         Collider[] colliders = Physics.OverlapSphere(explosionpos, scriptableobject.explosionRange);
         foreach (Collider HIT in colliders)

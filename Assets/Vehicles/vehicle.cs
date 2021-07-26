@@ -28,8 +28,6 @@ public class vehicle : MonoBehaviour
     public static bool grounded;
     public void Tankmode()
     {
-
-       
         deactivte.enabled = false;
         guntext.color = new Color(0, 0, 0, 0);
         gunisenabled.SetActive(false);

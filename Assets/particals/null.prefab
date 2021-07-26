@@ -167,7 +167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d60f0b41b371f6443aba04b1d8ffdd68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookradius: 30
+  lookradius: 0
+  target: {fileID: 0}
 --- !u!195 &8404417848707698351
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -202,5 +203,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7d0747ad6024cf459f3d95cc5592e56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
-  death: {fileID: 0}
+  health: 100
+  death: {fileID: 799940772913994419, guid: f715780f0c464e3498c8178f32e71ea5, type: 3}

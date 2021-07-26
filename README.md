@@ -333,3 +333,8 @@ torromow im gonna add graphiciss ettings and other settings now that most of the
 
 ## (02/07/2021)
 ###  made a camerashake effect nad the past week i been fixing most of the bugs and i forgot to save my github so i done it here
+
+
+
+## (027/07/2021)
+### finished the camera shake ( might redo it soon )   also my cosin helped me learn about more about raycasts and thats it for now

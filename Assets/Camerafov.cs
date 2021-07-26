@@ -8,7 +8,7 @@ public class Camerafov : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        fov = Camera.main;
     }
 
     // Update is called once per frame

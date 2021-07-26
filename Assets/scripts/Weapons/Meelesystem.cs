@@ -42,7 +42,7 @@ public class Meelesystem : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject)
+        if (collision.gameObject  && !collision.gameObject.CompareTag("Player")&& !collision.gameObject.CompareTag("Ground"))
         {
             camerashake.SetBool("Shakeorno", true);
         }

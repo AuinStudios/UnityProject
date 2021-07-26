@@ -9,13 +9,16 @@ public class test3 : MonoBehaviour
 
     public float lookradius = 10f;
 
-   public Transform target;
+    public Transform target;
+    private GameObject Attackcol;
     NavMeshAgent agent;
 
     // Start is called before the first frame update
     void Start()
     {
-        target = Playermanager.instance.Player.transform;
+        Attackcol = GameObject.Find("attackcol");
+       // target = Playermanager.instance.Player.transform;
+       
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -29,12 +32,13 @@ public class test3 : MonoBehaviour
             agent.SetDestination(target.position);
         }
 
-        if ( distance <= agent.stoppingDistance)
+        if (distance <= agent.stoppingDistance)
         {
-
+            Attackcol.SetActive(true);
             facetarget();
         }
-
+        else
+            Attackcol.SetActive(false);
     }
 
     void facetarget()
