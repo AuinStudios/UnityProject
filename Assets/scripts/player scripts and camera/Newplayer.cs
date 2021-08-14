@@ -22,10 +22,6 @@ public class Newplayer : MonoBehaviour
     public PlayerHealthHandler health;
     private float maxVertSpeed = 200;
 
-    public void Awake()
-    {
-       
-    }
     void FixedUpdate()
     {
         Vector3 xzVel = new Vector3(rig.velocity.x, 0, rig.velocity.z);
@@ -77,11 +73,6 @@ public class Newplayer : MonoBehaviour
         }
     }
 
- 
-
-  
-
-   
     void Update()
     {
          float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.fixedDeltaTime * sensMultiplier;
@@ -139,7 +130,6 @@ public class Newplayer : MonoBehaviour
             rig.AddForce(player.forward * dash * Time.deltaTime, ForceMode.VelocityChange);
         
         }
-        
         
         if(health.Health <= 0  )
         {

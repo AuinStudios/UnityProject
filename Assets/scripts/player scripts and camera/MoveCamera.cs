@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class MoveCamera : MonoBehaviour
 {
-    
-    
     public Transform orientation;
     public float xRotation = 0f;
     public float sensitivity = 50f;
@@ -17,13 +15,8 @@ public class MoveCamera : MonoBehaviour
   
     public void Start()
     {
-       
-        
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
-        
-
     }
 
 
